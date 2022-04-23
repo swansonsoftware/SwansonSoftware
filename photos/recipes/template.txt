@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Recipe - </title>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="../acme.css" />
+	
+	<script language="JavaScript" type="text/javascript" src="../photos.js"></script>
+
+	<script language="JavaScript" type="text/javascript">
+
+		function doPrint() {
+			var div = document.getElementById("navBar");
+			div.style.visibility = 'hidden';
+			print();
+			div.style.visibility = 'visible';
+		}
+
+		function init() {
+			setTitle("Recipes - Category");
+		}
+		window.onload = init;
+	</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<div id="navBar" class="paragraph">
+	<table border="0" width="100%">
+		<tr>
+			<td><a href="../recipes.htm" class="generic" target="main"> Recipes</a>
+    			> recipe name
+    		</td>
+    		<td align="right">&nbsp;<span class="link" onclick='doPrint();'>Print this recipe</span>
+    		</td>
+    	</tr>
+    </table>
+</div>
+
+
+<div class="paragraph">
+
+<span class="recipeHeader">Title</span>
+<br />
+
+<i>by </i>
+<br />
+<br />
+
+
+<!--  INTRODUCTION  -->
+<table cellpadding="0" cellspacing="0" border="0" width="600">
+	<tr>
+		<td><b>PREP:</b> min; <b>Cooking time:</b> min
+			<br />
+			Serves 
+			<br />
+			<br />
+			<i>tips, if any</i>
+			<br />
+			<br />
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+<!--  INGREDIENTS  -->
+			<table>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>1</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>item</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>3</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>item</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>4-6</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>item</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>4</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>item</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>&#188;</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>cup </b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>8</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>shallots, finely chopped</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>2</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>garlic cloves, crushed</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>1&#189;</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>cups </b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>&#188; - &#189;</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>cup white wine</b></td>
+				</tr>
+				<tr>
+					<td width="15">&nbsp;</td>
+					<td valign="top" align="right" nowrap><b>-</b></td>
+					<td width="6">&nbsp;</td>
+					<td align="left" valign="top"><b>a large handful of fresh flat-leaf parsley,
+					coarsely chopped</b></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br />
+
+<!--  DIRECTIONS  -->
+<table>
+	<tr>
+		<td class="recipelistItem">1.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="recipelistItem">2.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="recipelistItem">3.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="recipelistItem">4.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="recipelistItem">5.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="recipelistItem">6.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="recipelistItem">7.</td>
+		<td>&nbsp;</td>
+		<td align="left" valign="top">directions</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+</table>
+
+
+<!--  NUTRITIONAL NOTES  -->
+<table width="600" cellspacing="0" cellpadding="2" border="1">
+	<tr>
+		<td><font size="-1"><i><b>1 Serving:</b> </i></font></td>
+	</tr>
+</table>
+
+<br />
+
+</div>
+</body>
+</html>

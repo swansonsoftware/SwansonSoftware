@@ -1,0 +1,10 @@
+dist/
+node_modules/
+bundled.js
+*.jpg
+*.psp
+*.jbf
+*.doc
+*.JPG
+*.AVI
+*.MP4

@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------------
+ (c) 2001 Gregory Swanson.  All Rights Reserved.
+
+--------------------------------------------------------------------*/
+ADDRESS, BLOCKQUOTE, CAPTION, CENTER, DD, DIR, DIV, DL, DT, FORM, MENU, OL, P, TD, TH, UL 
+{
+	font-family:"verdana","arial","helvetica","sans-serif";
+	font-size:100%;
+}
+
+a.generic {
+	color:#000099; font-weight:bold; background:transparent; text-decoration:underline;
+}
+
+a.generic:link {
+	color:#000099; font-weight:bold; background:transparent; text-decoration:underline;
+}
+
+a.generic:visited {
+	color:#000099; font-weight:bold; background: transparent; text-decoration:underline;
+}
+
+a.generic:hover {
+	color:#000099; font-weight:bold; background: transparent; text-decoration:underline;
+}
+
+a.generic:active {
+	color:#000099; font-weight:bold; background: transparent; text-decoration:underline;
+}
+
+body {
+	font-family:"verdana","arial","helvetica","sans-serif";
+	font-size:60%; margin:0px; cursor: default;
+}

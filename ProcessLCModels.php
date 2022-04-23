@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<title>Swanson Software - Lifecycle Models</title>
+	<link rel="stylesheet" href="styles/swansonsoftware.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="javascript/debug.js"></script>
+	<script src="javascript/swansonSoftware-v1.1.js"></script>
+
+</head>
+
+<body>
+
+<a id="top"></a>
+
+<div id="header" class="row">
+    <div class="col-3" style="padding:0">
+        <?php include "logo.php"; ?>
+    </div>
+
+    <div class="col-17">
+        <span id='PageTitle' class='PageTitle'>Process</span>
+    </div>
+</div>
+
+<div class="row">
+
+    <?php include "nav.php"; ?>
+
+    <div class="col-17 section" id="section">
+    <section id="printable">
+
+
+        <span id="articleHeader">
+        <a href="index.php">SwansonSoftware Home</a> > <a href="IntroProcess.php">Process</a> > Lifecycle Models
+        <a href="javascript:doPrint();" style="text-align:right;float:right;">Print</a>
+        </span>
+
+
+<h1 class="center">Software Lifecycle Models</h1>
+<p>
+Draft Version 0.6, April 25, 2015
+<br />
+<i>Gregory Swanson</i>
+</p>
+
+<h1 class="center">Contents</h1>
+
+    <ol class="contents">
+        <li><a href="#lst1">1. Introduction</a>
+            <ol class="contents">
+                <li><a href="#lst1.1">1.1 Level of Detail</a></li>
+            </ol>
+		</li>
+
+        <li><a href="#lst2">2. Kinds of Models</a>
+			<ol class="contents">
+				<li><a href="#lst2.1">2.1 Code-and-fix</a></li>
+				<li><a href="#lst2.2">2.2 Waterfall</a></li>
+				<li><a href="#lst2.3">2.3 Modified Waterfall Models:</a>
+					<ol class="contents">
+						<li><a href="#lst2.3.1">2.3.1 Sashimi</a></li>
+						<li><a href="#lst2.3.2">2.3.2 Waterfall with Subprojects</a></li>
+						<li><a href="#lst2.3.3">2.3.3 Waterfall with Risk Reduction: Whirlpool</a></li>
+					</ol>
+				</li>
+				<li><a href="#lst2.4">2.4 Incremental and Spiral Models:</a>
+					<ol class="contents">
+						<li><a href="#lst2.4.1">2.4.1 Evolutionary Prototyping</a></li>
+						<li><a href="#lst2.4.2">2.4.2 Staged Delivery</a></li>
+						<li><a href="#lst2.4.3">2.4.3 Evolutionary Delivery</a></li>
+						<li><a href="#lst2.4.4">2.4.4 Spiral</a></li>
+					</ol>
+				</li>
+            </ol>
+		</li>
+
+		<li><a href="#lst3">3. Choosing a Model</a></li>
+        <li><a href="#idRef">References</a></li>
+    </ol>
+
+<!--*******************************************************************************-->
+
+<a id="lst1"></a>
+<h2 class="count">Introduction</h2>
+
+<p>
+A lifecycle model, a.k.a. software development lifecycle model (SDLC), describes software
+ engineering processes used to build software. Software engineering processes are complex,
+ and a complete model of complex processes must be complex (Humphrey 1989, p. 249). A
+ complete model includes views for four aspects of the system: functional, behavioral,
+ structural, and conceptual (ibid. p. 252).
+</p>
+
+<p>
+The lifecycle model is a <b>Process Model</b>, however, there are many kinds of lifecycle
+ models that use different strategies for building software. Your choice of lifecycle
+ model should be based on how a particular model will work in your environment, or for
+ a specific project; e.g. factors that affect choice of lifecycle model include how
+ constrained the project schedule is, how well-known the requirements are, how sophisticated
+ the team is, etc. Your ability to choose the most appropriate model requires that you know
+ several models and the pros and cons of each: a particular model's effectiveness depends on
+ the context in which it is used (McConnell 1996, p. 154).
+</p>
+
+<a id="lst1.1"></a>
+<h3 class="count subhead">Level of Detail</h3>
+<p class="subhead">
+Lifecycle models are described and used at different levels of detail (Humphrey 1989, p. 249).
+ Humphrey defines three levels: U (universal), W (worldly), and A (atomic).
+</p>
+
+<ul>
+   <li>U-level - describes a high-level framework of policies that
+      "guide the behavior of the organization" (ibid p. 253). They are particularly useful when
+      unanticipated or unprecedented events occur.</li>
+   <li>W-level - describes procedures that implement U-level policies.
+      This includes task prerequisites and results, who will do the task and when it will be
+      done. W-level models reference the A-level for standards, definitions, and tools.</li>
+   <li>A-level - describes how tasks are performed at the W-level.
+      This includes standards, tools, definitions, conventions, etc.</li>
+</ul>
+
+<p>
+Most of the time when we talk about SDLC's, we really mean the W-level models that fit within
+ the context of a U-level process model like Rational Unified Process, Capability Maturity Model,
+ etc. That is the point of view that this article takes: lifecycle models at the W-level, where
+ the actual work in building software occurs.
+</p>
+
+<!--*******************************************************************************-->
+
+
+<a id="lst2"></a>
+<h2 class="count">Kinds of Models</h2>
+
+<p>
+This section presents a summary of the characteristics of several lifecycle models (from
+ Boehm (1988), Humphrey (1989), and McConnell (1996)). In general, there are two ways lifecycle models are presented:
+</p>
+	
+	<ol>
+		<li><b>Standard, named models</b>
+		<p>
+		Models are given names that indicate the fundamental strategy that the model
+		uses ("evolutionary prototyping", "staged delivery", etc.) or the appearance of the
+		diagram associated with the model ("spiral", "sashimi", etc.). Probably the
+		best discussion of these is in McConnell's book (1996).
+		</p>
+		</li>
+
+		<li><b>Tailored</b>
+		<p>
+		Models are constructed using process cell diagrams. Process cells represent development
+		procedures such as requirements gathering, detailed design, implementation, etc.
+		Process elements are added to address problems, and connected as needed (Humphrey, 1989).
+		Probably the best discussion of these is in Humphrey's book.
+		</p>
+		</li>
+	</ol>
+
+<p>
+Lifecycle models are not mutually exclusive; in fact, you should be prepared to change
+ models as a project evolves, so you can make use of model features that apply to a
+ specific situation (McConnell).
+</p>
+
+<!-- ******************************************* -->
+
+    <a id="lst2.1"></a>
+	<h3 class="count subhead">Code-and-fix</h3>
+	<p class="subhead">
+	Boehm described this model as the root of the problem from which the first lifecycle
+	model appeared, back in 1956 (p. 63).
+	</p>   
+   
+<!-- ******************************************* -->
+
+    <a id="lst2.2"></a>
+	<h3 class="count">Waterfall</h3>
+	<p class="subhead">
+	The waterfall model is used often to introduce the concept of lifecycle models, and
+	then to point out the problem of a model that confines activities to rigid and
+	inflexible phases. It is a formal process for developing software in a top-down
+	sequence (DeGrace and Stahl, p. 59). It is very document oriented, and works
+	better when a project can be well-defined.
+	</p>
+   
+	<p>
+	Because of these characteristics, the waterfall model is suitable for projects where
+	"quality requirements dominate cost and schedule requirements" (McConnell, p. 137).
+	</p>
+
+	<p>
+	Traditional implementations of the waterfall model include a sequence of 6 to 9
+	phases that begin with some form of document that describes the phase in which
+	work is beginning, and conclude with the production of a document as output that
+	may be input for the next phase. While backing up to correct a mistake made in a
+	previous phase is allowed, it is difficult and typically very costly.
+	</p>
+
+	<p>
+	To give you an idea of the amount of documentation this model can produce, here
+	is a list from DeGrace and Stahl (p. 54):
+	</p>
+	<ul>
+		<li>Original Problem Statement</li>
+		<li>Options Analysis Document</li>
+		<li>Cost-Benefit Analysis Document</li>
+		<li>Requirements document</li>
+		<li>Preliminary Program Plan:
+			<ul>
+				<li>Statement of Work</li>
+				<li>Work Breakdown Structure</li>
+				<li>Management Plan</li>
+				<li>Documentation Plan</li>
+				<li>Visibility and Tracking Plan</li>
+				<li>Schedules</li>
+			</ul>
+		</li>
+		<li>Alternatives Analysis Document</li>
+		<li>Functional Specification Document</li>
+		<li>Preliminary Design Document</li>
+		<li>User's Guide</li>
+		<li>Programmer's Guide</li>
+		<li>User Test Plan</li>
+		<li>User Training Plan</li>
+		<li>Test Plan Outlines</li>
+		<li>Test Reports</li>
+		<li>Installation Plan</li>
+	</ul>
+   
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	The waterfall model treats activities as sequential and disjoint, and expects
+	that the project is well-defined (McConnell, p. 143). It assumes that requirements
+	can be complete, which is seldom the case (DeGrace and Stahl, p. 68; McConnell,
+	p. 137). It was introduced at a time when computers and computer time  were
+	very expensive relative to the cost of personnel (DeGrace and Stahl, p. 70).
+	</p>
+   
+<!-- ******************************************* -->
+
+	<a id="lst2.3"></a>
+    <h3 class="count subhead">Modified Waterfall Models</h3>
+    <br />
+
+	<a id="lst2.3.1"></a>
+	<h4 class="count subhead">Sashimi</h4>
+	<p class="subhead">
+	The Sashimi model originated in Japan as an improvement based on experience
+	with the waterfall model (DeGrace and Stahl, p. 154). There is greater
+	overlap between phases, fewer phases, and several activities are merged into
+	the phases (rather than in separate phases).  The amount of documentation
+	is reduced because less is needed when there is personnel continuity between
+	phases and activities (McConnell, p. 144).
+	</p>
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	Greater overlap between phases causes difficulty in determining milestones,
+	and reduces your ability to track progress (McConnell, p. 144). Potentials
+	for miscommunication and mistaken assumptions means that team members
+	need a higher level of sophistication to avoid these pitfalls.
+	</p>
+
+<!-- ******************************************* -->
+
+	<a id="lst2.3.2"></a>
+	<h4 class="count subhead">Waterfall with Subprojects</h4>
+	<p class="subhead">
+	This model solves the problem with the waterfall model in which implementation
+	of well-understood parts of a system are not allowed until the design of
+	difficult parts are complete (McConnell, p. 145).
+	</p>
+		
+	<p>
+	Implementing a waterfall with subprojects requires the architecture to have
+	the system broken into subsystems that can be implemented as separate
+	projects (McConnell, p. 145).
+	</p>
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	Unforseen interdependencies between the subsystems (ibid.).
+	</p>
+			
+<!-- ******************************************* -->
+
+	<a id="lst2.3.3"></a>
+	<h4 class="count subhead">Waterfall with Risk Reduction: Whirlpool</h4>
+	<p class="subhead">
+	Addresses the problem with the waterfall model where you are required to
+	fully define requirements before architectural design can proceed (although
+	you can apply this technique to more than just the requirements phase)
+	(McConnell, p. 146).
+	</p>
+
+	<p>
+	DeGrace and Stahl use a similar technique they call the whirlpool model 
+	(p. 97). In this model, a loop (or spiral; the whirlpool) is added to
+	address risk in a particular activity such as requirements analysis. This
+	spiral might encompass other activities, so that an iteration of these
+	steps can occur to work out problems.
+	</p>
+
+	<p>
+	DeGrace and Stahl's model has two spirals. One is between the
+	design/implementation/test phase and installation/delivery phase. This
+	loop is called the "verification loop" because it reconciles the system's
+	functionality with the requirements as the developers understood them
+	(p. 98). The second spiral is between the installation/delivery phase
+	and the initiation phase, called the "validation loop" because it
+	reconciles the system with the expectations of the users (or those who
+	initiated the project) (p. 101).
+	</p>
+
+
+<!-- ******************************************* -->
+
+	<a id="lst2.4"></a>
+	<h3 class="count subhead">Incremental and Spiral Models</h3>
+    <br />
+
+	<a id="lst2.4.1"></a>
+	<h4 class="count subhead">Evolutionary Prototyping</h4>
+	<p class="subhead">
+	This is one the "best practices" McConnell describes as key to attaining
+	the most reliable reduction in development time (ibid). Evolutionary prototyping
+	addresses the problem of poorly understood or changing requirements by
+	allowing the system concept to evolve as development progresses (McConnell,
+	p. 147). The customer is shown a prototype of some aspect of the system,
+	provides feedback, and functionality is adjusted for the next prototype.
+	At some point, aggreement on functionality is reached and the final
+	development phase begins, where all remaining work is completed.
+	</p>
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	Though there are many potential risks associated with this model, most are
+	easily managed. Even with so many potential risks, the potential to reduce
+	development time by 45 to 80 percent (ibid. p. 441) should outweigh them.
+	</p>
+
+	<ul>
+		<li>Unrealistic schedule and budget expectations - when you
+		produce a prototype in a short amount of time you set customers' and managers'
+		expectations high. They may assume that the finished product will arrive much
+		sooner than it actually can. It is important to communicate the limitations of
+		the prototype (McConnell, p. 436).
+		</li>
+
+		<li>Poor view of project timeline - evolutionary prototyping's
+		usefulness is in allowing upstream work to begin with coding (the prototype),
+		in exchange for potential increased downstream rework. Time that would normally
+		be used to produce requirements and design documents is saved, at least
+		initially. You cannot anticipate how many iterations will be needed (ibid. p. 437).
+
+		<p>
+		McConnell suggests using a modification of staged delivery that includes aspects
+		of evolutionary prototyping to manage this risk.
+		</p>
+		</li>
+
+		<li>Poor feedback - success with evolutionary prototyping
+		depends on the quality of feedback from the end user or customer.
+		</li>
+
+		<li>Poor product performance - one of the problems with a
+		prototype is starting out thinking it will be thrown away later, so poor-quality
+		code is writen and techniques that would help performance are ignored (ibid.)
+
+		<p>
+		McConnell suggests that you treat the design of a prototype so that it can be
+		modified easily into production-quality; also, if you create a throwaway
+		prototype, be sure to throw it away (ibid.).
+		</p>
+		</li>
+			
+		<li>Unrealistic expectations for performance - a prototype
+		may perform very well because it does not have to do as much work, e.g.
+		connecting to a production database and displaying the results of a query.
+		On the other hand, a prototype may perform poorly, e.g. a prototype that parses
+		strings may be written in a language that has poor performance with string
+		processing (ibid. p. 438).
+
+		<p>
+		McConnell suggests adding code to slow down the performance if the prototype
+		is too fast, and explain that the final product will be written in a language
+		that processes strings more efficiently (ibid.).
+		</p>
+		</li>
+
+		<li>Poor design - if there is any time during development in
+		which experience and ability are needed, it is on a prototyping project.
+		McConnell states "Evolutionary Prototyping requires that developers make
+		far-reaching design decisions much earlier in the development process than
+		when other development approaches are used. Inexperienced developers are
+		often poorly equipped to make good design decisions under such circumstances
+		(ibid. p. 439).
+		</li>
+	</ul>
+
+	<p>
+	Prototyping generally produces better designs, but there are a few factors that
+	can interfere (ibid. p. 439).
+	</p>
+	<ul>
+		<li>Manage successive prototypes so that the design does not deteriorate.</li>
+
+		<li>When design problems arise due to feedback from
+		customers or end users, don't try to force the design to work when redesign
+		is more appropriate.</li>
+
+		<li>Poor maintainability - evolutionary prototyping
+		sometimes is used as an excuse for code-and-fix development. McConnell found
+		that of the published studies on prototyping, more experienced worse
+		maintainability than with "traditional approaches" (ibid. p. 439).
+
+		<p>
+		This risk is managed in the same way it is managed with any lifecycle approach.
+		With evolutionary prototyping, you need to be aware of the tendency and be
+		ready to take precautions.
+		</p>
+		</li>
+
+		<li>There may be increased risk of feature creep due to
+		factors such as asking users for feedback on a prototype.</li>
+
+		<li>There is risk of wasting time investigating features
+		that are excluded from the product later, or developing the prototype too far.</li>
+	</ul>
+
+
+<!-- ******************************************* -->
+
+	<a id="lst2.4.2"></a>
+	<h4 class="count subhead">Staged Delivery</h4>
+	<p class="subhead">
+	Staged delivery addresses the problem with the waterfall model where there is no
+	visible progress of the project from the end user's perspective, because nothing
+	is delivered until everything is finished (ibid. p. 148).
+	</p>
+
+	<p>
+	With staged delivery, software is delivered in "successive stages" as the project
+	progresses. Unlike evolutionary prototyping, staged delivery requires that you
+	know what you are building - the requirements analysis has been done and the system
+	concept is well-defined. This model works well with software that is customized
+	for each customer, from a base product. The customer can begin using the system
+	while development of the customizations continues.
+	</p>
+
+	<p>
+	Staged delivery does not reduce development time as does evolutionary prototyping,
+	but it does improve visibility of development progress (ibid. p. 550). If there
+	are problems, you will know sooner.
+	</p>
+
+	<p>
+	Other benefits provided by staged delivery:
+	</p>
+	<ul>
+		<li>Reduced estimation error - allows you to break up the project estimate into smaller estimates (ibid. p. 552).</li>
+
+		<li>Minimizes integration problems - earlier releases means earlier integration. Integration will be more of a priority when everyone knows that the due date is near (ibid. p. 550)</li>
+	</ul>
+
+	<h4 class="subhead">Requirements</h4>
+   
+	<ul>
+		<li>You need a good understanding of technical dependencies so that the features in one planned release do not leap frog planned release of required feature dependencies (ibid. p. 553).</li>
+
+		<li>Developers need to accept some restrictions on their assignments in order to meet the deadline for a stage (ibid.).</li>
+
+		<li>Staged delivery Only works for systems in which subsets of functionality are useful (ibid. p. 555).</li>
+	</ul>
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	Feature creep - it is typical for users to find functionality that they want added, once they have a system to use (ibid.).
+	</p>
+
+<!-- ******************************************* -->
+
+	<a id="lst2.4.3"></a>
+	<h4 class="count subhead">Evolutionary Delivery</h4>
+	<p class="subhead">
+	Evolutionary delivery is a combination of evolutionary prototyping and staged
+	delivery (McConnell, p. 425). The degree to which one balances the other is
+	flexible. This model works well for customized software for situations where
+	the customer needs to use the software before deciding if modifications are
+	required.
+	</p>
+
+	<p>
+	Evolutionary delivery can be balanced more toward evolutionary prototyping; this
+	provides the customer with "highly visible signs of progress" (ibid. p. 426),
+	provides flexibility to change the system based on user requests, and provides
+	less control for management in terms of project schedule. On the other hand,
+	evolutionary delivery can be balanced more toward staged delivery; this also
+	provides the customer with "highly visible signs of progress", but provides
+	little flexibility to change the system based on user requests, and provides
+	more control for management.
+	</p>
+
+	<h4 class="subhead">Requirements</h4>
+	<p class="subhead">
+	Successful use of evolutionary delivery requires that you begin with a basic
+	idea of the system, and you use that to build a system architecture and core
+	(ibid., p. 427). The architecture needs to be flexible so it can change as
+	the system evolves.
+	</p>
+
+	<p>
+	While pure staged delivery does not allow the system architecture to evolve,
+	evolutionary delivery does at the expense of some control over project
+	schedule. You can gain back control by balancing the project toward staged
+	delivery. E.g. McConnell describes an example where you decide at the outset
+	on a set of four evolutionary deliveries, and each successive delivery
+	incorporates features which evolved out of customer feedback (ibid. p. 428).
+	</p>
+
+	<h4 class="subhead">Main Weaknesses</h4>
+	<p class="subhead">
+	When an evolutionary delivery model is balanced more towards evolutionary
+	prototyping, it takes on the same risks associated with that model. When an
+	evolutionary delivery model is balanced towards staged delivery, it takes on
+	the risks associated with staged delivery (ibid. p. 429).
+	</p>
+
+<!-- ******************************************* -->
+
+	<a id="lst2.4.4"></a>
+	<h4 class="count subhead">Spiral</h4>
+	<p class="subhead">
+	The spiral model was designed to reduce risks that stem from a lack of understanding
+	of requirements, architecture, the technology used, etc. (ibid. p. 141).
+	</p>
+
+	<p>
+	Each layer of the spiral - one complete loop - is an iteration that includes steps
+	for resolving risk with a deliverable. This might be prototyping to determine
+	performance capabilities, delivering a prototype to evaluate vague requirements,
+	etc. The final loop uses the waterfall approach, after risks have been considered
+	and reduced to acceptable levels (DeGrace and Stahl, p. 116; McConnell, p. 142).
+	</p>
+<!--
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+-->
+   <p>
+   </p>
+
+
+<!--*******************************************************************************-->
+
+
+
+<a id="lst3"></a>
+<h2 class="count">Choosing a Model</h2>
+
+<p>
+McConnell (1996) recommends that you answer several questions about the project and then
+ use those answers to choose from a matrix that shows how lifecycle models work under
+ different circumstances (p. 154).
+</p>
+
+<p class="tableCaption">
+Modified from McConnell (ibid p. 156).  Legend: x = excellent, ~ = fair to excellent, empty
+ box = poor.
+</p>
+<table class="tableParent">
+    <tr>
+        <th>Model</th>
+        <th>a</th>
+        <th>b</th>
+        <th>c</th>
+        <th>d</th>
+        <th>e</th>
+        <th>f</th>
+        <th>g</th>
+        <th>h</th>
+        <th>i</th>
+        <th>j</th>
+        <th>k</th>
+    </tr>
+    <tr>
+        <td>Pure Waterfall</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>~</td>
+    </tr>
+    <tr>
+        <td>Code-and-Fix</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td>Spiral</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>x</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Modified Waterfalls</td>
+        <td>~</td>
+        <td>~</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+        <td>~</td>
+        <td>x</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Evolutionary Prototyping</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>x</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Staged Delivery</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Evolutionary Delivery</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>x</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+    </tr>
+    <tr>
+        <td>Design-to-Schedule</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>~</td>
+        <td>~</td>
+        <td>x</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Design-to-Tools</td>
+        <td>~</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>~</td>
+        <td>x</td>
+        <td>x</td>
+        <td>x</td>
+        <td>~</td>
+    </tr>
+    <tr>
+        <td>Commercial</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>x</td>
+        <td>x</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>~</td>
+    </tr>
+</table>
+
+<ol style="list-style:lower-alpha">
+   <li>Works with poorly understood requirements</li>
+   <li>Works with poorly understood architecture</li>
+   <li>Produces highly reliable system</li>
+   <li>Produces system with large growth envelope</li>
+   <li>Manages risks</li>
+   <li>Can be constrained to a predefined schedule</li>
+   <li>Has low overhead</li>
+   <li>Allows for midcourse corrections</li>
+   <li>Provides customer with progress visibility</li>
+   <li>Provides management with progress visibility</li>
+   <li>Requires little manager or developer sophistication</li>
+</ol>
+
+<!--*******************************************************************************-->
+
+
+<a id="idRef"></a>
+
+<h3 class="center chapterSep">References</h3>
+
+
+<p class="references">
+<b>Boehm, Barry W.</b>, 1988, A Spiral Model of Software Development and Enhancement. Computer,
+May: p. 61-72.
+</p>
+
+<p class="references">
+<b>DeGrace, Peter, and Stahl, Leslie Hulet</b>, 1990, Wicked Problems, Righteous Solutions: A
+ Catalogue of Modern Software Engineering Paradigms: Prentice-Hall, 244 pages.
+ ISBN: 0-13-590126-X
+</p>
+
+<p class="references">
+<b>Humphrey, Watts S.</b>, 1989, Managing the Software Process: Addison-Wesley, 494 pages.
+ ISBN: 0-201-18095-2
+</p>
+
+<p class="references">
+<b><a href="http://www.stevemcconnell.com/" target="_top">McConnell, Steve</a></b>,
+ 1996, Rapid Development: Taming Wild Software Schedules: Microsoft Press, 660 pages.
+ ISBN: 1-55615-900-5
+</p>
+
+        <a id="moveTop" href="#top">Top of page</a>
+    </section>
+    </div>
+</div>
+
+<?php include "footer.php"; ?>
+
+</body>
+</html>

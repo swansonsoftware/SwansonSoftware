@@ -1,0 +1,245 @@
+/*font-family:brandonreg*/
+body {
+	margin:0px;
+    //font-family:"Palatino Linotype";
+	font-family:"verdana","arial","sans-serif";
+	font-size:100%;
+    counter-reset: section;
+}
+span.PageTitle {
+    position:absolute;
+    left:200px; top:18px;
+	width:350px;
+	font-family:"arial","sans-serif";
+    font-size:18pt; font-weight:bold;
+    color:#999;
+}
+nav ul {
+    top:57px; left:0px; height:100%; 
+    margin:0;padding:0;
+	list-style-type:none;
+}
+nav ul li {
+	margin:5px;
+	padding-top:10px;
+	padding-bottom:0px;
+	font-family:"verdana","arial","sans-serif";
+}
+nav ul li.subNav {
+	margin:5px; 
+	padding-left:10px;
+	padding-top:5px;
+}
+a:link {
+    color:blue; background:transparent; text-decoration:none;
+	//font-family:"verdana","arial","sans-serif";
+	font-family:"Book Antiqua","Palatino Linotype";
+}
+a:hover {
+    text-decoration:underline;
+}
+a.category {
+    color:blue; font-size:100%; font-weight: bold;
+	//font-family:"verdana","arial","sans-serif";
+	font-family:"Book Antiqua","Palatino Linotype";
+}
+header {
+    position:fixed;
+    height:57px; 
+	width:100%;
+    z-index:100;
+    background-color:#fff;
+}
+nav {
+    position:fixed;
+	top:57px; height:100%; width:162px;
+    background-color:#e8e8e8;
+}
+section {
+    position:relative;
+	top:57px;
+	left:167px;
+	width:75%;
+    padding:10px;
+	background-color:#e8e8e8;
+}
+footer {
+    text-align:center;
+    padding:5px;
+	font-family:"Book Antiqua","Palatino Linotype";
+    font-size:95%;
+}
+h1.mainHeader {
+	font-family:"arial","sans-serif";
+	font-size:180%;
+    text-align:center;
+}
+h2.mainSubHeader {
+	font-family:"arial","sans-serif";
+	font-size:130%;
+}
+h1 {
+	font-size:180%;
+    font-family:"Book Antiqua","Palatino Linotype";
+}
+h1.center {
+	font-size:180%;
+    font-family:"Book Antiqua","Palatino Linotype";
+    text-align:center;
+}
+h2 {
+	font-size:150%;
+    font-family:"Book Antiqua","Palatino Linotype";
+	padding-top:20px;
+	padding-bottom:0px;
+}
+h3 {
+	font-size:130%;
+    font-family:"Book Antiqua","Palatino Linotype";
+	margin-bottom:0em;
+}
+h3.center {
+	font-size:130%;
+    font-family:"Book Antiqua","Palatino Linotype";
+	margin-bottom:0em;
+    text-align:center;
+}
+h4 {
+	font-size:120%;
+    font-family:"Book Antiqua","Palatino Linotype";
+	margin-bottom:0em;
+}
+h5 {
+	font-size:110%;
+    font-family:"Book Antiqua","Palatino Linotype";
+	margin-bottom:0em;
+}
+h2.count {
+    counter-reset: subsection;
+}
+h2.count:before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+h3.count {
+    counter-reset: subsubsection;
+}
+h3.count:before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+h4.count:before {
+    counter-increment: subsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+}
+ol.roman {
+    list-style-type:upper-roman;
+}
+ol.contents {
+    list-style-type:none;
+}
+.cont {
+	line-height:1.5;
+	font-size:1.2em;
+}
+.contSub {
+	line-height:1.5;
+	font-size:1em;
+}
+ol li {
+	//padding-bottom:5px;
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:110%;
+}
+ul li {
+	padding-bottom:5px;
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:110%;
+	line-height:1.3;
+}
+li > ul {
+	padding-top:10px;
+    padding-bottom:15px;
+}
+.sub1 {
+	margin-top:5px;
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:100%;
+	line-height:1.3;
+}
+p.sub1caption {
+	margin-top:5px;
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:100%;
+	line-height:1.3;
+	margin-bottom:0px;
+}
+.sub1NM {
+	//no margin
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:100%;
+	line-height:1.3;
+}
+.default {
+	font-family:"verdana","arial","sans-serif";
+	line-height:1.3;
+}
+p {
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:110%;
+	line-height:1.3;
+}
+p.head {
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:110%;
+	line-height:1.3;
+	margin-top:5px;
+}
+p.author {
+    font-family:"Book Antiqua","Palatino Linotype";
+	font-size:110%;
+	font-style:italic;
+	line-height:1.3;
+	margin-top:5px;
+}
+.links {
+    font-family:"Book Antiqua","Palatino Linotype";
+	line-height:1.3;
+    //font-size:95%; 
+}
+.references {
+    font-family:"Book Antiqua","Palatino Linotype";
+	line-height:1.3;
+    font-size:95%; 
+}
+.chapterSep {
+    margin-bottom:2em;
+}
+#articleHeader {
+   position:absolute;
+   width:100%;
+   margin:0px;
+   padding:0px;
+   //border-bottom:solid black;
+}
+.articleHeader { //class=
+   position:relative;
+   top:0px;
+   width:45%;
+   background-color:#fff;
+}
+#print {
+   position:relative;
+   float:right;
+   text-align:right;
+   //border-bottom:solid black;
+   color:blue;
+}
+.portfolio {
+   float:clear;
+   width:70%;
+   margin:10px;0px;15px;20px;
+   padding:10px;
+   border:1px solid black;
+   text-align:left;
+}

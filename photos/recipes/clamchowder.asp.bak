@@ -1,0 +1,192 @@
+<script language="JavaScript" type="text/javascript" src="javascript/recipes.js"></script>
+
+<span id="recipeHeader" class="recipeHeader">Clam Chowder</span>
+<div id="print" onclick='doPrint();'>Print this recipe</div>
+
+<br />
+
+<i>Gregory Swanson</i>
+
+
+<!--  INTRODUCTION  -->
+<p>
+<b>PREP:</b> 30 min; <b>Cooking time:</b> 1&frac14; hr
+</p>
+
+<p>
+Serves 8
+<br />
+<br />
+<i>This is the New England (white) clam chowder, made with milk. All chowders are made with pork, usually bacon. You can make this without any pork at all. It is delicious either way.
+</i>
+</p>
+
+<!--  INGREDIENTS  -->
+	<div class="ingredientAmount">
+		<b>1</b>
+	</div>
+	<div class="ingredient">
+		<b>tablespoon olive oil</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>3</b>
+	</div>
+	<div class="ingredient">
+		<b>tablespoons butter</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>1</b>
+	</div>
+	<div class="ingredient">
+		<b>medium onion, finely chopped (about 2 cups)</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>&#190;</b>
+	</div>
+	<div class="ingredient">
+		<b>flower garlic, finely chopped</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>carrots, finely chopped</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>celery stalks, finely chopped</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>5</b>
+	</div>
+	<div class="ingredient">
+		<b>russet potatos, chopped in &#189;-inch cubes</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>1</b>
+	</div>
+	<div class="ingredient">
+		<b>cup cooked bacon, drained and crumbled</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>10 ounce cans clams, save juice<br />
+		(substitute 4 lbs. fresh clams, in the shell)</b>
+	</div>
+	<br />
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>cups milk, warmed</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>&#189;</b>
+	</div>
+	<div class="ingredient">
+		<b>teaspoon ground black pepper</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>bay leaves</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>1</b>
+	</div>
+	<div class="ingredient">
+		<b>large pinch of fresh tarragon, stems removed<br />
+		(or &frac12 tsp dried flakes)</b>
+	</div>
+	<br />
+	<br />
+
+	<div class="ingredientAmount">
+		<b>2</b>
+	</div>
+	<div class="ingredient">
+		<b>sprigs fresh thyme (or &frac12 tsp dried leaves)</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>+</b>
+	</div>
+	<div class="ingredient">
+		<b>2 (optional) teaspoons salt</b>
+	</div>
+	<br />
+
+	<div class="ingredientAmount">
+		<b>+</b>
+	</div>
+	<div class="ingredient">
+		<b>(optional) large handful of fresh flat-leaf parsley, stems removed</b>
+	</div>
+	<br />
+
+
+<br />
+
+<!--  DIRECTIONS  -->
+<ol>
+	<li>If using fresh clams see step 7 for preparation, otherwise continue to step 2.</li>
+	<br />
+	<li>Open cans of clams and strain juice into measuring cup. Add water until combined mixture equals three cups. Heat until simmering.</li>
+	<br />
+	<li>In large pot, saute garlic and onions in oil and butter until onions are transluscent. Add carrots and celery and saute for three or four minutes.</li>
+	<br />
+	<li>Add heated clam juice and water, potatos, bacon, and bay leaves. Bring to a boil. Reduce heat and simmer 1 to 1&frac14 hour.</li>
+	<br />
+	<li>Add tarragon, thyme, salt (if using), and pepper. Stir into soup.</li>
+	<br />
+	<li>Remove from heat and let cool about 10 minutes. Stir in clams and warmed milk. Spoon into bowls and add parsley.</li>
+	<br />
+	<li>If using fresh clams: rinse clams under cold water and put them in a steamer. The steamer should have plenty of water. Bring to a boil and steam the clams no more than four or five minutes. Remove the steamed clams and rinse under cold water again. Save the steamer water and use it in step 4. Note: it is important to rinse the clams after steaming so they do not get overcooked and become tough. Continue to step 3.</li>
+	<br />
+</ol>
+
+
+<!--  NUTRITIONAL NOTES  -->
+<div id="nutritionalNotes">
+<i><b>Makes about 10 cups (2 quarts); 1 serving (1&#189; cups) *</b>
+ without bacon: 288 calories, 250 mg sodium (without added salt; with added salt: 604 mg), 11 g fat, 62 mg cholesterol;
+ with bacon: 353 calories, 361 mg sodium (without added salt), 17 g fat</i>
+</div>
+
+<div id="credits">
+* values estimated from tables on products and Handbook of The Nutritional Value of Food In Common Units,
+    ISBN: 0-486-21342-0
+</div>
+
+<br />
+</div>
