@@ -1,0 +1,40 @@
+.row {
+    @mixin atMedium {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    
+        &--gutters {
+        column-gap: 5.3%;
+        }
+    
+        &--gutters-large {
+          column-gap: 8%;
+        }
+    
+        &--gutters-small {
+          column-gap: 3.6%;
+        }
+    
+        &__b-margin-until-medium {
+          margin-bottom: 0;
+        }
+    
+        &__medium-2 {
+            grid-column: span 2;
+        }
+      
+          &__medium-4 {
+          grid-column: span 4;
+        }
+    
+        &__medium-6 {
+          grid-column: span 6;
+        }
+    
+        &__medium-8 {
+          grid-column: span 8;
+        }
+    
+      }
+    
+}

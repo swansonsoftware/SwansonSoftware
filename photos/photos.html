@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<title>Swanson Software</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+
+@keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
+  }
+
+  .fading-slideshow {
+    position: relative;
+    margin: 1em auto;
+    padding: 0;
+    list-style-type: none;
+    /*width: 360px;*/
+    height: 500px;
+  }
+  .fading-slideshow > li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* current slide */
+
+  .fading-slideshow > li:first-of-type {
+    animation-name: fader;
+    animation-delay: 30s;
+    animation-duration: 3s;
+    z-index: 20;
+  }
+
+  /* next slide to display */
+
+  .fading-slideshow > li:nth-of-type(2) {
+    z-index: 10;
+  }
+
+  /* all other slides */
+
+  .fading-slideshow > li:nth-of-type(n+3) {
+    display: none;
+  }
+
+  /* image caption */
+  .fading-slideshow li::after {
+    position: absolute;
+    left: 11px;
+    bottom: 11px;
+    padding: 2px 0;
+    width: calc(100% - 22px);
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    content: attr(title);
+    font-size: 1.1em;
+    color: red;
+  }
+  .vcr-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    border-radius: 50px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 100;
+  }
+  .vcr-button {
+    font-size: 3rem;
+    font-weight: normal;
+    color: red;
+    cursor:pointer;
+  }
+      </style>
+</head>
+
+<body>
+  
+    <header>
+        <div class="row">
+            <div class="col-20 banner">
+                <ul class="fading-slideshow">
+                    <li title="View from lanai"><img src="2005/large/KI_20051015_0021.jpg" title="View from Lanai"></li>
+                    <li><img src="2005/large/KI_20051015_0022.jpg" ></li>
+                    <li><img src="2017/large/Dsc01511.jpg" ></li>
+                    <li><img src="2017/large/Dsc01555.jpg" ></li>
+                </ul>
+                <p class="vcr-container">
+                  <a onclick="swapVcrBtn();">
+                    <i id="pause" class="fa fa-pause-circle-o vcr-button"></i>
+                    <i id="play" class="fa fa-play-circle-o vcr-button"></i>
+                  </a><span>&nbsp;&nbsp;&nbsp;</span>
+                  <a onclick="prevSlide();"><i class="fa fa-angle-left vcr-button"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                  <a onclick="nextSlide();"><i class="fa fa-angle-right vcr-button"></i></a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+<script>
+  const controller = new AbortController();
+
+  window.addEventListener("DOMContentLoaded", setFader, false );
+
+  function setFader(e) {
+    document.querySelectorAll(".fading-slideshow > li").forEach(
+      c => c.addEventListener("animationend", e => e.target.parentNode.appendChild(e.target), { signal: controller.signal })
+
+    );
+  }
+
+  // const btnPause = document.getElementById('pause');
+  // const btnPlay = document.getElementById('play');
+  // btnPause.addEventListener('click', swapVcrBtn);
+  // btnPlay.addEventListener('click', swapVcrBtn);
+  const PAUSE = 0;
+  const PLAY = 1;
+  var btnId = PAUSE;
+  swapVcrBtn();
+
+  function swapVcrBtn() {
+    if (btnId == PAUSE) {
+      document.getElementById('pause').style.display = "inline";
+      document.getElementById('play').style.display = "none";
+      btnId = PLAY;
+      pause();
+    } else {
+      document.getElementById('pause').style.display = "none";
+      document.getElementById('play').style.display = "inline";
+      btnId = PAUSE;
+      play();
+    }
+  }
+
+  // window.addEventListener("DOMContentLoaded", e => {
+
+  // document.querySelectorAll(".fading-slideshow > li").forEach(
+  //   c => c.addEventListener("animationend", e => e.target.parentNode.appendChild(e.target))
+  // );
+
+  // });      
+  function pause() {
+
+  }
+
+  function prevSlide() {
+
+  }
+
+  function nextSlide() {
+
+  }
+
+  /*
+   * Home Page Slider
+   *
+  */
+  var slideIndex = 0;
+  var theTimer;
+  var slideInterval = 14;
+  
+  if (slideInterval == 0) {
+      slideInterval = 5;
+  }
+  var selectedImg = -1; //dot clicked
+//  <?php if ($count > 1) { ?>
+//  showSlides();
+//  <?php } else { ?>
+      //show slide
+      // var i;
+      // var imgs = document.getElementsByClassName("sbgs-slider-slide-image");
+      // var slides = document.getElementsByClassName("sbgs-hide-slide");
+      // for (i = 0; i < slides.length; i++) {
+          //  slides[0].style.display = "block";
+          //  imgs[0].className = "sbgs-slider-slide-image";
+      // }
+//  <?php } ?>
+  
+  // var i;
+  // var slides = document.getElementsByTagName("li");
+  // for (i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = "none";
+  // }
+
+  function showSlides() {
+
+      slideIndex++;
+      if (slideIndex > slides.length) {
+          slideIndex = 1;
+      }
+
+      // slides[slideIndex-1].style.display = "flex";
+// alert("hi");
+//       slides[slideIndex-1].style.animationName = "fader";
+//       slides[slideIndex-1].style.animationDelay = "2s";
+//       slides[slideIndex-1].style.animationDuration = "2s";
+//       slides[slideIndex-1].style.zIndex = "20";
+
+      // for (i = 0; i < dots.length; i++) {
+      //     dots[i].className = dots[i].className.replace(" sbgs-active-dot", "");
+      // }
+  
+      // for (i = 0; i < imgs.length; i++) {
+      //     imgs[i].className = "sbgs-slider-slide-image fadein";
+      // }
+      // slides[slideIndex-1].style.display = "block";
+  
+      // dots[slideIndex-1].className += " sbgs-active-dot";
+  
+      theTimer = setTimeout(showSlides, slideInterval*1000); //Time in ms, 3000 = 3 seconds
+  }
+  function currentSlide() {
+    // alert("clearing timer");
+    controller.abort();
+      // clearTimeout(theTimer);
+      // var imgs = document.getElementsByClassName("sbgs-slider-slide-image");
+      // var slides = document.getElementsByClassName("sbgs-hide-slide");
+      // var dots = document.getElementsByClassName("sbgs-dot");
+  
+      // for (i = 0; i < slides.length; i++) {
+      //     slides[i].style.display = "none";
+      // }
+      // if (n > slides.length) {n = 1} 
+      // if (n < 1) {n = slides.length}
+      // for (i = 0; i < dots.length; i++) {
+      //     dots[i].className = dots[i].className.replace(" sbgs-active-dot", "");
+      // }
+  
+      // if (n == selectedImg) {
+      //     slides[n-1].style.display = "block";
+      //     imgs[n-1].className = "sbgs-slider-slide-image fadeout";
+      //     slideIndex = n;
+      //     theTimer = setTimeout(showSlides, slideInterval*1000);
+      //     selectedImg = -1;
+      // } else {
+      //     slides[n-1].style.display = "block";
+      //     imgs[n-1].className = imgs[n-1].className.replace("fadein", "");
+      //     selectedImg = n;
+      // }
+      // dots[n-1].className += " sbgs-active-dot";
+  }
+  </script>
+  
+
+</body>
+</html>
