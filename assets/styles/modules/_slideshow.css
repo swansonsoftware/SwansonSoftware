@@ -58,6 +58,8 @@
 
     &__vcr-container {
         position: absolute;
+        /*opacity: 0;*/
+        transition: all .3s ease-out;
         bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
@@ -67,6 +69,14 @@
         background: rgba(0,0,0,0.5);
         z-index: 100;
 
+        &--is-hidden {
+            opacity: 0;
+        }
+
+        &--is-visible {
+            opacity: 1;
+        }
+    
         &__vcr-button {
             font-size: 3rem;
             font-weight: normal;

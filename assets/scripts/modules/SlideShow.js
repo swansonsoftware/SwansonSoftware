@@ -3,25 +3,27 @@ import { forEach } from "lodash";
 class SlideShow {
     constructor(slideInterval) {
         this.slider = document.querySelector(".slideshow");
-        this.slides = this.slider.getElementsByTagName("li");
-        this.slideTitle = document.querySelector(".slideshow__slide-title");
-        this.btnPause = document.getElementById('pause');
-        this.btnPlay = document.getElementById("play");
-        this.linkPausePlay = document.getElementById("pauseplay");
-        this.btnPrev = document.getElementById("prevslide");
-        this.linkPrev = document.getElementById("prev");
-        this.btnNext = document.getElementById("nextslide");
-        this.linkNext = document.getElementById("next");
-        this.PAUSE = 0;
-        this.PLAY = 1;
-        this.btnIcon = this.PLAY;
-        this.slideIndex = 0;
-        this.prevSlideIndex = -1;
-        this.slideInterval = slideInterval;
-        this.theTimer;
         if (this.slider) {
-            this.events();
-            this.play();
+            this.slides = this.slider.getElementsByTagName("li");
+            this.slideTitle = document.querySelector(".slideshow__slide-title");
+            this.btnPause = document.getElementById('pause');
+            this.btnPlay = document.getElementById("play");
+            this.linkPausePlay = document.getElementById("pauseplay");
+            this.btnPrev = document.getElementById("prevslide");
+            this.linkPrev = document.getElementById("prev");
+            this.btnNext = document.getElementById("nextslide");
+            this.linkNext = document.getElementById("next");
+            this.PAUSE = 0;
+            this.PLAY = 1;
+            this.btnIcon = this.PLAY;
+            this.slideIndex = 0;
+            this.prevSlideIndex = -1;
+            this.slideInterval = slideInterval;
+            this.theTimer;
+            if (this.slider) {
+                this.events();
+                this.play();
+            }
         }
     }
 
