@@ -1,9 +1,16 @@
 import '../styles/styles.css';
 import 'lazysizes';
+import Menu from './modules/Menu';
+import Footer from './modules/Footer';
 import MobileMenu from './modules/MobileMenu';
 import SlideShow from './modules/SlideShow';
 
-let slideShow = new SlideShow(5);
+if (typeof slideInterval != "undefined") {
+    let slideShow = new SlideShow(slideInterval);
+}
+
+let menu = new Menu();
+let footer = new Footer();
 let vanishingMenus;
 
 let slider = document.querySelector(".slideshow");
@@ -14,7 +21,6 @@ if (slider != null) {
         }).catch((e) => console.log("Error loading VanishingMenus " + e)) 
     }
 }
-
 
 let mobileMenu = new MobileMenu();
 

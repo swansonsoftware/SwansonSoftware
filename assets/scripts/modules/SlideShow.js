@@ -1,5 +1,3 @@
-import { forEach } from "lodash";
-
 class SlideShow {
     constructor(slideInterval) {
         this.slider = document.querySelector(".slideshow");
@@ -20,6 +18,7 @@ class SlideShow {
             this.prevSlideIndex = -1;
             this.slideInterval = slideInterval;
             this.theTimer;
+            this.startPlay;
             if (this.slider) {
                 this.events();
                 this.play();
@@ -52,7 +51,7 @@ class SlideShow {
     keyPressPausePlay(e) {
         if (e.code == "Enter") {
             if (this.btnIcon == this.PLAY) {
-                this.play();
+                this.startPlay();
             } else {
                 this.pause();
             }
@@ -75,6 +74,7 @@ class SlideShow {
         clearTimeout(this.theTimer);
         this.swapVcrBtn(this.PAUSE);
     }
+
 
     play() {
         this.swapVcrBtn(this.PLAY);

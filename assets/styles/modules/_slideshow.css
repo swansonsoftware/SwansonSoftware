@@ -16,7 +16,7 @@
         font-size: 1.1em;
         background: rgba(255,255,255,0.0);
         opacity: 0;
-        transition: all 2s ease-out;
+        transition: opacity 2s ease-out;
 
         &--is-visible {
             background: rgba(255,255,255,0.6);
@@ -58,8 +58,7 @@
 
     &__vcr-container {
         position: absolute;
-        /*opacity: 0;*/
-        transition: all .3s ease-out;
+        transition: opacity .2s ease-out;
         bottom: 0px;
         left: 50%;
         transform: translateX(-50%);
