@@ -1,20 +1,29 @@
 import '../styles/styles.css';
-import 'lazysizes';
+//import 'lazysizes';
 import Menu from './modules/Menu';
 import Footer from './modules/Footer';
+import FooterStatic from './modules/FooterStatic';
+import AlbumFooter from './modules/AlbumFooter';
 import MobileMenu from './modules/MobileMenu';
 import SlideShow from './modules/SlideShow';
+import Lightbox from './modules/Lightbox';
+import LiteYTEmbed from './modules/lite-yt-embed';
+import Debug from './modules/debug';
 
 if (typeof slideInterval != "undefined") {
     let slideShow = new SlideShow(slideInterval);
+    let debug = new Debug(slideInterval);
 }
 
 let menu = new Menu();
 let footer = new Footer();
+let footerStatic = new FooterStatic();
+let albumFooter = new AlbumFooter();
 let vanishingMenus;
 
 let slider = document.querySelector(".slideshow");
-if (slider != null) {
+let dbg = document.querySelector(".debug");
+if (slider != null || dbg != null) {
     if (typeof vanishingMenus == "undefined") {
         import('./modules/VanishingMenus').then(x => {
             vanishingMenus = new x.default();
@@ -22,7 +31,9 @@ if (slider != null) {
     }
 }
 
+let albumModal = new Lightbox();
 let mobileMenu = new MobileMenu();
+let liteYTEmbed = new LiteYTEmbed();
 
 if (module.hot) {
     module.hot.accept();

@@ -1,11 +1,32 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: $bodyFontColor;
+    color: $bodyLiteBGFontColor;
+}
+
+body.dark {
+    background-color: $albumBackgroundColor;
+}
+
+body.album {
+    background-color: $albumBackgroundColor;
+}
+
+.no-scroll {
+    height: 100%;
+    overflow: hidden;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    color: $bodyLiteBGFontColor;
+}
+
+a:hover {
+    color: $hoverColorLiteBG;
 }
 
 * {

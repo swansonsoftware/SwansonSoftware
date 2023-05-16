@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<title>Swanson Software</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:wght@100..400&display=swap" rel="stylesheet">
     <script>
         // alert(screen.width); //screen.availHeight: 824; screen.availWidth: 1536; screen.pixelDepth: 24
     </script>
 </head>
 
-<body>
+<body class="dark">
 
     <header class="site-header">
         <div class="wrapper">
@@ -35,15 +32,7 @@
             </div>
 
             <div class="site-header__menu-content">
-                
                 <nav class="primary-nav primary-nav--pull-right">
-                    <ul>
-                        <li><a href="ProcessModels.php">Process Models</a></li>
-                        <li><a href="ProcessRequirements.php">Requirements</a></li>
-                        <li><a href="ProcessDesign.php">Design</a></li>
-                        <li><a href="ProcessLCModels.php">Lifecycle Models</a></li>
-                        <li><a href="ProcessReviews.php">Reviews</a></li>
-                    </ul>
                 </nav>
             </div>
         </div>
@@ -51,9 +40,9 @@
 
     <div class="banner">
         <picture class="banner__image">
-            <source srcset="assets/images/0a-hero.webp 1920w, assets/images/0a-hero-hi-dpi-i.jpg 3840w" media="(min-width: 1380px)">
-            <source srcset="assets/images/0a-hero--medium.webp 990w" media="(min-width: 640px)">
-            <img srcset="assets/images/0a-hero--small.webp 640w" alt="Kauai Beach moonrise">
+            <source srcset="assets/images/0a-hero.webp" media="(min-width: 1380px)">
+            <source srcset="assets/images/0a-hero--medium.webp" media="(min-width: 640px)">
+            <img src="assets/images/0a-hero--small.webp" alt="Kauai Beach moonrise">
         </picture>
         <div class="banner__text-content">
             <div class="wrapper">
@@ -63,26 +52,8 @@
         </div>
     </div>
 
-    <div class="page-section">
-        <div class="wrapper">
-            <p>
-                September 30, 2007: <a href="ProcessReviews.php">Software Reviews version 1.2</a>.
-            </p>
-            <ul>
-                <li><a href="portfolio.html">Portfolio</a> of my projects</li>
-                <li><a href="./photos/photos.html">Family Album</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <footer  class="site-footer">
-        <div class="wrapper">
-            <p><span class="site-footer__text">Copyright &copy; 1999-2019. All rights reserved. | 
-            <a href="emailForm.php" class="generic">Contact</a> |
-            <a href="about.php" class="generic">About SwansonSoftware.com</a></span></p>
-        </div>
+    <footer  class="site-footer-static">
     </footer>
 
-     <script src="bundled.js"></script>
 </body>
 </html>

@@ -2,21 +2,16 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<title>Swanson Software - Portfolio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin Sans:wght@100..400&display=swap" rel="stylesheet">
-    <script>
-    </script>
 </head>
 
 <body>
 <a id="top"></a>
 
-<header class="site-header">
+<header class="site-header site-header--dark">
     <div class="wrapper">
         <!--
         <div class="site-header__logo">
@@ -25,49 +20,23 @@
             </a>
         </div>
         -->
-        <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon site-header__menu-icon--dark">
             <div class="site-header__menu-icon__bars">
-                <i class="fa fa-bars" style="color: #fff;"></i>
+                <i class="fa fa-bars"></i>
             </div>
             <div class="site-header__menu-icon__x">
-                <i class="fa fa-close" style="color: #fff;"></i>
+                <i class="fa fa-close"></i>
             </div>
         </div>
 
         <div class="site-header__menu-content">
-                
-            <nav class="primary-nav primary-nav--pull-right">
-                <ul>
-                    <li><a href="ProcessModels.php">Process Models</a></li>
-                    <li><a href="ProcessRequirements.php">Requirements</a></li>
-                    <li><a href="ProcessDesign.php">Design</a></li>
-                    <li><a href="ProcessLCModels.php">Lifecycle Models</a></li>
-                    <li><a href="ProcessReviews.php">Reviews</a></li>
-                </ul>
+            <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
             </nav>
         </div>
     </div>
 </header>
 
 
-<div class="slideshow">
-    <div class="slideshow__slide-title"></div>
-    <ul class="slideshow__slides">
-        <li class="slideshow__slides__slide" title="View from Lanai"><img src="photos/2005/large/KI_20051015_0021.jpg"></li>
-        <li class="slideshow__slides__slide" title="View from Lanai"><img src="photos/2005/large/KI_20051015_0022.jpg"></li>
-        <li class="slideshow__slides__slide" title="San Jose Rose Garden"><img class="lazyload" src="photos/2017/large/Dsc01511.jpg" ></li>
-        <li class="slideshow__slides__slide" title="San Jose Rose Garden"><img class="lazyload" src="photos/2017/large/Dsc01555.jpg" ></li>
-        <li class="slideshow__slides__slide" ><img class="lazyload" src="photos/2018/large/Dsc02425.jpg" ></li>
-    </ul>
-    <p class="slideshow__vcr-container">
-        <a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
-          <i id="pause" class="fa fa-pause-circle-o slideshow__vcr-container__vcr-button"></i>
-          <i id="play" class="fa fa-play-circle-o slideshow__vcr-container__vcr-button"></i>
-        </a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link"><i id="prevslide" class="fa fa-angle-left slideshow__vcr-container__vcr-button"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="#" id="next" class="slideshow__vcr-container__vcr-button--link"><i id="nextslide" class="fa fa-angle-right slideshow__vcr-container__vcr-button"></i></a>
-    </p>
-</div>
 
 <div class="page-section">
     <div class="wrapper">
@@ -78,17 +47,22 @@
             <div class="row__medium-6 row__b-margin-until-medium">
                 <h1 class="headline">Projects</h1>
                 <p>
-                    The portfolio below is the result of consulting projects done done while between jobs, except for Zippy and PhysicianAccess. Most of these companies are no longer in business.
+                    I haved worked in software development for over 30 years, for companies of all sizes from 2 developers to 
+                    hundreds, and I have seen the tools and processes evolve. I have stored programs on punch cards, paper tape,
+                    floppy disk and CDs, and now in the cloud.
                 </p>
-                <p>
-                    <b>FindLocalWork.com</b>
-                    - Web-based company information resource for job hunters and sales professionals. Created using PHP and MySQL on Linux. My work on this system included database design, application design, PDF reports, email, and credit card processing setup with Verisign's Payflow Link. Graphic design and images were added by a third party.
+                <p>Some of the companies I worked for did not even have an application for tracking software bugs. Some started
+                    without a bug tracker and later realized they needed one, so they used one that came as freeware with another 
+                    application. Some used an application developed in-house, or purchased an application. Others used one
+                    application for customer issues (SalesForce) and another for bugs (Jira). 
                 </p>
-        
-                <p>
-                    <a href="portfolio_zippy.php">Zippy Communications</a>
-                    - Visual Basic 6.0 client/server application for integrated messaging, collaboration and
-                    personal information management.
+                <p>The worst customer support I witnessed occurred when using SalesForce and Jira, because SalesForce was customized
+                    for the Sales people and did not have fields needed for tracking bug information or linking to information in Jira,
+                    and we did not use a tool to synchronize customer issues with Jira. There was a lot of duplicated work, missed
+                    communications, and frustrated customers. Even after several rounds of customizations to SalesForce, which 
+                    were intended to address mainly the Sales team needs, the features and fields needed by Support were missing. Everybody
+                    on the Support team hated SalesForce. Furthermore, this way of doing things appears to be the new standard 
+                    in the business.
                 </p>
         
                 <p>
@@ -96,40 +70,21 @@
                     - Web-based customer call tracking system.
                 </p>
         
-                <p>
-                    <a href="portfolio_velocity.php">Velocity Management Systems, Inc.</a>
-                    - Company brochure
-                </p>
-        
-                <p>
-                    <a href="portfolio_intransaction.php">Intransaction, Inc.</a>
-                    - Web-based multi-state Workers' Compensation Insurance quote processing system.
-                </p>
-        
-                <p>
-                    <a href="portfolio_pax.php">PhysicianAccess.com</a>
-                    - QA support tools - bug tracker, call tracker.
-                </p>
-            
             </div>
 
             <div class="row__medium-6 row__b-margin-until-medium">
                 <h1 class="headline">Languages and Technologies</h1>
-                <p>
-                    My expertise is application development for the Microsoft&#174; <b>Windows</b> platform. I
-                    began using Visual Basic in 1994 with VB 3 and have used all versions through VB 6. Around 2009
-                    I began using C#, and most of my work now is with C#.
+                <p>The first programs I wrote were on puch cards and on a teletype (no monitor). Most of the applications I wrote through the 1980's were on a teletype. Instead of a monitor, there was a box of tractor-feed computer paper on the floor, which spooled continuously through the teletype. When the program was finished, I puched it out on paper tape and stored in a plastic box.
                 </p>
+                <p>I was a latecomer to software development on the PC in the 1990's, and that work began on Microsoft&#174; <b>Windows</b>. Today, Windows is still my platform of choice for development, even when developing a website that will run on Linux with an Apache web server.</p>
+
+                <p>I began using Visual Basic in 1994 with VB 3 and have used all versions through VB 6. However, VB has been fully eclipsed by newer and better .NET languages and around 2009 I switched to C# for most development. As a hobbiest web developer I use PHP and WordPress, or simple HTML with WebPack and node.js to automate, organize, and bundle project files. I began doing web development around 1999.</p>
                 
-                <p>
-                    In addition to application development I enjoy Web development. I began web development around 1999, with consulting jobs, commercial off-the-shelf products, and development of my site.
-                </p>
                 <p>
                     Languages I use:
                     <ul>
+                        <li>PHP</li>
                         <li>C# (Visual Studio)</li>
-                        <li>Visual Basic (VB 6)</li>
-                        <li>VBScript</li>
                         <li>JavaScript</li>
                     </ul>
                 </p>
@@ -139,10 +94,8 @@
                 </p>
                     
                 <ul>
-                    <li>Wix (Windows Installer toolset)</li>
-                    <li>HTML 4, 5</li>
+                    <li>HTML</li>
                     <li>CSS</li>
-                    <li>ASP</li>
                     <li>SQL</li>
                     <li>XML</li>
                 </ul>
@@ -153,21 +106,24 @@
                     
                 <ul>
                     <li>SQL Server</li>
-                    <li>IIS (manual and scripting configuration)</li>
-                    <li>PaintShop</li>
                     <li>SVN/Tortoise</li>
+                    <li>WordPress</li>
+                    <li>Github</li>
+                    <li>PaintShop</li>
+                    <li>Illustrator</li>
+                    <li>IIS (manual and scripting configuration)</li>
                 </ul>
                 
                 <p>
-                Tools and applications I use less frequently now:
+                Languages and applications I used a lot, but less frequently now:
                 </p>
                     
                 <ul>
+                    <li>Visual Basic (VB 6)</li>
+                    <li>VBScript</li>
                     <li>C&#92;C++ (Visual Studio flavors)</li>
+                    <li>Wix (Windows Installer toolset)</li>
                     <li>PowerShell</li>
-                    <li>MySQL</li>
-                    <li>PHP</li>
-                    <li>Perl</li>
                     <li>Actuate</li>
                     <li>Microsoft HTML Help Workshop</li>
                     <li>Microsoft Help Workshop - old style help</li>
@@ -187,16 +143,10 @@
     </div>
 </div> 
 
-
 <footer  class="site-footer">
-    <div class="wrapper">
-        <p><span class="site-footer__text">Copyright &copy; 1999-2019. All rights reserved. | 
-        <a href="emailForm.php" class="generic">Contact</a> |
-        <a href="about.php" class="generic">About SwansonSoftware.com</a></span></p>
-    </div>
 </footer>
 
- <script src="bundled.js"></script>
+<script>slideInterval = 5;</script>
 
 </body>
 </html>

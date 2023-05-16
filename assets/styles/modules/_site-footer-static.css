@@ -1,0 +1,25 @@
+.site-footer-static {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+
+    &__text {
+        display: block;
+        margin-bottom: 1rem;
+        color: $bodyDarkBGFontColor;
+    
+        @mixin atMedium {
+          display: inline;
+          margin-bottom: 0;
+          margin-right: 1.4rem;
+        }
+        a {
+            color: $bodyDarkBGFontColor;
+          }
+        a:hover {
+        color: $hoverColorDarkBG;
+        }
+    }
+    
+}

@@ -1,0 +1,142 @@
+.album-photos {
+    /*position: relative;*/
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &--pull-left {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        justify-content: flex-start;
+    }
+
+    &__polaroid {
+        padding-top: 10px;
+        color: $bodyLiteBGFontColor;
+
+        &--rotate-right {
+            width: 284px;
+            padding: 10px 10px 20px 10px; /*top right bottom left*/
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            float: left;
+            -ms-transform: rotate(7deg); /* IE 9 */
+            -webkit-transform: rotate(7deg); /* Safari */
+            transform: rotate(7deg);
+        }
+
+        &--rotate-left {
+            width: 284px;
+            padding: 10px 10px 20px 10px; /*top right bottom left*/
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            float: left;
+            -ms-transform: rotate(-8deg); /* IE 9 */
+            -webkit-transform: rotate(-8deg); /* Safari */
+            transform: rotate(-8deg);
+        }
+
+        &--rotate-none {
+            width: 284px;
+            padding: 10px 10px 20px 10px; /*top right bottom left*/
+            border: 1px solid #BFBFBF;
+            background-color: white;
+            float:left;
+        }
+
+        &__book {
+            box-shadow: 10px 10px 5px #aaaaaa;
+            margin-right: 10px;
+        }
+
+        &--show-overlay {
+            text-decoration: none;
+            z-index: 5;
+        }
+
+        a img {
+            border: 3px solid #fff;
+        }
+
+        a:hover img {
+            border: 3px solid #000;
+        }
+    }
+
+    /*
+    &__headline {
+        color: #fff;
+        font-size: 1.9rem;
+        position: relative;
+    }
+*/
+
+    &__photo-title{
+        position: absolute;
+        top: 50%;
+        left:0%;
+        width: 200px;
+        transform: translate(0%, -50%);
+        padding: 0px 15px;
+        border-radius: 5px;
+        font-family: 'Tangerine', sans-serif;
+        text-align: center;
+        font-size: 2em;
+        font-weight:600;
+        background: rgba(255,255,255,0.3);
+        opacity: 1;
+        transition: all 0.5s ease-in;
+        z-index: 1;
+
+        &--is-collapsed {
+            left: -185px;
+        }
+
+        &__button {
+            position: fixed;
+            top: 0%;
+            right: 0%;
+            height: 100%;
+            width: 15px;
+            background-color: rgba(255,255,255,0.3);
+            text-decoration: none;
+            z-index: 2;
+            
+            &:hover{
+                cursor: pointer;
+                background: rgba(0,0,0,0.6);
+            }
+
+            &__icon-left {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $bodyLiteBGFontColor;
+                position: fixed;
+                top: 50%;
+                transform: translate(0%, -50%);
+                right: 2px;
+            }
+
+            &__icon-right {
+                font-size: 2rem;
+                font-weight: bold;
+                color: $bodyLiteBGFontColor;
+                position: fixed;
+                top: 50%;
+                transform: translate(0%, -50%);
+                right: 2px;
+            }
+        }
+    }
+
+    &__photo-caption {
+        color: rgb(255,255,255,0.3);
+        transition: color .5s ease-in-out;
+ 
+        &--is-visible {
+            color: $bodyLiteBGFontColor;
+        }
+    }
+
+}

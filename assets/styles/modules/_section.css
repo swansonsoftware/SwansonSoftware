@@ -1,0 +1,37 @@
+.section {
+    counter-reset: section;
+    
+    &--h2 {
+        counter-reset: subsection;
+        margin-bottom:0px;
+    
+        &:before {
+            counter-increment: section;
+            content: counter(section) ". ";
+        }
+    }
+    
+    &--h3 {
+        counter-reset: subsubsection;
+        margin-bottom:0px;
+    
+        &:before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection) " ";
+        }
+    }
+    
+    &--h4 {
+        &:before {
+            counter-increment: subsubsection;
+            content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+            margin-top:0px;
+            margin-bottom:0px;        
+        }
+    }
+
+    &__refs {
+        text-align: center;
+        margin-top: 2em;
+    }
+}

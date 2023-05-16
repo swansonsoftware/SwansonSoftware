@@ -1,2 +1,9 @@
-$bodyFontColor: #000;
+$bodyLiteBGFontColor: #000;
+$bodyDarkBGFontColor: #fff;
 $bannerFontWhite: #fff;
+$hoverColor: #fff;
+$hoverColorLiteBG: #282828;
+$hoverColorDarkBG: #e8e8e8;
+$albumBackgroundColor: #000;
+$menuTransition: 0.2s;
+$slideTransition: 1s;

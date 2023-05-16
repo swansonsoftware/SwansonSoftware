@@ -6,10 +6,28 @@
         }
     }
 
+    &__siteHome {
+        position: relative;
+        @mixin atMedium {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__albumHome {
+        position: relative;
+        @mixin atMedium {
+            position: absolute;
+            /*left: 100px;*/
+            float:right;
+        }
+    }
+
     a {
-        color: #fff;
+        color: $bodyDarkBGFontColor;
         text-decoration: none;
         padding: 7px 15px;
+        transition: all $menuTransition ease-in;
     }
 
     a:hover, a:focus{
@@ -20,13 +38,13 @@
 
     &&--dark {
         a {
-            color: #000;
+            color: $bodyLiteBGFontColor;
             text-decoration: none;
             padding: 7px 15px;
         }
 
         a:hover, a:focus{
-            color: #fff;
+            color: $bodyDarkBGFontColor;
             text-decoration: underline;
             border-radius: 5px;
             background-color: #000;
@@ -41,19 +59,35 @@
     
     li {
         list-style: none;
-        display: inline-block;
-        padding-right: 15px;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-top: 1px solid #fff;
 
         @mixin atMedium {
             float: left;
-            display: block;
+            display: inline-block;
+            padding-right: 15px;
+            border-top: none;
+        }
+    }
+
+    li:first-child {
+        padding-top: 0px;
+        padding-bottom: 5px;
+        border-top: none;
+        @mixin atMedium {
+            padding-top: 4px;
         }
     }
 
     li:last-child {
         padding-right: 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #fff;
         @mixin atMedium {
             padding-right: 20px;
+            border-bottom: none;
         }
     }
 }

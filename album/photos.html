@@ -2,91 +2,47 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8" />
-	<title>Swanson Software</title>
+	<meta charset="utf-8">
+	<title>Greg And Ru&#39;s Album</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 </head>
 
-<body>
+<body class="album">
 
 <header class="site-header">
     <div class="wrapper">
-        <!--
-        <div class="site-header__logo">
-            <a href="index.html">
-                <img src='images/logo.gif' alt='Swanson Software logo image' title='Swanson Software' />
-            </a>
-        </div>
-        -->
         <div class="site-header__menu-icon">
             <div class="site-header__menu-icon__bars">
-                <i class="fa fa-bars" style="color: #fff;"></i>
+                <i class="fa fa-bars"></i>
             </div>
             <div class="site-header__menu-icon__x">
-                <i class="fa fa-close" style="color: #fff;"></i>
+                <i class="fa fa-close"></i>
             </div>
         </div>
 
         <div class="site-header__menu-content">
-            <nav class="album-nav">
-                
-                <!--
-                <div class="album-nav__menu-wrapper" id="myTopnav">
-                -->
-                    <!-- <div class="dropdown"> -->
-                        <!--
-                    <div class="album-nav__menu-level-top">
-                        <button class="album-nav__dropbtn" >1900s 
-                        -->
-                            <!--
-                            <span class="ss-menu-caret">
-                                <i class="fa fa-caret-down"></i>
-                                <i class="fa fa-plus" id="p1"></i>
-                                <i class="fa fa-minus" id="m1"></i>
-                            </span>
-                        -->
-                        <!--
-                        </button>
-                    -->
-                        <!--<div class="dropdown-content" id="submenu1">-->
-                            <!--
-                        <div class="album-nav__menu-level-sub1" id="submenu1">
-                            <a href="oldTimes.php" style="border-top: none;">Old Times</a>
-                            <a href="1989.php">1989</a>
-                            <a href="1999.php">1999</a>
-                        </div>-->
-                    <!--
-                    </div>
-
-                </div>-->
+            <nav class="album-nav album-nav--pull-right">
             </nav>
         </div>
     </div>
 </header>
-
-
-<div class="slideshow">
-    <div class="slideshow__slide-title"></div>
-    <ul class="slideshow__slides">
-        <li class="slideshow__slides__slide" title="View from Lanai"><img src="images/2000s/2005/KI_20051015_0021.webp"></li>
-        <li class="slideshow__slides__slide" title="View from Lanai"><img src="images/2000s/2005/KI_20051015_0022.webp"></li>
-        <li class="slideshow__slides__slide" title="San Jose Rose Garden"><img class="lazyload" src="images/2010s/2017/Dsc01511.webp" ></li>
-        <li class="slideshow__slides__slide" title="San Jose Rose Garden"><img class="lazyload" src="images/2010s/2017/Dsc01555.webp" ></li>
-        <li class="slideshow__slides__slide" ><img class="lazyload" src="images/2010s/2018/Dsc02425.webp" ></li>
-    </ul>
-    <p class="slideshow__vcr-container">
-        <a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
-          <i id="pause" class="fa fa-pause-circle-o slideshow__vcr-container__vcr-button"></i>
-          <i id="play" class="fa fa-play-circle-o slideshow__vcr-container__vcr-button"></i>
-        </a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link"><i id="prevslide" class="fa fa-angle-left slideshow__vcr-container__vcr-button"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-        <a href="#" id="next" class="slideshow__vcr-container__vcr-button--link"><i id="nextslide" class="fa fa-angle-right slideshow__vcr-container__vcr-button"></i></a>
-    </p>
+<br>
+<div class="album-wrapper">
+    <div class="album-wrapper__video">
+        <div class="lyt-video">
+            <lite-youtube class="lyt-video--center" videoid="wRYuLtZ5cig" playlabel="">
+                <span class="lyt-video__video-caption">Kauai<br>Moonrise over Nukoli'i Beach</span>
+            </lite-youtube>
+        </div>
+    </div>
 </div>
+<br>
 
-<script>slideInterval = 55;</script>
+<footer  class="album-footer">
+</footer>
+
 <script src="../bundled.js"></script>
 
 </body>

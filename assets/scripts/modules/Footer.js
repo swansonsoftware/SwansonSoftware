@@ -8,9 +8,9 @@ class Footer {
         if (this.footerElement != null) {
             this.footerElement.insertAdjacentHTML("beforeend", `
             <div class="wrapper">
-                <p><span class="site-footer__text">Copyright &copy; 1999-2019. All rights reserved. | 
-                <a href="emailForm.php">Contact</a> |
-                <a href="about.php">About SwansonSoftware.com</a></span></p>
+                <p><span class="site-footer__text">Copyright &copy; 2023. All rights reserved. | 
+                <a href="email-form.html">Contact</a> |
+                <a href="about.html">About SwansonSoftware.com</a></span></p>
             </div>
             `)
         }

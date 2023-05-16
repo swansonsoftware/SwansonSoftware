@@ -4,7 +4,7 @@
         grid-template-columns: repeat(12, 1fr);
     
         &--gutters {
-        column-gap: 5.3%;
+          column-gap: 5.3%;
         }
     
         &--gutters-large {

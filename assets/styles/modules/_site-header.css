@@ -4,19 +4,24 @@
     width: 100%;
     z-index: 2;
     transition: background-color .3s ease-out;
+    backdrop-filter: blur(2px);
 
     &--is-expanded {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.5);
         &--dark {
             background-color: rgba(230, 230, 230, 0.7);
         }
     }
+    &--is-hidden {
+        backdrop-filter: none;
+    }
 
     @mixin atMedium {
+        padding: 10px 0;
         position: fixed;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.1);
         &--dark {
-            background-color: rgba(230, 230, 230, 0.7);
+            background-color: rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -35,7 +40,7 @@
         color: #fff;
 
         &--dark {
-            color: #000;
+            color: $bodyLiteBGFontColor;
         }
 
         .site-header__menu-icon__x {
@@ -61,27 +66,28 @@
 
     &__menu-content {
         opacity: 0;
+        display: none;
         transform: scale(.8);
         transition: all .3s ease-out;
-        z-index: -10;
         position: relative;
-        text-align: center;
+        text-align: left;
 
         @mixin atMedium {
             opacity: 1;
-            z-index: 1;
+            display: block;
             transform: scale(1);
+            text-align: center;
         }
 
-        &--is-hidden {
+        &--is-hidden {/*Used with VanishingMenus*/
             opacity: 0;
-            z-index: 1;
             transform: scale(1);
+            display: none;
         }
 
         &--is-visible {
+            display: block; /* ?? this ignores the transform so may need to do this in js */
             opacity: 1;
-            z-index: 1;
             transform: scale(1);
         }
     }
