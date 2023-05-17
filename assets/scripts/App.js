@@ -8,11 +8,9 @@ import MobileMenu from './modules/MobileMenu';
 import SlideShow from './modules/SlideShow';
 import Lightbox from './modules/Lightbox';
 import LiteYTEmbed from './modules/lite-yt-embed';
-import Debug from './modules/debug';
 
 if (typeof slideInterval != "undefined") {
     let slideShow = new SlideShow(slideInterval);
-    let debug = new Debug(slideInterval);
 }
 
 let menu = new Menu();
