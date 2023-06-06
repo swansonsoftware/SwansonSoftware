@@ -1,7 +1,16 @@
 .primary-nav {
 
     &&--pull-right {
+        background: $siteHeaderDarkBackgroundColor;
+        position: relative;
+        top: -110px;
+        padding-top: 100px;
+        padding-bottom: 15px;
+
         @mixin atMedium {
+            position:static;
+            padding-top: 0;
+            padding-bottom: 0;
             float: right;
         }
     }
@@ -14,61 +23,56 @@
         }
     }
 
-    &__albumHome {
-        position: relative;
-        @mixin atMedium {
-            position: absolute;
-            /*left: 100px;*/
-            float:right;
-        }
-    }
-
     a {
         color: $bodyDarkBGFontColor;
         text-decoration: none;
-        padding: 7px 15px;
         transition: all $menuTransition ease-in;
+        
+        @mixin atMedium {
+            padding: 4px 15px;
+        }
     }
 
-    a:hover, a:focus{
+    a:hover{
         text-decoration: underline;
-        border-radius: 5px;
-        background-color: #000;
     }
 
     &&--dark {
+        background: $siteHeaderLiteBackgroundDesktop;
+
         a {
             color: $bodyLiteBGFontColor;
             text-decoration: none;
             padding: 7px 15px;
         }
 
-        a:hover, a:focus{
-            color: $bodyDarkBGFontColor;
+        a:hover{
             text-decoration: underline;
-            border-radius: 5px;
-            background-color: #000;
         }
     }
 
     ul {
         margin: 0;
-        padding: 0;
+        padding: 25px 0px 0px 30px; /*top right bottom left*/
         @mixin clearfix{};
-      }
+        @mixin atMedium{
+            padding: 25px 0px 0px 0px;
+        }
+    }
     
     li {
         list-style: none;
         display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-top: 1px solid #fff;
+        padding-top: 25px;
+        font-size: 1.8rem;
 
         @mixin atMedium {
             float: left;
             display: inline-block;
+            padding-top: 4px;
             padding-right: 15px;
             border-top: none;
+            font-size: 1.2rem;
         }
     }
 
@@ -84,10 +88,8 @@
     li:last-child {
         padding-right: 0;
         padding-bottom: 5px;
-        border-bottom: 1px solid #fff;
         @mixin atMedium {
             padding-right: 20px;
-            border-bottom: none;
         }
     }
 }

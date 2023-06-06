@@ -20,6 +20,18 @@
             opacity: 1;
             visibility: visible;
             transform: scale(1);
+            z-index: 10;
+        }
+
+        &--anchor {
+            text-decoration: none;
+            /*position: absolute;
+            top: 18px;
+            right: 16px;*/
+            &:focus {
+                color: #fff;
+                font-weight: 700;
+            }
         }
 
         &--close-icon {
@@ -27,15 +39,21 @@
             top: 18px;
             right: 16px;
             cursor: pointer;
-            color: rgba(255, 255, 255, 0.5);
-            border: 1px solid black;
-            background-color: rgba(0, 0, 0, .5);
-            font-size:24px;
+            font-size:40px;
             &:hover {
-                background-color: $hoverColor;
-                color: #000;
-                font-weight: bold;
+                color: #fff;
+                font-weight: 700;
             }
+            &:focus {
+                color: #fff;
+                font-weight: 700;
+            }
+        }
+        &--close-icon::after{
+            font-family: 'Material Icons';
+            font-style: normal;
+            color: rgba(255, 255, 255, 0.9);
+            content: '\e5c9';
         }
 
         &__image {

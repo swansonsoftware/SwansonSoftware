@@ -57,7 +57,8 @@ let config = {}
 if (currentTask == 'dev') {
     
     config.entry = './assets/scripts/App.js'
-    config.plugins = swansonSoftareHtmlPages
+    // config.plugins = swansonSoftareHtmlPages
+    config.plugins = htmlpages
     config.module = {
         rules: [
             cssConfig

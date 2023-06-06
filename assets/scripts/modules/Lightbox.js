@@ -2,6 +2,7 @@ class Lightbox {
     constructor() {
         this.injectHTML();
         this.overlay = document.querySelector(".lightbox__overlay");
+        this.overlayAnchor = document.querySelector(".lightbox__overlay--anchor");
         this.closeIcon = document.querySelector(".lightbox__overlay--close-icon");
         this.overlayImageDiv = document.querySelector("#lightbox__overlay__image");
         this.overlayRequesters = document.querySelectorAll(".album-photos__polaroid--show-overlay");
@@ -27,12 +28,13 @@ class Lightbox {
     injectHTML() {
         document.body.insertAdjacentHTML("beforeend", `
         <div class="lightbox__overlay">
-            <i class="fa fa-window-close lightbox__overlay--close-icon" aria-hidden="true"></i>
+            <a href="#" class="lightbox__overlay--anchor"><i class="lightbox__overlay--close-icon" aria-hidden="true"></i></a>
             <div id="lightbox__overlay__image" class="lightbox__overlay__image" ></div>
             <div class="album-photos__photo-title">
             <a href="#" class="album-photos__photo-title__button">
-                <i id="angle-left" class="fa fa-angle-left album-photos__photo-title__button__icon-left"></i>
-                <i id="angle-right" class="fa fa-angle-right album-photos__photo-title__button__icon-right"></i>
+                <span class="accessibility--hidden">Select this button to alternately close or open the box with the photo caption.</span>
+                <i id="angle-left" class="album-photos__photo-title__button__icon-left"></i>
+                <i id="angle-right" class="album-photos__photo-title__button__icon-right"></i>
             </a><span id="photoCaption" class="album-photos__photo-caption"></span>
         </div>
         </div>
@@ -43,6 +45,7 @@ class Lightbox {
         if (this.closeIcon) {
             this.closeIcon.addEventListener("click", e => this.closeOverlay(e));
             document.addEventListener("keydown", e => this.keyPressDispatcher(e))
+            // this.overlayAnchor.addEventListener("click", e => this.closeOverlay(e)); //for tab navigation
         }
         this.overlayRequesters.forEach(el => el.addEventListener("click", e => {this.openOverlay(e, el)}));
 
@@ -87,6 +90,7 @@ class Lightbox {
         this.largeFilename = '';
         this.hidpiFilename = '';
         this.filename = fqFilename.substring(fqFilename.lastIndexOf("album/") + 6);
+        this.filename = this.filename.replace('.jpg', '.webp');
         this.mediumFilename = this.filename.replace('small', 'medium');
         this.largeFilename = this.filename.replace('small', 'large');
         this.hidpiFilename = this.filename.replace('small', 'hidpi');
@@ -116,21 +120,13 @@ class Lightbox {
             
             //Replace "small" with "large" or "hidpi" in the filename
 
-            // this.overlayImageDiv.innerHTML = `
-            //     <picture>
-            //         <source srcset="${this.hidpiFilename} 2x" media="(min-width: 2000px)">
-            //         <source srcset="${this.largeFilename}" media="(min-width: 1000px)">
-            //         <img src="${this.filename}" alt="${photoCaption}" />
-            //     </picture>
-            //     `;
-
-                this.overlayImageDiv.innerHTML = `
-                <picture>
-                    <source srcset="${this.largeFilename} 1x, ${this.hidpiFilename} 2x" media="(min-width: 1000px)">
-                    <source srcset="${this.filename} 1x, ${this.mediumFilename} 2x" media="(min-width: 600px)">
-                    <img src="${this.filename}" alt="${photoCaption}" />
-                </picture>
-                `;
+            this.overlayImageDiv.innerHTML = `
+            <picture>
+                <source srcset="${this.largeFilename} 1x, ${this.hidpiFilename} 2x" media="(min-width: 1000px)">
+                <source srcset="${this.filename} 1x, ${this.mediumFilename} 2x" media="(min-width: 600px)">
+                <img src="${this.filename}" alt="${photoCaption}" />
+            </picture>
+            `;
 
             this.overlay.classList.add("lightbox__overlay--visible");
         }
@@ -138,6 +134,7 @@ class Lightbox {
     }
 
     closeOverlay(e) {
+        e.preventDefault();
         if (this.isOverlayOpen) {
             this.overlay.classList.remove("lightbox__overlay--visible");
             document.body.classList.remove('no-scroll');

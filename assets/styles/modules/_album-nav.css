@@ -1,7 +1,16 @@
 .album-nav {
 
     &&--pull-right {
+        background: $albumBackgroundColor;
+        position: relative;
+        top: -100px;
+        padding-top: 100px;
+        padding-bottom: 15px;
+
         @mixin atMedium {
+            position:static;
+            padding-top: 0;
+            padding-bottom: 0;
             float: right;
         }
     }
@@ -11,14 +20,6 @@
         @mixin atMedium {
             position: absolute;
             left: 0;
-        }
-    }
-
-    &__albumHome {
-        position: relative;
-        @mixin atMedium {
-            position: absolute;
-            left: 100px;
         }
     }
 
@@ -33,10 +34,6 @@
         }
     }
 
-    &__menu-level-top {
-        width: 100%;
-    }
-
     &__dropdown-content {
         /*display: none;*/ /* need display none so user can tap on image that is below the menu*/
         position: relative;
@@ -48,7 +45,6 @@
         transition: opacity 0.05s ease-in; /* transition doesn't work when setting display: block*/
 
         &--visible {
-            /*display: block;*/
             background-color: rgba(0, 0, 0, 0.5);
             opacity: 1;
             transition: opacity 0.05s ease-in;
@@ -96,8 +92,6 @@
 
     a:hover{
         text-decoration: underline;
-        border-radius: 5px;
-        background-color: #000;
     }
 
     &&--dark {
@@ -107,40 +101,38 @@
             padding: 7px 15px;
         }
 
-        a:hover, a:focus{
-            color: $bodyDarkBGFontColor;
+        a:hover{
             text-decoration: underline;
-            border-radius: 5px;
-            background-color: #000;
         }
     }
 
     ul {
         margin: 0;
-        padding: 0;
+        padding: 25px 0px 0px 30px; /*top right bottom left*/
         @mixin clearfix{};
-      }
+        @mixin atMedium{
+            padding: 25px 0px 0px 0px;
+        }
+    }
     
     li {
         list-style: none;
         display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-top: 1px solid #fff;
+        padding-top: 25px;
+        font-size: 1.8rem;
 
         @mixin atMedium {
             float: left;
             display: inline-block;
             padding-top: 4px;
             padding-right: 15px;
-            border-top: none;
+            font-size: 1.2rem;
         }
     }
 
     li:first-child {
         padding-top: 0px;
         padding-bottom: 5px;
-        border-top: none;
         @mixin atMedium {
             padding-top: 4px;
         }
@@ -149,10 +141,8 @@
     li:last-child {
         padding-right: 0;
         padding-bottom: 5px;
-        border-bottom: 1px solid #fff;
         @mixin atMedium {
             padding-right: 20px;
-            border-bottom: none;
         }
     }
 }

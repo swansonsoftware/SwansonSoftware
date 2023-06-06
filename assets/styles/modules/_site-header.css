@@ -1,94 +1,168 @@
 .site-header {
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
+    padding: 0 0; /* top padding causes scrollbar to move down so must be 0 */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    height: 90px;
+    z-index: 10;
     transition: background-color .3s ease-out;
-    backdrop-filter: blur(2px);
+    transition: top .3s;
+
+    @mixin atSmall{
+        position: absolute;
+        right: 0px;
+        padding-top: 0;
+    }
+    @mixin atMedium {
+        width: 100%;
+        height: 90px;
+        padding: 10px 0;
+        /*position: sticky;*/ /* Home page hero is pushed down with sticky*/
+        position: fixed;
+        background-color: $siteHeaderDarkBackgroundColor;
+    }
+
+    &--dark {
+        background-color: $siteHeaderLiteBackgroundDesktop;
+        position: sticky;
+    }
+    &--album {
+        background-color: $siteHeaderDarkBackgroundColor;
+        position: sticky;
+    }
+    &--album-slideshow {
+        background-color: $siteHeaderDarkBackgroundColor;
+    }
+
+    &--collapse {
+        top: -100px;
+        transition: top .3s;
+    }
+    &--expand {
+        /*position: fixed; can't see top of page*/
+        top: 0;
+    }
+    &__slideshow-expand {
+        top:0;
+        width: 100%;
+    }
+    &__slideshow-collapse {
+        top:-100px;
+        width: 100%;
+    }
 
     &--is-expanded {
-        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        height: 100%;
         &--dark {
-            background-color: rgba(230, 230, 230, 0.7);
+            background-color: $siteHeaderLiteBackgroundDesktop;
         }
-    }
-    &--is-hidden {
-        backdrop-filter: none;
-    }
-
-    @mixin atMedium {
-        padding: 10px 0;
-        position: fixed;
-        background-color: rgba(255, 255, 255, 0.1);
-        &--dark {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-    }
-
-    &__logo {
-        position: absolute;
-        top: 0;
     }
 
     &__menu-icon {
-        width: 20px;
-        height: 20px;
+        width: 90px;
+        height: 70px;
         position: absolute;
         z-index: 10;
         top: 10px;
-        right: 10px;
-        color: #fff;
+        right: 50px;
+        background-color: $siteHeaderBackgroundColor;
+        color: $siteHeaderLiteBackgroundMobile;
+        border: 1px solid $siteHeaderLiteBackgroundMobile;
+        border-radius: 9999px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $hoverColorLiteBG;
+        }
 
         &--dark {
+            background-color: $siteHeaderLiteBackgroundDesktop;
             color: $bodyLiteBGFontColor;
+            border: 1px solid $bodyLiteBGFontColor;
+
+            &:hover {
+                background-color: $hoverColorDarkBG;
+            }
         }
 
-        .site-header__menu-icon__x {
-            position: absolute;
-            top: 0px;
-            right: 7px;
-            opacity: 0;
+        &--collapse {
+            top: -100px;
+            transition: top .3s;
+        }
+        &--expand {
+            top: 10px;
         }
 
+        @mixin atSmall {
+            right:10px;
+        }
+    
         @mixin atMedium {
             display: none;
         }
     }
 
-    &__menu-icon--close-x {
-        .site-header__menu-icon__bars {
-            opacity: 0;
-        }
-        .site-header__menu-icon__x {
-            opacity: 1;
-        }
+    &__menu-icon--collapsed::after {
+        font-size: 30px;
+        font-family: 'Material Icons';
+        content: '\e5d2';
+    }
+
+    &__menu-icon--expanded::after {
+        font-size: 30px;
+        font-family: 'Material Icons';
+        content: '\e5cd';
     }
 
     &__menu-content {
-        opacity: 0;
-        display: none;
         transform: scale(.8);
         transition: all .3s ease-out;
-        position: relative;
+        position: fixed;
         text-align: left;
+        padding-top: 100px;
+        padding-bottom: 15px;
+        left:-800px;
+        width: 1px;
+        z-index: 1;
 
         @mixin atMedium {
             opacity: 1;
+            width: 100%;
             display: block;
+            position: static;
             transform: scale(1);
             text-align: center;
+            padding-top: 20px;
         }
 
-        &--is-hidden {/*Used with VanishingMenus*/
-            opacity: 0;
+        &--collapse {
+            top: -70px;
+            transition: top .3s;
+        }
+        &--expand {
+            top: 0;
+        }
+
+        /*not used?*/
+        &--is-hidden {/*Used with VanishingMenus.js but commented*/
+            left:-50px;
+            top: 30px;
             transform: scale(1);
             display: none;
         }
 
         &--is-visible {
-            display: block; /* ?? this ignores the transform so may need to do this in js */
+            left:0;
+            width: 100%;
+            height: 100%;
             opacity: 1;
             transform: scale(1);
+            background: rgba(0, 0, 0, 0.9);
+            overflow-y: scroll;
         }
     }
 }

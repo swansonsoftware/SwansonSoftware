@@ -1,6 +1,7 @@
 /**
  * A lightweight youtube embed. Still should feel the same to the user, just MUCH faster to initialize and paint.
  */
+
 class LiteYTEmbed extends HTMLElement {
     constructor() {
         super();

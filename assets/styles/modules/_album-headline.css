@@ -1,12 +1,15 @@
 .album-headline {
     color: $bodyDarkBGFontColor;
 
-    &--main {
+    &--h1 {
         color: $bodyDarkBGFontColor;
-        font-size: 2rem;
-        font-weight: 300;
+        font-size: 2.5rem;
+        font-weight: 400;
         padding: 20px 0;
         margin: 0;
+        @mixin atMedium{
+            font-size: 4rem;
+        }
     }
 
     &--sublevel-1 {
@@ -24,4 +27,13 @@
         padding: 10px 0;
         margin: 0;
     }
+
+    &--h2 {
+        color: $bodyDarkBGFontColor;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 10px 0;
+        margin: 0;
+    }
+
 }

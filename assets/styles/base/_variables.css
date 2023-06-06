@@ -3,7 +3,15 @@ $bodyDarkBGFontColor: #fff;
 $bannerFontWhite: #fff;
 $hoverColor: #fff;
 $hoverColorLiteBG: #282828;
-$hoverColorDarkBG: #e8e8e8;
+$hoverColorDarkBG: #dedfe3; /*#e8e8e8;*/
+$siteHeaderBackgroundColor: #383838;
+$siteHeaderDarkBackgroundColor: #000;
+$siteHeaderLiteBackgroundMobile: #fff;
+$siteHeaderLiteBackgroundDesktop: #ebecf0;
 $albumBackgroundColor: #000;
+$albumSlideshowHeaderBackground: rgba(0, 0, 0, 0.5);
 $menuTransition: 0.2s;
 $slideTransition: 1s;
+$vcrButtonColor: #ff0000;
+$vcrButtonHoverColor: #ff0000;
+$albumPhotoCaptionBackgroundColor: rgba(255,255,255,0.4);

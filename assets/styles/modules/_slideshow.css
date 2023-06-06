@@ -64,7 +64,7 @@
         text-align: center;
         font-size: 2em;
         font-weight:600;
-        background: rgba(255,255,255,0.3);
+        background: $albumPhotoCaptionBackgroundColor;
         opacity: 1;
         transition: all $slideTransition ease-in;
         z-index: 1;
@@ -79,7 +79,7 @@
             right: 0%;
             height: 100%;
             width: 15px;
-            background-color: rgba(255,255,255,0.3);
+            background-color: $albumPhotoCaptionBackgroundColor;
             text-decoration: none;
             z-index: 2;
             
@@ -91,27 +91,39 @@
             &__icon-left {
                 font-size: 2rem;
                 font-weight: bold;
-                color:#000;
+                color: $bodyLiteBGFontColor;
                 position: fixed;
                 top: 50%;
                 transform: translate(0%, -50%);
-                right: 2px;
+                right: -7px;
+                margin-top: 4px;
+            }
+            &__icon-left::after{
+                font-family: 'Material Icons';
+                font-style: normal;
+                content: '\e5cb';
             }
 
             &__icon-right {
                 font-size: 2rem;
                 font-weight: bold;
-                color:#000;
+                color: $bodyLiteBGFontColor;
                 position: fixed;
                 top: 50%;
                 transform: translate(0%, -50%);
-                right: 2px;
+                right: -7px;
+                margin-top: 4px;
+            }
+            &__icon-right::after{
+                font-family: 'Material Icons';
+                font-style: normal;
+                content: '\e5cc';
             }
         }
     }
 
     &__slide-caption {
-        color: rgb(255,255,255,0.3);
+        color: $albumPhotoCaptionBackgroundColor; /* hide caption - make text the same color as background */
         transition: color $slideTransition ease-in-out;
  
         &--is-visible {
@@ -126,10 +138,11 @@
         left: 50%;
         transform: translateX(-50%);
         width: 150px;
-        border-radius: 50px;
+        border-radius: 40px;
         text-align: center;
         background: rgba(0,0,0,0.5);
         z-index: 100;
+        line-height:.8;
 
         &--is-hidden {
             opacity: 0;
@@ -138,21 +151,93 @@
         &--is-visible {
             opacity: 1;
         }
+
+        &--kill {
+            left: -1000px;
+        }
     
-        &__vcr-button {
+        &__vcr-button--link {
+            text-decoration: none;
+        }
+
+        &__vcr-button-pause{
+            position: relative;
+            left:-8px;
+            top:4px;
             font-size: 3rem;
             font-weight: normal;
-            color: red;
             cursor:pointer;
-
-            &--link {
-                text-decoration: none;
-            }
-
+            color: $vcrButtonColor;
             &:hover {
-                color: #FD4D0C;
+                color: $vcrButtonHoverColor;
+                font-weight: bold;
             }
         }
+        &__vcr-button-pause::after {
+            font-family: 'Material Icons';
+            font-style: normal;
+            content: '\e036';
+        }
+
+        &__vcr-button-play{
+            position: relative;
+            left:-8px;
+            top:4px;
+            font-size: 3rem;
+            font-weight: normal;
+            cursor:pointer;
+            color: $vcrButtonColor;
+            &:hover {
+                color: $vcrButtonHoverColor;
+                font-weight: bold;
+            }
+        }
+        &__vcr-button-play::after {
+            font-family: 'Material Icons';
+            font-style: normal;
+            content: '\e039';
+        }
+
+        &__vcr-button-angle-left{
+            position: relative;
+            display: inline-block;
+            left:-8px;
+            width: 30px;
+            top:5px;
+            font-size: 3rem;
+            font-weight: normal;
+            cursor:pointer;
+            color: $vcrButtonColor;
+            &:hover {
+                color: $vcrButtonHoverColor;
+                font-weight: bold;
+            }
+        }
+        &__vcr-button-angle-left::after {
+            font-family: 'Material Icons';
+            font-style: normal;
+            content: '\e5cb';
+        }
+
+        &__vcr-button-angle-right{
+            position: relative;
+            display: inline-block;
+            left:-8px;
+            width: 30px;
+            top:5px;
+            font-size: 3rem;
+            font-weight: normal;
+            cursor:pointer;
+            color: $vcrButtonColor;
+            &:hover {
+                color: $vcrButtonHoverColor;
+                font-weight: bold;
+            }
+        }
+        &__vcr-button-angle-right::after {
+            font-family: 'Material Icons';
+            font-style: normal;
+            content: '\e5cc';
+        }
     }
-    
 }

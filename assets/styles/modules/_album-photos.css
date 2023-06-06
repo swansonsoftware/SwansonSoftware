@@ -1,5 +1,4 @@
 .album-photos {
-    /*position: relative;*/
     padding-top: 50px;
     display: flex;
     justify-content: center;
@@ -12,7 +11,7 @@
     }
 
     &__polaroid {
-        padding-top: 10px;
+        padding: 10px 10px 20px 10px;
         color: $bodyLiteBGFontColor;
 
         &--rotate-right {
@@ -21,9 +20,9 @@
             border: 1px solid #BFBFBF;
             background-color: white;
             float: left;
-            -ms-transform: rotate(7deg); /* IE 9 */
-            -webkit-transform: rotate(7deg); /* Safari */
-            transform: rotate(7deg);
+            /*-ms-transform: rotate(7deg);*/ /* IE 9 */
+            /*-webkit-transform: rotate(7deg);*/ /* Safari */
+            /*transform: rotate(7deg);*/
         }
 
         &--rotate-left {
@@ -32,9 +31,9 @@
             border: 1px solid #BFBFBF;
             background-color: white;
             float: left;
-            -ms-transform: rotate(-8deg); /* IE 9 */
-            -webkit-transform: rotate(-8deg); /* Safari */
-            transform: rotate(-8deg);
+            /*-ms-transform: rotate(-8deg);*/ /* IE 9 */
+            /*-webkit-transform: rotate(-8deg);*/ /* Safari */
+            /*transform: rotate(-8deg);*/
         }
 
         &--rotate-none {
@@ -64,14 +63,6 @@
         }
     }
 
-    /*
-    &__headline {
-        color: #fff;
-        font-size: 1.9rem;
-        position: relative;
-    }
-*/
-
     &__photo-title{
         position: absolute;
         top: 50%;
@@ -84,7 +75,7 @@
         text-align: center;
         font-size: 2em;
         font-weight:600;
-        background: rgba(255,255,255,0.3);
+        background: $albumPhotoCaptionBackgroundColor;
         opacity: 1;
         transition: all 0.5s ease-in;
         z-index: 1;
@@ -99,7 +90,7 @@
             right: 0%;
             height: 100%;
             width: 15px;
-            background-color: rgba(255,255,255,0.3);
+            background-color: $albumPhotoCaptionBackgroundColor;
             text-decoration: none;
             z-index: 2;
             
@@ -115,7 +106,12 @@
                 position: fixed;
                 top: 50%;
                 transform: translate(0%, -50%);
-                right: 2px;
+                right: -7px;
+            }
+            &__icon-left::after{
+                font-family: 'Material Icons';
+                font-style: normal;
+                content: '\e5cb';
             }
 
             &__icon-right {
@@ -125,13 +121,18 @@
                 position: fixed;
                 top: 50%;
                 transform: translate(0%, -50%);
-                right: 2px;
+                right: -7px;
+            }
+            &__icon-right::after{
+                font-family: 'Material Icons';
+                font-style: normal;
+                content: '\e5cc';
             }
         }
     }
 
     &__photo-caption {
-        color: rgb(255,255,255,0.3);
+        color: $albumPhotoCaptionBackgroundColor; /* hide caption - make text the same color as background */
         transition: color .5s ease-in-out;
  
         &--is-visible {

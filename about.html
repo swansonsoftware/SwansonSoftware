@@ -2,149 +2,57 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="About Swanson Software.">
 	<meta charset="utf-8">
 	<title>About Swanson Software</title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="javascript/debug.js"></script>
+    <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-<a id="top"></a>
+    <a href="#maincontent" class="accessibility__skiptocontent accessibility__skiptocontent--dark">Skip to main content</a>
+    <a id="top"></a>
 
-<header class="site-header site-header--dark">
-    <div class="wrapper">
-        <!--
-        <div class="site-header__logo">
-            <a href="index.html">
-                <img src='images/logo.gif' alt='Swanson Software logo image' title='Swanson Software' />
-            </a>
-        </div>
-        -->
-
-        <div class="site-header__menu-icon site-header__menu-icon--dark">
-            <div class="site-header__menu-icon__bars">
-                <i class="fa fa-bars"></i>
+    <header class="site-header site-header--dark">
+        <div class="wrapper">
+            <div class="site-header__menu-icon site-header__menu-icon--dark">
             </div>
-            <div class="site-header__menu-icon__x">
-                <i class="fa fa-close"></i>
+
+            <div class="site-header__menu-content">
+                <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
+                </nav>
             </div>
         </div>
+    </header>
 
-        <div class="site-header__menu-content">
-            <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
-            </nav>
+    <div class="page-section" id="maincontent">
+        <div class="wrapper">
+
+            <h1 class="headline">About Swanson Software</h1>
+
+            <h2 class="headline__h2">Not a Business</h2>
+
+            <div class="row row--gutters">
+                <div class="row__medium-6 row__b-margin-until-medium">
+                    <p>SwansonSoftware.com is not a business, it is my personal Web site. You will find no advertisements on this site, it is not a source of income.</p>
+
+                    <p>I haved worked in software development for over 30 years, for companies of all sizes from 2 developers to hundreds, and I have seen the tools and processes evolve. Over the years, the media I use to store programs has evolved from punch cards to paper tape, floppy disk to hard drive or CDs, and network servers to cloud.</p>
+
+                    <p>Long ago, we didn't use applications to track software bugs. Bugs were tracked in a text file or spreadsheet. There was no source code control. Software editing was done in a character-based terminal connected to a main frame, or in a command window on a pc, or on a teletype that used paper feed instead of a display monitor, or with a text editor. Code editors did not have syntax highlighting. Software development was a new business and the principles and practices for creating it were not well defined.</p>
+
+                    <p>Today we use applications for tracking bugs and for source control; we have development environments that not only highlight syntax, but can provide suggestions on syntax alternatives, fix mistakes, and much more. We also learned about software life cycles and design, and how to improve programming skills.</p>
+
+                    <p>The mission of Swanson Software is to disseminate the principles and practices of software construction.</p>
+            
+                </div>
+
+            </div>            
+
         </div>
     </div>
-</header>
 
-<div class="page-section">
-    <div class="wrapper">
-
-        <h1 class="headline">About SwansonSoftware</h1>
-
-        <h3 class="headline--h2">Not a Business</h3>
-
-        <p>SwansonSoftware.com is not a business, it is my personal Web site. You will find no advertisements on this site, it is not a source of income.</p>
-
-        <div class="row row--gutters">
-            <div class="row__medium-6 row__b-margin-until-medium">
-                <h3 class="headline--h3">Projects</h3>
-                <p>
-                    I haved worked in software development for over 30 years, for companies of all sizes from 2 developers to 
-                    hundreds, and I have seen the tools and processes evolve. I have stored programs on punch cards, paper tape,
-                    floppy disk and CDs, and now in the cloud.
-                </p>
-                <p>Some of the companies I worked for did not even have an application for tracking software bugs. Some started
-                    without a bug tracker and later realized they needed one, so they used one that came as freeware with another 
-                    application. Some used an application developed in-house, or purchased an application. Others used one
-                    application for customer issues (SalesForce) and another for bugs (Jira). 
-                </p>
-                <p>The worst customer support I witnessed occurred when using SalesForce and Jira, because SalesForce was customized
-                    for the Sales people and did not have fields needed for tracking bug information or linking to information in Jira,
-                    and we did not use a tool to synchronize customer issues with Jira. There was a lot of duplicated work, missed
-                    communications, and frustrated customers. Even after several rounds of customizations to SalesForce, which 
-                    were intended to address mainly the Sales team needs, the features and fields needed by Support were missing. Everybody
-                    on the Support team hated SalesForce. Furthermore, this way of doing things appears to be the new standard 
-                    in the business.
-                </p>
-        
-            </div>
-
-            <div class="row__medium-6 row__b-margin-until-medium">
-                <h3 class="headline--h3">Languages and Technologies</h3>
-                <p>The first programs I wrote were on puch cards and on a teletype (no monitor). Most of the applications I wrote through the 1980's were on a teletype. Instead of a monitor, there was a box of tractor-feed computer paper on the floor, which spooled continuously through the teletype. When the program was finished, I puched it out on paper tape and stored in a plastic box.
-                </p>
-                <p>I was a latecomer to software development on the PC in the 1990's, and that work began on Microsoft&#174; <b>Windows</b>. Today, Windows is still my platform of choice for development, even when developing a website that will run on Linux with an Apache web server.</p>
-
-                <p>I began using Visual Basic in 1994 with VB 3 and have used all versions through VB 6. However, VB has been fully eclipsed by newer and better .NET languages and around 2009 I switched to C# for most development. As a hobbiest web developer I use PHP and WordPress, or simple HTML with WebPack and node.js to automate, organize, and bundle project files. I began doing web development around 1999.</p>
-                
-                <p>
-                    Languages I use:
-                    <ul>
-                        <li>PHP</li>
-                        <li>C# (Visual Studio)</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </p>
-                    
-                <p>
-                Technologies I use in the course of my work include:
-                </p>
-                    
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>SQL</li>
-                    <li>XML</li>
-                </ul>
-                
-                <p>
-                Tools, databases, and applications I use:
-                </p>
-                    
-                <ul>
-                    <li>SQL Server</li>
-                    <li>SVN/Tortoise</li>
-                    <li>WordPress</li>
-                    <li>Github</li>
-                    <li>PaintShop</li>
-                    <li>Illustrator</li>
-                    <li>IIS (manual and scripting configuration)</li>
-                </ul>
-                
-                <p>
-                Languages and applications I used a lot, but less frequently now:
-                </p>
-                    
-                <ul>
-                    <li>Visual Basic (VB 6)</li>
-                    <li>VBScript</li>
-                    <li>C&#92;C++ (Visual Studio flavors)</li>
-                    <li>Wix (Windows Installer toolset)</li>
-                    <li>PowerShell</li>
-                    <li>Actuate</li>
-                    <li>Microsoft HTML Help Workshop</li>
-                    <li>Microsoft Help Workshop - old style help</li>
-                    <li>WAS &#40;Web Application Stress&#41;, a tool for stress testing web servers</li>
-                    <li>Mercury Interactive WinRunner and TestDirector</li>
-                    <li>Segue SILKTest</li>
-                    <li>Rational Robot</li>
-                    <li>DOS Basic</li>
-                    <li>DOS Batch Files</li>
-                </ul>
-                    
-                <p>
-                    <i>Gregory Swanson</i>
-                </p>
-            </div>
-        </div>            
-
-    </div>
-</div>
-
-<footer  class="site-footer">
-</footer>
+    <footer  class="site-footer">
+    </footer>
 
 </body>
 </html>

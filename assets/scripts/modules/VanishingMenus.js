@@ -3,26 +3,28 @@ import throttle from 'lodash/throttle';
 class VanishingHeader {
     constructor() {
         this.siteHeader = document.querySelector(".site-header");
-        this.menuContent = document.querySelector(".site-header__menu-content");
-        this.menuContent.classList.add("site-header__menu-content--is-hidden");
+        this.siteHeaderAlbum = document.querySelector(".site-header--album-slideshow");
+        this.menuIcon = document.querySelector(".site-header__menu-icon--expanded");
+        this.albumNav = document.querySelector(".album-nav");
         this.vcrContainer = document.querySelector(".slideshow__vcr-container");
         this.isSmallScreen = false;
+
         if (window.innerWidth > 500 && window.innerHeight > 500){
             this.isSmallScreen = false;
         } else {
             this.isSmallScreen = true;
-            //remove the blur on small devices, otherwise the menu blur is never hidden on touch screens
-            this.siteHeader.classList.add("site-header--is-hidden"); //only removes the blur (backdrop-filter:none)
         }
-        if ( ! this.isSmallScreen ){ //start with VCR buttons hidden, except on small mobile devices
-            if (this.vcrContainer) {
-                this.vcrContainer.classList.add("slideshow__vcr-container--is-hidden");
-            }
+
+        this.siteHeaderAlbum.style.position = "fixed";
+        if (this.isSmallScreen){
+            this.siteHeader.style.width = "100%"; //for slideshow mobile only, as photos may take entire width vs. text which does not.
+        } else {
+            this.siteHeader.style.maxWidth = "100%"; //for slideshow non-mobile only, as photos may take entire width vs. text which does not.
         }
-        this.siteHeader.style.backgroundColor = "transparent";
-        if (this.vcrContainer) {
-            this.vcrContainer.style.backgroundColor = "transparent";
-        }
+        this.siteHeader.style.backgroundColor = "rgba(0,0,0,0.5)";
+        this.siteHeader.style.left = "50%";
+        this.siteHeader.style.transform = "translate(-50%, 0%)";
+
         this.noHideMenu = false;
         this.headerTimer;
         this.vcrButtonsTimer;
@@ -31,14 +33,21 @@ class VanishingHeader {
         this.pointermoveFlag = 0;
         this.touch = 0;
         this.events();
+        if (this.isSmallScreen){
+            this.runOnTouch();
+            this.runOnTouchEnd();
+        } else {
+            this.runOnPointerMove();
+        }
     }
 
     events() {
         window.addEventListener("pointermove", throttle( () => this.runOnPointerMove(), this.throttleTimerMS));
-        // window.addEventListener("pointermove", () => this.runOnPointerMove());
         
         //show the VCR controls on mobile devices when user taps
         window.addEventListener("touchstart", throttle( () => this.runOnTouch(), this.throttleTimerMS));
+        window.addEventListener("touchend", throttle( () => this.runOnTouchEnd(), this.throttleTimerMS));
+
         //Prevent the menu and VCR buttons from hiding when the mouse pointer hovers over
         if (this.siteHeader) {
             this.siteHeader.addEventListener("mouseover", () => {this.setNoHideMenu(true)}); //don't hide the menu when user is accessing it
@@ -48,28 +57,31 @@ class VanishingHeader {
                 this.vcrContainer.addEventListener("mouseout", () => {this.setNoHideMenu(false)});
             }
         }
-        // console.log("window.innerWidth: " + window.innerWidth);
-        //alert(window.innerWidth);
     }
 
+    /**
+     * setNoHideMenu
+     * Set the flag to prevent hiding the menu. This is an event handler, activated by mouseover/mouseout.
+     */
     setNoHideMenu(hideMenuOption) {
         this.noHideMenu = hideMenuOption;
         this.pointermoveFlag = 0;
-        // console.log("Set noHideMenu: " + hideMenuOption + ", this.pointermoveFlag: " + this.pointermoveFlag);
     }
 
+    /**
+     * runOnPointerMove
+     * Show menu and VCR buttons, for desktop
+     */
     runOnPointerMove() {
-        // console.log('pointermoved' + ", this.pointermoveFlag: " + this.pointermoveFlag);
         if ( ! this.isSmallScreen ){
-            this.menuContent.classList.add("site-header__menu-content--is-visible");
-            this.menuContent.classList.remove("site-header__menu-content--is-hidden");
-            this.siteHeader.classList.remove("site-header--is-hidden");
-            this.siteHeader.style.backgroundColor = "rgba(255,255,255,0.1)";
-            if (this.vcrContainer) {
-                this.vcrContainer.classList.add("slideshow__vcr-container--is-visible");
-                this.vcrContainer.classList.remove("slideshow__vcr-container--is-hidden");
-                this.vcrContainer.style.background = "rgba(0,0,0,0.5)";
+            this.siteHeader.classList.remove("site-header__slideshow-collapse");
+            this.siteHeader.classList.add("site-header__slideshow-expand");
+            this.siteHeader.style.backgroundColor = "rgba(0,0,0,0.5)";
+
+            if (this.albumNav){
+                this.albumNav.style.background = "transparent";
             }
+            this.showVcrButtons();
             if (this.pointermoveFlag == 0) { //prevent calling hideHeader multiple times (it makes menu flicker)
                 this.pointermoveFlag = 1;
                 this.headerTimer = setTimeout(()=> this.hideHeader(), this.hideDelayMS);
@@ -77,45 +89,69 @@ class VanishingHeader {
         }
     }
 
-    //For mobile devices
+    /**
+     * runOnTouch
+     * Show VCR buttons and menu, for mobile devices
+     */
     runOnTouch() {
-        if (this.vcrContainer) {
-            this.vcrContainer.classList.add("slideshow__vcr-container--is-visible");
-            this.vcrContainer.classList.remove("slideshow__vcr-container--is-hidden");
-            this.vcrContainer.style.background = "rgba(0,0,0,0.5)";
-        } 
+        this.showVcrButtons();
+        this.siteHeader.classList.remove("site-header__slideshow-collapse");
+        this.siteHeader.classList.add("site-header__slideshow-expand");
+        this.siteHeader.style.backgroundColor = "rgba(0,0,0,0.5)";
+    }
+
+    /**
+     * runOnTouchEnd
+     * Hide VCR buttons and menu, for mobile devices
+     */
+    runOnTouchEnd() {
         if (this.touch == 0) {
             this.touch = 1;
-            this.vcrButtonsTimer = setTimeout(()=> this.hideVcrButtons(), this.hideDelayMS);
+            this.vcrButtonsTimer = setTimeout(()=> this.touchHideNav(), this.hideDelayMS);
         }
     }
 
     hideHeader() {
         if (this.pointermoveFlag == 1) {
             if (this.noHideMenu == false){
-                console.log('hiding menu');
-                this.menuContent.classList.remove("site-header__menu-content--is-visible");
-                this.menuContent.classList.add("site-header__menu-content--is-hidden");
-                this.siteHeader.classList.add("site-header--is-hidden");
+                this.siteHeader.classList.add("site-header__slideshow-collapse");
+                this.siteHeader.classList.remove("site-header__slideshow-expand");
                 this.siteHeader.style.backgroundColor = "transparent";
-                if (this.vcrContainer) {
-                    this.vcrContainer.classList.add("slideshow__vcr-container--is-hidden");
-                    this.vcrContainer.classList.remove("slideshow__vcr-container--is-visible");
-                    this.vcrContainer.style.backgroundColor = "transparent";
-                }
+                this.hideVcrButtons();
                 this.pointermoveFlag = 0;
             }
         }
     }
 
-    hideVcrButtons() {
+    touchHideNav() {
         if (this.touch == 1) {
-            if (this.vcrContainer) {
-                this.vcrContainer.classList.add("slideshow__vcr-container--is-hidden");
-                this.vcrContainer.classList.remove("slideshow__vcr-container--is-visible");
-                this.vcrContainer.style.backgroundColor = "transparent";
+            this.menuIcon = document.querySelector(".site-header__menu-icon--expanded");
+            if (this.menuIcon){
+                //don't hide the menu icon while the menu is expanded
+                this.vcrButtonsTimer = setTimeout(()=> this.touchHideNav(), this.hideDelayMS);
+            } else {
+                this.siteHeader.classList.add("site-header__slideshow-collapse");
+                this.siteHeader.classList.remove("site-header__slideshow-expand");
+                this.siteHeader.style.backgroundColor = "transparent";
+                this.hideVcrButtons();
+                this.touch = 0;
             }
-            this.touch = 0;
+        }
+    }
+
+    showVcrButtons(){
+        if (this.vcrContainer) {
+            this.vcrContainer.classList.add("slideshow__vcr-container--is-visible");
+            this.vcrContainer.classList.remove("slideshow__vcr-container--is-hidden");
+            this.vcrContainer.style.background = "rgba(0,0,0,0.5)";
+        } 
+    }
+
+    hideVcrButtons(){
+        if (this.vcrContainer) {
+            this.vcrContainer.classList.add("slideshow__vcr-container--is-hidden");
+            this.vcrContainer.classList.remove("slideshow__vcr-container--is-visible");
+            this.vcrContainer.style.backgroundColor = "transparent";
         }
     }
 }
