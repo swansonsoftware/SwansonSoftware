@@ -6,20 +6,15 @@
         font-size: 4rem;
     }
 
-    &--center {
-        text-align: center;
-    }
     &__h1 {
         font-size: 2.5rem;
         font-weight: 400;
+        padding: 20px 0;
+        margin: 0;
 
-        &--center-document{
+        &--center{
             text-align: center;
         }
-    }
-
-    &--dark {
-        color: $bodyDarkBGFontColor;
     }
 
     &__h2 {
@@ -29,12 +24,20 @@
         padding: 10px 0;
         margin: 0;
 
-        &--center-document {
+        &--center {
             text-align: center;
         }
     }
 
-    &--h3 {
+    &__h3 {
+        color: $bodyLiteBGFontColor;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    &__h4 {
         color: $bodyLiteBGFontColor;
         font-size: 1.17rem;
         font-weight: 400;
@@ -45,5 +48,12 @@
     &__breadcrumbs {
         display: inline;
     }
-    
+    /*
+    &--center {
+        text-align: center;
+    }
+    &--dark {
+        color: $bodyDarkBGFontColor;
+    }
+    */
 }

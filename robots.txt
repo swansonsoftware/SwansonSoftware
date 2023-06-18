@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /photos
 Disallow: /downloads
-Disallow: /calls
-Disallow: /examples

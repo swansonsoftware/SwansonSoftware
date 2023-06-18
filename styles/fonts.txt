@@ -1,5 +1,0 @@
-see:
-
-fontwolf
- Avenir
- futura (Adobe license allows use on web)

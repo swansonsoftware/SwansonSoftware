@@ -12,7 +12,8 @@ class Menu {
         this.cancelEvents = false;
         this.siteHeader = document.querySelector(".site-header");
         this.siteHeaderMenuIcon = document.querySelector(".site-header__menu-icon");
-        this.prevScrollpos = window.pageYOffset;
+        //this.prevScrollpos = window.pageYOffset; deprecated
+        this.prevScrollpos = window.scrollY;
         this.throttleTimerMS = 200;
         this.events();
         this.setSelectedMenuItem();
@@ -54,7 +55,6 @@ class Menu {
         if (this.primaryNavElement != null) {
             this.primaryNavElement.insertAdjacentHTML("beforeend", `
                 <ul>
-                    <li class="primary-nav__siteHome"><a href="index.html">Swanson Software</a></li>
                     <li><a id="photos" href="./album/photos.html">Album</a></li>
                     <li><a id="process-models" href="process-models.html">Process Models</a></li>
                     <li><a id="requirements" href="requirements.html">Requirements</a></li>
@@ -77,7 +77,6 @@ class Menu {
 
             this.albumNavElement.insertAdjacentHTML("beforeend", `
             <ul>
-                <li class="album-nav__siteHome"><a href="../index.html">Swanson Software</a></li>
                 <li class="album-nav"><a id="photos" href="photos.html">Album</a></li>
                 <li class="album-nav"><a id="recipes" href="recipes.html">Recipes</a></li>
                 <!--<li class="album-nav"><a id="music" href="music.html">Music</a></li>-->
@@ -97,7 +96,8 @@ class Menu {
      * Hide the menu when user scrolls down; show the menu when user scrolls up.
      */
     runOnScroll(){
-        var currentScrollPos = window.pageYOffset;
+        // var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
         if (this.prevScrollpos > currentScrollPos) {
             //scrolling up
             this.siteHeader.classList.remove('site-header--collapse');

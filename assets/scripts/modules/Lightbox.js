@@ -28,7 +28,7 @@ class Lightbox {
     injectHTML() {
         document.body.insertAdjacentHTML("beforeend", `
         <div class="lightbox__overlay">
-            <a href="#" class="lightbox__overlay--anchor"><i class="lightbox__overlay--close-icon" aria-hidden="true"></i></a>
+            <a href="#" class="lightbox__overlay--anchor"><span class="accessibility--hidden">Select this to close the photo.</span><i class="lightbox__overlay--close-icon" aria-hidden="true"></i></a>
             <div id="lightbox__overlay__image" class="lightbox__overlay__image" ></div>
             <div class="album-photos__photo-title">
             <a href="#" class="album-photos__photo-title__button">

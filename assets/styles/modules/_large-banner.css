@@ -12,7 +12,6 @@
         /*grid-column: 1;
         grid-row: 1;*/
         img {
-            /*display: block;*/
             max-width: 100%;
             height: auto;
             object-fit: contain;

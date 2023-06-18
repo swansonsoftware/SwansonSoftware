@@ -5,6 +5,11 @@
     <meta name="description" content="Swanson Software's paper on software process.">
 	<meta charset="utf-8">
 	<title>Swanson Software - Process Models</title>
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
     <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -15,9 +20,12 @@
 
     <header class="site-header site-header--dark" data-matching-link="#process-models">
         <div class="wrapper">
-            <!--<a href="index.html" style="position: fixed;"><img src='images/logo.gif' alt='Swanson Software logo' title='Swanson Software' /></a>-->
-            <div class="site-header__menu-icon site-header__menu-icon--dark">
+            <div class="site-header__logo">
+                <a href="index.html">
+                    <img src='/assets/images/logo.svg' alt='Swanson Software logo' title='Swanson Software home' />
+                </a>
             </div>
+            <div class="site-header__menu-icon site-header__menu-icon--dark"></div>
 
             <div class="site-header__menu-content">
                 <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
@@ -29,17 +37,10 @@
     <div class="page-section" id="maincontent">
         <div class="wrapper">
 
-            <!--
-            <span class="headline__breadcrumbs">
-                <a href="index.html">SwansonSoftware Home</a> > Software Process Models
-                <a href="javascript:doPrint();" style="text-align:right;float:right;">Print</a>
-            </span>
-            -->
-
-            <h1 class="headline__h1 headline__h1--center-document">Software Process Models</h1>
+            <h1 class="headline__h1 headline__h1--center">Software Process Models</h1>
             <p><i>Gregory Swanson, 2015</i></p>
 
-            <h2 class="headline__h2 headline__h2--center-document">Contents</h2>
+            <h2 class="headline__h2 headline__h2--center">Contents</h2>
 
                 <ol class="contents">
                     <li><a href="#lst1">Introduction</a>
@@ -89,8 +90,8 @@
                         <ol class="contents">
                             <li><a href="#lst7.1">Classic Mistakes</a></li>
                             <li><a href="#lst7.2">Software Development Fundamentals</a></li>
-                            <li><a href="#lst7.3">Manage Risks</a></li>
-                            <li><a href="#lst7.4">Schedule-Oriented Practices</a></li>
+                            <li>Manage Risks<!--<a href="#lst7.3">Manage Risks</a>--></li>
+                            <li>Schedule-Oriented Practices<!--<a href="#lst7.4">Schedule-Oriented Practices</a>--></li>
                         </ol>
                     </li>
                     <!--
@@ -171,7 +172,7 @@
 
                 <a id="lst1.1"></a>
                 <h3  class="section--h3">Consolidation and Coordination</h3>
-                <p class="subhead">
+                <p>
                 One problem with so many options is deciding which one to use.  For example, if a
                 software vendor is certified in CMM, is there enough overlap between CMM and ISO 9001
                 requirements to get business from clients who require ISO certification - and vice-versa?
@@ -241,7 +242,7 @@
 
                 <a id="lst2.1"></a>
                 <h3 class="section--h3">Process Models and Lifecycle Models</h3>
-                <p class="subhead">
+                <p>
                 Process models are lifecycle models described at a high-level, where individual distinctive
                 features of particular lifecycle models are less important. Humphrey describes this as
                 the U (universal) level of detail (ibid. p. 249). Process models have two other levels
@@ -385,7 +386,7 @@
 
                 <h3 class="section--h3">Assumptions</h3>
 
-                <p class="subhead">
+                <p>
                 Authors Paulk et. al. present the CMM as it should be applied for "a large, complex
                 software project" (p.79). What is assummed (but not stated) is that organizations that
                 take on such large projects also have the resources to implement the CMM. Another
@@ -408,7 +409,7 @@
                 <a id="lst4.2"></a>
                 <h3 class="section--h3">How Much Does it Cost?</h3>
 
-                <p class="subhead">
+                <p>
                 Organizations using the CMM report spending hundreds of thousands of dollars implementing
                 it:
                 </p>
@@ -422,7 +423,7 @@
                 <a id="lst4.3"></a>
                 <h3 class="section--h3">Tool Support for CMM</h3>
 
-                <p class="subhead">
+                <p>
                 Rational Software (a subsidiary of IBM) markets an integrated suite of tools for managing
                 software projects. Rational has the market lead in this area.
                 </p>
@@ -437,7 +438,7 @@
                 <a id="lst4.4"></a>
                 <h3 class="section--h3">CMM Introduction</h3>
 
-                <p class="subhead">
+                <p>
                 Process as described by the CMM includes practices for planning, engineering, and
                 managing software development and maintenance (p.4). "C"apability refers to an
                 organization's software process capability. "M"aturity refers to an organization's
@@ -501,7 +502,7 @@
                 <a id="lst4.5"></a>
                 <h3 class="section--h3">CMM Maturity Definitions</h3>
 
-                <p class="subhead">
+                <p>
                 The CMM framework consists of five maturity levels, each of which is a set of process
                 goals. Improvement is evolutionary, from an ad hoc, immature process to a disciplined,
                 mature process, encompassing five stages.
@@ -509,7 +510,7 @@
 
                 <a id="lst4.5.1"></a>
                 <h4 class="section--h4">Level 1: Initial</h4>
-                <p class="subhead">
+                <p>
                 Characterized as ad hoc, few processes are defined and success depends on the overcommitment
                 and competence of individuals in the organization. Even when a good engineering process
                 is in place, other weak process areas in the organization allow problems to arise as a
@@ -518,7 +519,7 @@
 
                 <a id="lst4.5.2"></a>
                 <h4 class="section--h4">Level 2: Repeatable</h4>
-                <p class="subhead">
+                <p>
                 Project commitments are realistic and based on both experience and the requirements for
                 the project. Software project management is guided by processes that are documented,
                 practiced, measured, and enforced (p. 18). Note that processes are allowed to differ
@@ -535,7 +536,7 @@
 
                 <a id="lst4.5.3"></a>
                 <h4 class="section--h4">Level 3: Defined</h4>
-                <p class="subhead">
+                <p>
                 Characterized by a documented <i>standard software process</i> for developing and
                 maintaining software. The standard software process is tailored for individual projects
                 and the tailored process is called the <i>project's defined software process</i>. These
@@ -553,7 +554,7 @@
 
                 <a id="lst4.5.4"></a>
                 <h4 class="section--h4">Level 4: Managed</h4>
-                <p class="subhead">
+                <p>
                 Measurements of software processes are collected in a software process database and
                 analyzed. Process is stable, and incorporates measurements that define project limits.
                 When limits are exceeded, process is in place to understand the cause and take appropriate
@@ -566,7 +567,7 @@
 
                 <a id="lst4.5.5"></a>
                 <h4 class="section--h4">Level 5: Optimizing</h4>
-                <p class="subhead">
+                <p>
                 Level 5 focuses on changing the causes of chronic waste, manifested in the form of rework,
                 to prevent it from recurring. Software processes are evaluated to prevent repetition of
                 the steps leading to known types of software defects. Knowledge gained in this process
@@ -583,7 +584,7 @@
 
                 <a id="lst4.6.1"></a>
                 <h4 class="section--h4">Maturity Level</h4>
-                <p class="subhead">
+                <p>
                 Maturity levels indicate process capability. A maturity level is "a well-defined evolutionary
                 plateau toward achieving a mature software process" (p.30). Each maturity level except
                 level 1 contains several key process areas.
@@ -597,7 +598,7 @@
 
                 <a id="lst4.6.2"></a>
                 <h4 class="section--h4">Key Process Areas</h4>
-                <p class="subhead">
+                <p>
                 Key process areas as described at each maturity level are fully implemented and
                 institutionalized. I.e. an organization that reaches a particular maturity level has
                 mastered the key process areas for that level.
@@ -611,7 +612,7 @@
 
                 <a id="lst4.6.3"></a>
                 <h4 class="section--h4">Key Practices</h4>
-                <p class="subhead">
+                <p>
                 Key practices must be interpreted in the context of a specific implementation (p. 41).
                 Key practices are the meat of the CMM. They describe what is to be done but not how to do
                 it. It is beyond the scope of this document to describe key practices. Most of the
@@ -624,7 +625,7 @@
 
                 <a id="lst4.6.4"></a>
                 <h4 class="section--h4">Common Features</h4>
-                <p class="subhead">
+                <p>
                 Key practices are organized by common features. Common features are attributes of key
                 process areas. The common features are:
                 </p>
@@ -687,7 +688,7 @@
                 <a id="lst6.1"></a>
                 <h3 class="section--h3">Best Practices</h3>
 
-                <p class="subhead">
+                <p>
                 Something missing in CMM is a simple list of best practices. You have to dig through
                 CMM's Key Practices and build your own set. Kruchten (ibid) describes a high level list
                 of practices, by way of introduction to RUP:
@@ -705,7 +706,7 @@
                 <a id="lst6.2"></a>
                 <h3 class="section--h3">Structure</h3>
 
-                <p class="subhead">
+                <p>
                 RUP is often described with a chart that has x (dynamic structure) and y (static structure)
                 axes. The x axis shows the life cycle of the project, and when the workflow activities are
                 performed. The y axis shows process components, activities, workflows, artifacts, and
@@ -717,8 +718,8 @@
                 </p>
 
                 <br>
-                <h4 class="subhead">Static Structure</h4>
-                <p class="subhead">
+                <h4 class="headline__h4">Static Structure</h4>
+                <p>
                 Processes as defined in the RUP have four elements:
                 </p>
                 <ol>
@@ -741,6 +742,7 @@
                             <li>Performing</li>
                             <li>Reviewing</li>
                         </ul>
+                        <br>
                     </li>
 
                     <li>Artifacts
@@ -758,6 +760,7 @@
                             <li>Implementation Set</li>
                             <li>Deployment Set</li>
                         </ul>
+                        <br>
                     </li>
 
                     <li>Workflows
@@ -799,6 +802,7 @@
                                     <li>Configuration and change management</li>
                                     <li>Environment</li>
                                 </ul>
+                                <br>
                             </li>
 
                             <li>Iteration Workflows
@@ -824,8 +828,8 @@
                     </li>
                 </ol>
 
-                <p class="h5">Additional static process elements</p>
-                <p class="subhead">
+                <h4 class="headline__h4">Additional static process elements</h4>
+                <p>
                 Supplemental to activities and artifacts, these "make the process easier to understand and
                 use" (ibid, p.46) - in other words, these enforce the process because 1) after spending
                 thousands of dollars for the software tools, your boss doesn't want the software sitting
@@ -833,9 +837,7 @@
                 can get it out is to continue using the tools.
                 </p>
 
-                <p>
-                The additional elements are:
-                </p>
+                <p>The additional elements are:</p>
                 <ul>
                     <li>Guidelines
                         <p>
@@ -868,8 +870,8 @@
                     </li>
                 </ul>
 
-                <h4 class="subhead">Dynamic Structure</h4>
-                <p class="subhead">
+                <h4 class="headline__h4">Dynamic Structure</h4>
+                <p>
                 Dynamic structure describes the software development life cycle (SDLC) structure of the RUP:
                 iterative development with <b>phases</b> and <b>milestones</b> driven by risk mitigation and
                 incremental evolution (ibid, p. 51). This structure shows where in a project life cycle the
@@ -905,8 +907,8 @@
                 </p>
 
 
-                <p class="h5">Phases</p>
-                <p class="subhead">
+                <h4 class="headline__h4">Phases</h4>
+                <p>
                 Four phases constitute one complete development cycle; one development cycle usually overlaps
                 the next a little. Kruchten states that each iteration in RUP comprises a complete set of
                 four phases, but with varying emphasis depending on the phase in which the iteration occurs
@@ -919,8 +921,8 @@
                     <li><b>Transition</b> - to users, including delivery, training, support, and maintenance.</li>
                 </ul>
 
-                <p class="h5">Milestones</p>
-                <p class="subhead">
+                <h4 class="headline__h4">Milestones</h4>
+                <p>
                 Milestones are decision points defined by criteria that are used to determine whether to
                 proceed, abort, or change course (p. 59). Milestones occur at the end of each phase:
                 </p>
@@ -1007,7 +1009,7 @@
                 <a id="lst7.1"></a>
                 <h3 class="section--h3">Classic Mistakes</h3>
 
-                <p class="subhead">
+                <p>
                 Classic mistakes are ineffective practices that have been tried often and that have
                 predictable and bad results. These are classified under each of the four dimensions
                 described above. McConnell provides a list of several dozen classic mistakes; a sampling of
@@ -1026,7 +1028,7 @@
                 <a id="lst7.2"></a>
 
                 <h3 class="section--h3">Software Development Fundamentals</h3>
-                <p class="subhead">
+                <p>
                 If you want to improve your ability to predict project schedule, you need to pay attention to
                 fundamentals. Management fundamentals, technical fundamentals, and quality-assurance
                 fundamentals are all part of the equation. As you can see, the topics under these sections
@@ -1036,7 +1038,7 @@
 
                 <a id="lst7.3.1"></a>
                 <h4 class="section--h4">Management Fundamentals</h4>
-                <p class="subhead">
+                <p>
                 The "classic trade-off-triangle" consists of schedule, cost, and product. Management would like
                 to control all three. It makes sense that you have to put project management discipline in
                 place before software engineering discipline. Project management fundamentals include
@@ -1045,7 +1047,7 @@
 
                 <a id="lst7.3.2"></a>
                 <h4 class="section--h4">Technical Fundamentals</h4>
-                <p class="subhead">
+                <p>
                 Technical fundamentals are modern programming practices. In order to be successful in this area
                 you need to know different methods and practices, because projects benefit from particular
                 combinations. Examples of technical fundamentals include requirements management, design,
@@ -1058,7 +1060,7 @@
                 <h3 class="section--h3">Manage Risks</h3>
 
                 <a id="lst7.4"></a>
-                <h3 class="count subhead">Apply Schedule-oriented Practices</h3>
+                <h3 class="count">Apply Schedule-oriented Practices</h3>
                 -->
 
 

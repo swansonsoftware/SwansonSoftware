@@ -5,6 +5,11 @@
     <meta name="description" content="Swanson Software's paper on software design, describing principles and practices.">
 	<meta charset="utf-8">
 	<title>Swanson Software - Design</title>
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
     <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -15,8 +20,12 @@
 
     <header class="site-header site-header--dark" data-matching-link="#design">
         <div class="wrapper">
-            <div class="site-header__menu-icon site-header__menu-icon--dark">
+            <div class="site-header__logo">
+                <a href="index.html">
+                    <img src='/assets/images/logo.svg' alt='Swanson Software logo' title='Swanson Software home' />
+                </a>
             </div>
+            <div class="site-header__menu-icon site-header__menu-icon--dark"></div>
 
             <div class="site-header__menu-content">
                 <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
@@ -28,17 +37,10 @@
     <div class="page-section" id="maincontent">
         <div class="wrapper">
 
-            <!--
-            <span id="headline__breadcrumbs">
-                <a href="index.html">SwansonSoftware Home</a> > Software Design 
-                <a href="javascript:doPrint();" style="text-align:right;float:right;">Print</a>
-            </span>
-        -->
-        
-            <h1 class="headline__h1 headline__h1--center-document">Software Design</h1>
+            <h1 class="headline__h1 headline__h1--center">Software Design</h1>
             <p><i>Gregory Swanson, 2005</i></p>
         
-            <h2 class="headline__h2 headline__h2--center-document">Contents</h2>
+            <h2 class="headline__h2 headline__h2--center">Contents</h2>
         
             <ol class="contents">
                 <li><a href="#lst1">Introduction</a></li>
@@ -197,7 +199,7 @@
                 <a id="lst2.1"></a>
                 <h3 class="section--h3">Design Models</h3>
                 
-                <p class="subhead">
+                <p>
                 Design models have a fundamental role in software design (ibid. p. 23, paraphrased):
                 </p>
                 
@@ -220,7 +222,7 @@
                 
                 <a id="lst2.2"></a>
                 <h3 class="section--h3">Design Methods</h3>
-                <p class="subhead">
+                <p>
                 A design method - whether graphical or mathematical - consists of two major components (ibid. p. 34):
                 </p>
                 
@@ -253,7 +255,7 @@
                 
                 <a id="lst2.3"></a>
                 <h3 class="section--h3">Transfer of Knowledge</h3>
-                <p class="subhead">
+                <p>
                 One of the main benefits of design representations is that they serve as a tool for knowledge
                 transfer. Other uses for design documents are 1) they record design decisions and (ideally)
                 the rationale behind them; 2) they serve as a reference during construction and maintenance.
@@ -279,7 +281,7 @@
                 <a id="lst2.4"></a>
                 <h3 class="section--h3">Anticipating Change</h3>
                 
-                <p class="subhead">
+                <p>
                 Systems that evolve require more forethought in the design stage. Budgen cites the work of Lehman
                 and Ramil (2002) who found that there are generally two kinds of systems (ibid. p. 58):
                 </p>
@@ -295,7 +297,7 @@
                 
                 <a id="lst2.5"></a>
                 <h3 class="section--h3">Software Designers</h3>
-                <p class="subhead">
+                <p>
                 A single person may be responsible for a design, or a team may share the responsibility. What
                 does it take for a person or team to be successful, or even exceptional, at design? Budgen
                 cites work by Curtis et. al. (1988) who found that exceptional designers possess three
@@ -358,7 +360,7 @@
                 
                 <a id="lst3.1"></a>
                 <h3 class="section--h3">Simplicity</h3>
-                <p class="subhead">
+                <p>
                 Simplicity of design means it includes nothing more than what is essential. Simplicity is a
                 measure of maintainability and testability, and to a lesser degree reliability and possibly
                 efficiency (ibid. p. 76). Design simplicity is usually described in terms of complexity:
@@ -428,7 +430,7 @@
                 <a id="lst3.2"></a>
                 <h3 class="section--h3">Modularity</h3>
                 
-                <p class="subhead">
+                <p>
                 Modularity of design means the extent to which it is divided into components that
                 </p>
                 <ul>
@@ -443,7 +445,7 @@
                 
                 <a id="lst3.2.1"></a>
                 <h4 class="section--h4">Coupling</h4>
-                <p class="subhead">
+                <p>
                 Coupling is a measure of the type and strength of connections
                 between modules. Highly coupled modules have strong interconnections, loosely coupled
                 modules have weak interconnections. Uncoupled modules have no interconnections.
@@ -531,9 +533,9 @@
                         </tr>
                     </table>
                 
-                
-                <p class="h5">Coupling Forms</p>
-                <p class="subhead">
+                <br>
+                <h4 class="headline__h4">Coupling Forms</h4>
+                <p>
                 McConnell (1993) gives a thorough as well as accessible description of coupling, from a
                 programmer's point of view (p. 87).  In order of decreasing coupling:
                 
@@ -547,7 +549,7 @@
                 
                 <a id="lst3.2.2"></a>
                 <h4 class="section--h4">Cohesion</h4>
-                <p class="subhead">
+                <p>
                 Cohesion is a measure of the functional relatedness of the
                 components of a module (Yourdon and Constantine 1979, p. 106; Budgen 2003, p. 78).
                 Cohesion is directly related to a module's relation to the problem solution (Yourdon and
@@ -610,9 +612,9 @@
                         </tr>
                     </table>
                 
-                
-                <p class="h5">Cohesion Levels</p>
-                <p class="subhead">
+                <br>
+                <h4 class="headline__h4">Cohesion Levels</h4>
+                <p>
                 Cohesion levels are determined by seven distinct associative principles. In order
                 of increasing cohesion they are:
                 </p>
@@ -739,7 +741,7 @@
                 
                 <a id="lst3.3"></a>
                 <h3 class="section--h3">Information Hiding</h3>
-                <p class="subhead">
+                <p>
                 Information hiding means to hide details of data structures inside a module. Only routines that
                 are part of the module have direct access to the data structures; routines that are not part
                 of the module must call routines within the module to work with the data structures.
@@ -777,7 +779,7 @@
                 
                 <a id="lst4.1"></a>
                 <h3 class="section--h3">Diagrams</h3>
-                <p class="subhead">
+                <p>
                 Diagrams give us a way to communicate complex ideas: what we are capable of thinking depends
                 on the language we use for thinking (Martin and McClure, 1985 p. 109). Diagrams extend our
                 vocabulary, and different kinds of diagrams extend our vocabulary in different ways.
@@ -855,16 +857,16 @@
                 </p>
                 
                     <ul>
-                        <li><a href="#dsgn1">Stepwise Refinement</a></li>
-                        <li><a href="#dsgn2">Incremental Design</a></li>
-                        <li><a href="#dsgn3">Structured Systems Analysis and Structured Design</a></li>
-                        <li><a href="#dsgn6">Object-Oriented Design and Object-Based Design</a></li>
-                        <li><a href="#dsgn7">Component-Based Design</a></li>
+                        <li>Stepwise Refinement<!--<a href="#dsgn1">Stepwise Refinement</a>--></li>
+                        <li>Incremental Design<!--<a href="#dsgn2">Incremental Design</a>--></li>
+                        <li>Structured Systems Analysis and Structured Design<!--<a href="#dsgn3">Structured Systems Analysis and Structured Design</a>--></li>
+                        <li>Object-Oriented Design and Object-Based Design<!--<a href="#dsgn6">Object-Oriented Design and Object-Based Design</a>--></li>
+                        <li>Component-Based Design<!--<a href="#dsgn7">Component-Based Design</a>--></li>
                     </ul>
                 
                 
                 <h3 class="section--h3">Choosing a Method</h3>
-                <p class="subhead">
+                <p>
                 All design methodologies have the same
                 goals, but some methods work better on certain kinds of problems than other methods.
                 Often you will choose a design method that complements the programming environment. Most
@@ -876,7 +878,7 @@
                 <a id="dsgn1"></a>
                 <h3 class="section--h3">Structured Design</h3>
                 
-                <p class="subhead">
+                <p>
                 Design principles developed in the area of structured design are not made obsolete by
                 principles developed in the area of object-oriented (OO) design. Structured design concepts
                 such as cohesion and coupling describe fundamental characteristics of all software that
@@ -921,8 +923,8 @@
                 </ul>
                 
                 
-                <h3>Applying the Principles</h3>
-                <p class="subhead">
+                <h3 class="headline__h3">Applying the Principles</h3>
+                <p>
                 Structured design is concerned with relationships between pieces of a system. We refer to
                 these pieces as modules, though the term 'module' does not necessarily indicate a group
                 of functions. Some qualities of modularity are apparent only in the relationship between
@@ -996,7 +998,6 @@
                 ISBN 0-75-066075-9
                 </p>
         
-                <a id="moveTop" href="#top">Top of page</a>
             </section>
         </div>
     </div>

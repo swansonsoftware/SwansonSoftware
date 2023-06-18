@@ -1,6 +1,6 @@
 .site-header {
     padding: 0 0; /* top padding causes scrollbar to move down so must be 0 */
-    max-width: 1200px;
+    /*max-width: 1200px; want the header text constrained but the header background color to stretch across*/ 
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
@@ -13,6 +13,7 @@
         position: absolute;
         right: 0px;
         padding-top: 0;
+        width: 100%;
     }
     @mixin atMedium {
         width: 100%;
@@ -58,6 +59,16 @@
         &--dark {
             background-color: $siteHeaderLiteBackgroundDesktop;
         }
+    }
+
+    &__logo {
+        position: relative;
+        left: -18px;
+        padding-top: 10px;
+        float: left;
+        border: 0;
+        width: 250px;
+        height: 60px;
     }
 
     &__menu-icon {
@@ -110,6 +121,8 @@
         font-size: 30px;
         font-family: 'Material Icons';
         content: '\e5d2';
+        /*https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element*/
+        /*content: url('/assets/images/menu_FILL0_wght400_GRAD0_opsz48.svg');*/
     }
 
     &__menu-icon--expanded::after {

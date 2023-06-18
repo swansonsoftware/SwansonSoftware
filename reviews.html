@@ -5,6 +5,11 @@
     <meta name="description" content="Swanson Software's paper on software reviews.">
 	<meta charset="utf-8">
 	<title>Swanson Software - Reviews</title>
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
     <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -15,8 +20,12 @@
 
     <header class="site-header site-header--dark" data-matching-link="#reviews">
         <div class="wrapper">
-            <div class="site-header__menu-icon site-header__menu-icon--dark">
+            <div class="site-header__logo">
+                <a href="index.html">
+                    <img src='/assets/images/logo.svg' alt='Swanson Software logo' title='Swanson Software home' />
+                </a>
             </div>
+            <div class="site-header__menu-icon site-header__menu-icon--dark"></div>
 
             <div class="site-header__menu-content">
                 <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
@@ -27,18 +36,11 @@
 
     <div class="page-section" id="maincontent">
         <div class="wrapper">
-
-            <!--
-            <span id="headline__breadcrumbs">
-                <a href="index.html">SwansonSoftware Home</a> > Software Reviews
-                <a href="javascript:doPrint();" style="text-align:right;float:right;">Print</a>
-            </span>
-            -->
             
-            <h1 class="headline__h1 headline__h1--center-document">Software Reviews</h1>
+            <h1 class="headline__h1 headline__h1--center">Software Reviews</h1>
             <p><i>Gregory Swanson, 2007</i></p>
             
-            <h2 class="headline__h2 headline__h2--center-document">Contents</h2>
+            <h2 class="headline__h2 headline__h2--center">Contents</h2>
 
             <ol class="contents">
                 <li><a href="#lst1">Introduction</a>
@@ -82,7 +84,7 @@
             </ol>
                 
                 
-            <section id="printable">
+            <section class="section">
                 
                 <a id="lst1"></a>
                 <h2 class="section--h2">Introduction</h2>
@@ -131,7 +133,7 @@
                 
                 <a id="lst1.1"></a>
                 <h3 class="section--h3">Components</h3>
-                <p class="subhead">
+                <p>
                 Depending on the formality of the process, some of the following review components may not be
                 needed.  Based on Humphrey, 1989 (Humphrey refers to software reviews as inspections):
                 </p>
@@ -171,7 +173,7 @@
                 <a id="lst1.2"></a>
                 <h3 class="section--h3">Cost</h3>
                 
-                <p class="subhead">
+                <p>
                 Several factors affect the cost of inspections.
                 </p>
                 <ul>
@@ -225,7 +227,7 @@
                 <a id="lst2.1"></a>
                 <h3 class="section--h3">Fagan's Software Review</h3>
                 
-                <p class="subhead">
+                <p>
                 Michael Fagan had two purposes in mind: 1) improve software quality, and 2) increase software 
                 developer productivity.  The review process he describes includes six main steps (Wong p. 17):
                 </p>
@@ -256,7 +258,7 @@
                 <a id="lst2.2"></a>
                 <h3 class="section--h3">Active Design Review</h3>
                 
-                <p class="subhead">
+                <p>
                 Active Design Review was described by Parnas and Weiss (1985). The rationale for ADR are (from
                 Wong, p. 20):
                 </p>
@@ -283,7 +285,7 @@
                 <a id="lst2.3"></a>
                 <h3 class="section--h3">Two-Person Review</h3>
                 
-                <p class="subhead">
+                <p>
                 Two-Person Review (TPR) was described by Bisant and Lyle (1989).  Similar to ADR in that there 
                 are two roles: author and reviewer.  TPR "adopts Fagan's formal review method but removes the
                 role of the moderator (Wong, p. 21)."
@@ -293,7 +295,7 @@
                 <a id="lst2.4"></a>
                 <h3 class="section--h3">N-Fold Review</h3>
                 
-                <p class="subhead">
+                <p>
                 N-Fold Review was described by Martin and Tsai (1990).  Martin and Tsai's premise is that
                 multiple review teams "working in parallel sessions" will find "a large number of defects"
                 in an artefact, whereas a single team will likely find a small number (Wong, p. 21).
@@ -319,7 +321,7 @@
                 <a id="lst2.5"></a>
                 <h3 class="section--h3">Phased Review</h3>
                 
-                <p class="subhead">
+                <p>
                 Phased Review (PR) was described by Knight and Myers (1993).  PR adopts ideas from ADR, 
                 Fagan's Software Review, and N-Fold Review.  It follows Fagan's six-step process, in a 
                 series of "mini-reviews" called "phases."  A phase is a full examination of one property of 
@@ -342,7 +344,7 @@
                 <a id="lst2.6"></a>
                 <h3 class="section--h3">IEEE Standard 1028 For Software Reviews</h3>
                 
-                <p class="subhead">
+                <p>
                 The standard describes a systematic, seven step review process (Wong, p. 24):
                 </p>
                 
@@ -376,7 +378,7 @@
                 <a id="lst2.7.1"></a>
                 <h4 class="section--h4">Walkthrough</h4>
                 
-                <p class="subhead">
+                <p>
                 A walkthrough is where the author describes the artefact to a group of peers and seeks comments.
                 A walkthrough differes from a formal software review in that
                 </p>
@@ -501,7 +503,7 @@
                 <a id="lst2.7.2"></a>
                 <h4 class="section--h4">Pair Programming</h4>
                 
-                <p class="subhead">
+                <p>
                 Pair programming is where "two programmers work simultaneously on the same program at a single
                 workstation" (ibid p. 25).  The result is continuous, incremental review of the working 
                 product.
@@ -511,7 +513,7 @@
                 <a id="lst2.7.3"></a>
                 <h4 class="section--h4">Peer Check</h4>
                 
-                <p class="subhead">
+                <p>
                 Often presented as the least expensive approach to software review, Peer Check is where "only
                 one person besides the author examines the software artefact" (ibid).  Similar to individual
                 software review, but has "no consistent set of practices.."  Usually informal, Peer Check can
@@ -522,7 +524,7 @@
                 <a id="lst2.7.4"></a>
                 <h4 class="section--h4">Pass-Around</h4>
                 
-                <p class="subhead">
+                <p>
                 Pass-around is where the author distributes copies of the artefact to reviewers for concurrent
                 review (Wong, p. 26).  Reviewers can see comments others have already written, which reveals
                 differences in interpretation and helps minimize redundancy.  There is no group meeting.
@@ -540,7 +542,7 @@
                 
                 <a id="lst3.1"></a>
                 <h3 class="section--h3">Review Task</h3>
-                <p class="subhead">
+                <p>
                 This section describes the tasks and techniques for conducting a software review, as well as 
                 what to look for.
                 </p>
@@ -557,9 +559,9 @@
                     <li>Testing artefact</li>
                 </ol>
                 
-                <h4 class="subhead">What To Look For</h4>
+                <h4 class="headline__h4">What To Look For</h4>
                 
-                <p class="subhead">
+                <p>
                 The following sections describe what to look for in the artefact (adapted from Yourdon (1989) 
                 and McConnell (1993)). 
                 </p>
@@ -583,7 +585,7 @@
                 <a id="lst3.2"></a>
                 <h3 class="section--h3">Reading Technique</h3>
                 
-                <p class="subhead">
+                <p>
                 Wong (ibid) describes reading technique as a mechanism an individual reviewer uses to detect 
                 defects.  Reading technique is "a series of procedures a reviewer can use to obtain an 
                 understanding of the artefact...providing a systematic guideline for finding defects." (3 and 
@@ -615,7 +617,7 @@
                 <a id="lst3.3"></a>
                 <h3 class="section--h3">Planning On-going Reviews</h3>
                 
-                <p class="subhead">
+                <p>
                 With on-going inspections, you will know what is next on the agenda for review. 
                 </p>
                 
@@ -649,7 +651,7 @@
                 
                 <a id="lst4.1"></a>
                 <h3 class="section--h3">Technical Review Summary Report</h3>
-                <p class="subhead">
+                <p>
                 Adapted from Freedman and Weinberg (p. 183).  This report is in a Q&A format.  The report describes 
                 what was reviewed, who did the reviewing, and what was their conclusion.  Fields would include:
                 </p>
@@ -688,7 +690,7 @@
                 <a id="lst4.2"></a>
                 <h3 class="section--h3">Design / Specification Grade Sheet</h3>
                 
-                <p class="subhead">
+                <p>
                 Adapted from Freedman and Weinberg (p. 324).  Fields could include:
                 </p>
                 <ul>

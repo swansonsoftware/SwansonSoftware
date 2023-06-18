@@ -28,8 +28,15 @@
     }
 
     li {
+        font-size: 1.1rem;
+        line-height: 1.5;
         margin:0px;
         padding:2px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 
     &__print {
