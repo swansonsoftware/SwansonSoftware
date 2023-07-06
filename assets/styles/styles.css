@@ -10,6 +10,7 @@
 @import 'modules/_primary-nav';
 @import 'modules/_site-footer';
 @import 'modules/_site-footer-static';
+@import 'modules/_site-footer-about';
 @import 'modules/_album-footer.css';
 @import 'modules/_row';
 @import 'modules/_headline';

@@ -79,6 +79,7 @@ class MobileMenu {
 
             if (this.vcrContainer){
                 this.vcrContainer.classList.add("slideshow__vcr-container--kill");
+                this.siteHeader.style.height = "100%";
             }
             this.isCollapsed = false;
 
@@ -89,6 +90,7 @@ class MobileMenu {
             document.body.classList.remove('no-scroll');
             if (this.vcrContainer){
                 this.vcrContainer.classList.remove("slideshow__vcr-container--kill");
+                this.siteHeader.style.height = "90px";
             }
             this.isCollapsed = true;
         }

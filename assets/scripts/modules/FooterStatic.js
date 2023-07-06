@@ -23,8 +23,14 @@ class FooterStatic {
             // `)
             this.footerElement.insertAdjacentHTML("beforeend", `
             <div class="wrapper">
-                <p><span class="site-footer-static__text">Copyright &copy; 2023. All rights reserved. | 
-                <a href="about.html">About SwansonSoftware.com</a></span></p>
+                <p>
+                    <span class="site-footer-static__text">Copyright &copy; 2023. All rights reserved.
+                    <br>
+
+                    <a href="about.html">About SwansonSoftware.com</a>
+                    <br>
+                    </span>
+                </p>
             </div>
             `)
         }
@@ -35,7 +41,7 @@ class FooterStatic {
         if (!this.isSmallScreen){
             this.footerElement.classList.remove("site-footer-static__short-screen");
             if (this.footerElement != null) {
-                var top = screen.availHeight - 150;
+                var top = screen.availHeight - 180;
                 this.footerElement.style.top  = top+"px";
             }
         } else {

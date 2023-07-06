@@ -29,7 +29,7 @@ class Lightbox {
         document.body.insertAdjacentHTML("beforeend", `
         <div class="lightbox__overlay">
             <a href="#" class="lightbox__overlay--anchor"><span class="accessibility--hidden">Select this to close the photo.</span><i class="lightbox__overlay--close-icon" aria-hidden="true"></i></a>
-            <div id="lightbox__overlay__image" class="lightbox__overlay__image" ></div>
+            <div id="lightbox__overlay__image" class="lightbox__overlay__image"></div>
             <div class="album-photos__photo-title">
             <a href="#" class="album-photos__photo-title__button">
                 <span class="accessibility--hidden">Select this button to alternately close or open the box with the photo caption.</span>
@@ -90,22 +90,36 @@ class Lightbox {
         this.largeFilename = '';
         this.hidpiFilename = '';
         this.filename = fqFilename.substring(fqFilename.lastIndexOf("album/") + 6);
-        this.filename = this.filename.replace('.jpg', '.webp');
-        this.mediumFilename = this.filename.replace('small', 'medium');
-        this.largeFilename = this.filename.replace('small', 'large');
-        this.hidpiFilename = this.filename.replace('small', 'hidpi');
+        // this.filename = this.filename.replace('.jpg', '.webp');
+        if (this.filename.lastIndexOf('-thumb') > 0){
+            this.mediumFilename = this.filename.replace('thumb', 'medium');
+            this.largeFilename = this.filename.replace('thumb', 'large');
+            this.hidpiFilename = this.filename.replace('thumb', 'hidpi');
+        } else {
+            this.mediumFilename = this.filename.replace('small', 'medium');
+            this.largeFilename = this.filename.replace('small', 'large');
+            this.hidpiFilename = this.filename.replace('small', 'hidpi');
+        }
     }
 
     openOverlay(e, el) {
-        // console.log(el.lastElementChild.attributes['alt'].value);
+        // console.log(el.lastElementChild.lastElementChild.nodeName); //IMG element
         e.preventDefault();
         document.body.classList.add('no-scroll');
 
-        if (el.lastElementChild) {
+        var elObj = null;
+        if (el.lastElementChild.nodeName == 'IMG'){
+            elObj = el.lastElementChild;
+        } else if (el.lastElementChild.lastElementChild.nodeName == 'IMG'){
+            elObj = el.lastElementChild.lastElementChild;
+        }
+
+        if (elObj) {
             // console.log("height:" + window.innerHeight + "px;width:" + window.innerWidth + "px;");
             this.overlayImageDiv.style = "height:" + window.innerHeight + "px;width:" + window.innerWidth + "px;";
 
-            const photoCaption = el.lastElementChild.attributes['alt'].value;
+            const photoCaption = elObj.attributes['alt'].value;
+            
 
             if (photoCaption){
                 this.swapTitleBtnIco(this.TITLEBTNLEFT);
@@ -116,11 +130,12 @@ class Lightbox {
                 this.photoCaption.innerText = '';
             }
 
-            this.parseFileName(el.lastElementChild.src);
+            this.parseFileName(elObj.src);
             
             //Replace "small" with "large" or "hidpi" in the filename
 
             this.overlayImageDiv.innerHTML = `
+            <div class='lightbox__overlay--spinner' style='position:absolute;z-index:-1;'></div>
             <picture>
                 <source srcset="${this.largeFilename} 1x, ${this.hidpiFilename} 2x" media="(min-width: 1000px)">
                 <source srcset="${this.filename} 1x, ${this.mediumFilename} 2x" media="(min-width: 600px)">

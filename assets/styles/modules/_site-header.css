@@ -55,7 +55,6 @@
 
     &--is-expanded {
         z-index: 2;
-        height: 100%;
         &--dark {
             background-color: $siteHeaderLiteBackgroundDesktop;
         }

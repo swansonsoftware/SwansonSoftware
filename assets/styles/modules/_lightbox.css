@@ -63,6 +63,29 @@
             align-items: center;
         }
 
+        &--spinner {
+            margin: auto;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            border: 0.25rem solid #fff;
+            border-top-color: #686868;
+            -webkit-animation: spin 1s infinite linear;
+                    animation: spin 1s infinite linear;
+        }
+        @-moz-keyframes spin {
+            from { -moz-transform: rotate(0deg); }
+            to { -moz-transform: rotate(359deg); }
+        }
+        @-webkit-keyframes spin {
+            from { -webkit-transform: rotate(0deg); }
+            to { -webkit-transform: rotate(359deg); }
+        }
+        @keyframes spin {
+            from {transform:rotate(0deg);}
+            to {transform:rotate(359deg);}
+        }
+        
         picture {
             display:flex;
             height: 100%;

@@ -34,7 +34,11 @@
         &__medium-8 {
           grid-column: span 8;
         }
-    
-      }
-    
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-top: 15px;
+    }
 }
