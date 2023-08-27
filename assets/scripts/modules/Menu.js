@@ -122,15 +122,17 @@ class Menu {
      * Set text decoration underline on selected menu item
      */
     setSelectedMenuItem(){
-        let selectedMenu = document.querySelector('.site-header').getAttribute("data-matching-link");
-        if (selectedMenu){
-            //is this a light or dark background
-            if (document.querySelector('.primary-nav--dark')){
-                document.querySelector(selectedMenu).style.textDecoration = "underline";
-            } else if (document.querySelector('.primary-nav--pull-right')){
-                //any link to underline?
-            } else if (document.querySelector('.album-nav--pull-right')){
-                document.querySelector(selectedMenu).style.textDecoration = "underline";
+        if (this.siteHeader){
+            let selectedMenu = document.querySelector('.site-header').getAttribute("data-matching-link");
+            if (selectedMenu){
+                //is this a light or dark background
+                if (document.querySelector('.primary-nav--dark')){
+                    document.querySelector(selectedMenu).style.textDecoration = "underline";
+                } else if (document.querySelector('.primary-nav--pull-right')){
+                    //any link to underline?
+                } else if (document.querySelector('.album-nav--pull-right')){
+                    document.querySelector(selectedMenu).style.textDecoration = "underline";
+                }
             }
         }
     }

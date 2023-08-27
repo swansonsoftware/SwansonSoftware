@@ -6,6 +6,7 @@ class FooterStatic {
             if (screen.availWidth > 750 && screen.availHeight > 700){
                 this.isSmallScreen = false;
             }
+            console.log('isSmallScreen: ' + this.isSmallScreen);
             this.injectFooterHTML();
             this.events();
             this.setFooterLocation();

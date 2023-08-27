@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>
+        console.log('screen width: ' + window.innerWidth + 'px');
+        // console.log(screen.width); //screen.availHeight: 824; screen.availWidth: 1536; screen.pixelDepth: 24
+    </script>
 </head>
 
 <body class="album">
@@ -39,20 +43,124 @@
 
         <!--<p><a href="2020s-slideshow.html">2020s Slideshow with info</a></p>-->
         <p><a href="2020s-slideshow-info.html">2020s Slideshow</a></p>
+<!--window.innerWidth iPhone 12 mini: 320 w in portrait, 607 w in landscape-->
+<!--
+    Images:
+        Retina hi dpi:  2x 1920x1080 = 3840x2160; 
+    see https://www.foregroundweb.com/image-size/
+        display-size of single image (non-slideshow): 262x150; best size ~400x225 @70%
+        https://web.dev/responsive-images/
+        
+        hidpi: 2560x1443 1600x1200 (for retina displays only)
+        large: 1920x1080 1440x1080
+        medium:1280x721  1280x960 (for retina displays only)
+        small: 640x360	 640x480
+        thumb: 260x147	 260x195
+        thumb (new): 330x186
+portrait:
+        hidpi: 1620x2160 (for retina displays only)
+        large: 810x1080
+        medium:960x1280  (for retina displays only)
+        small: 480x640
+        thumb: 260x347
+jpg compression: 60%
+
+May use these sizes in future:
+
+    3:2 ratio example: 1080x720
+    5:4 ratio example: 1280x1024; 1200x960; 640x512; 
+    16:9 ratio example: 1920x1080
+    9:16 ratio example: 1080x1920
+
+    Original: 3x4 (1600 x 1200)
+               3200 x 2400
+               1600 x 1200
+               1440 x 1080
+               1280 x 960
+                960 x 720
+                640 x 480
+                330 x 248
+
+    Original: 2x3 (2333 x 1555; 3888 x 2592)
+               3840 x 2560 (2x large)
+               3360 x 2240
+               2880 x 1920
+               2400 x 1600
+    large:     1920 x 1280
+               1600 x 1066
+    medium:    1280 x 853
+                960 x 640
+    small:      640 x 427
+    thumb:      330 x 220
+
+    Original: 16x9 (3888 x 2187)
+    hidpi:      3840 x 2160 (2 x 1920)
+                2560 x 1440
+                2240 x 1260
+    large:      1920 x 1080
+                1600 x 900
+    medium:     1280 x 720
+                 960 x 540
+    small:       640 x 360
+    thumb:       330 x 186
+
+
+<img src="images/2020s/2020-02-22_DSC03577-thumb.webp"
+srcset="2020-02-22_DSC03577-thumb.webp 1x
+        2020-02-22_DSC03577-small.webp 2x
+
+--------------------------
+<img src="small.webp" srcset="medium.webp 1000w, large.webp 2000w"
+1000w is equivalent to 1000px wide and 2000w to 2000px wide
+the browser will account for pixel density automatically
+
+If the browser window is wider than 1200px, the image is 
+probably going to be displayed about half the size of that. 
+If it’s smaller, it’ll probably be full-width.
+... sizes="(min-width: 1200px) 50vw, 100vw"
+
+<img src="images/2020s/2020-02-22_DSC03577-thumb.webp"
+sizes="(min-width: 1200px) 50vw, 100vw"
+
+-->
 
         <div class="album-photos">
+            <!--
+                        <img src="images/2020s/2020-02-22_DSC03577-small.webp" 
+                        srcset="images/2020s/2020-02-22_DSC03577-thumb.webp 800w, 
+                                images/2020s/2020-02-22_DSC03577-small.webp 900w"
+                                sizes="(min-width: 400px) 258px, calc(56.25vw + 44px)" 
+                        alt="Test image 1">
+
+            -->
+
             <div class="album-photos__polaroid">
                 <div class="album-photos__polaroid--rotate-left">
-                    <a href="#" class="album-photos__polaroid--show-overlay"><img src="images/2020s/2022/not_used/DSC03815-small-i.webp" alt="Test image 1"></a>
+                    <a href="#" class="album-photos__polaroid--show-overlay">
+                        <img src="images/2020s/2020-02-22_DSC03577-thumb-i.webp" width="330" height="186" alt="Persimon trees in backyard.">
+                    </a>
                     <p>Test image 1.</p>
                 </div>
             </div>
+
+            <div class="album-photos__polaroid">
+                <div class="album-photos__polaroid--rotate-left">
+                    <a href="#" class="album-photos__polaroid--show-overlay">
+                        <img src="images/2020s/2022-05-01-DSC03815b-small-i.webp" width="330" height="186" alt="Test image 1">
+                    </a>
+                    <p>Test image 1.</p>
+                </div>
+            </div>
+            <!--
             <div class="album-photos__polaroid">
                 <div class="album-photos__polaroid--rotate-right">
-                    <a href="#" class="album-photos__polaroid--show-overlay"><img src="images/2020s/2022/not_used/DSC03834-small-i.webp" alt="Test image 2"></a>
+                    <a href="#" class="album-photos__polaroid--show-overlay">
+                        <img src="images/2020s/2022/not_used/DSC03834-small-i.webp" width="330" height="186" alt="Test image 2">
+                    </a>
                     <p>Test image 2.</p>
                 </div>
             </div>
+            -->
             
         </div>
     </div>
@@ -60,7 +168,6 @@
     <footer  class="album-footer">
     </footer>
 
-    <!--<script src="../bundled.js"></script>-->
 
 </body>
 </html>

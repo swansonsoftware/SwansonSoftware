@@ -35,9 +35,14 @@
 <!--window.innerWidth iPhone 12 mini: 320 in portrait, 607 in landscape-->
 <!--
     Images:
-        hi dpi:  1920x1080 = 3840x2160; 
-        Desktop: 1920x1080
-        Mobile:  640x360
+        Retina hi dpi:  2x 1920x1080 = 3840x2160; 
+        Large (desktop): 1920x1080
+        Retina Medium (mobile): 
+        Small (mobile):  640x360
+        thumbnail: 258x145
+    see https://www.foregroundweb.com/image-size/
+        display-size of single image (non-slideshow): 262x150; best size ~400x225 @70%
+        https://web.dev/responsive-images/
 -->
 
 <div style="width: 100%;height:100vh;">
@@ -52,20 +57,43 @@
         <ul class="slideshow__slides">
             <li class="slideshow__slides__slide" style="height:100%;width:100%;">
                 <p class="titletext">Rose Garden 1</p>
+                <div class='slideshow__slides__slide--spinner'></div>
                 <picture>
-                    <source srcset="images/2020s/2022/not_used/DSC03815-large-i.webp 1x, images/2020s/2022/not_used/DSC03815-hidpi-i.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022/not_used/DSC03815-small-i.webp 1x, images/2020s/2022/not_used/DSC03815-medium-i.webp 2x" media="(min-width: 600px)">
-                    <img class="slide-image" src="images/2020s/2022/not_used/DSC03815-small-i.webp" alt="Rose Garden 1">
+                    <source srcset="images/2020s/2020-02-22_DSC03577-large-i.webp 1x, images/2020s/2020-02-22_DSC03577-hidpi-i.webp 1.33x" media="(min-width: 1000px)" width="1920" height="1080">
+                    <source srcset="images/2020s/2020-02-22_DSC03577-small-i.webp 1x, images/2020s/2020-02-22_DSC03577-medium-i.webp 2x" media="(min-width: 600px)" width="640" height="360">
+                    <img class="slide-image" src="images/2020s/2020-02-22_DSC03577-small-i.webp" width="640" height="360" alt="Rose Garden 1">
                 </picture>
             </li>
+            <!--
+                At a viewport of 1280×720 the image was displayed 1277 pixels wide, but the closest provided image has a width of 1920 which is 33% 
+                (1.16 megapixels) off. The affected viewports are 1000×563–1740×979, 2100×1181–2260×3013, 1000×1333–1720×2293.
+
+                Try using the following image sizes in the 1st <source srcset="…"> instead: 
+                1000×1000, 1280×1280, 1510×1510, 1710×1710, 1890×1890, 2048×2048
+
+            -->
+            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
+                <p class="titletext">Rose Garden 1</p>
+                <div class='slideshow__slides__slide--spinner'></div>
+                <picture>
+                    <source srcset="images/2020s/2022-05-01-DSC03815b-large-i.webp 1x, images/2020s/2022-05-01-DSC03815b-hidpi-i.webp 1.08x" media="(min-width: 1000px)" width="1920" height="1080">
+                    <source srcset="images/2020s/2022-05-01-DSC03815b-small-i.webp 1x, images/2020s/2022-05-01-DSC03815b-medium-i.webp 2x" media="(min-width: 600px)" width="640" height="360">
+                    <img class="slide-image" src="images/2020s/2022-05-01-DSC03815b-small-i.webp" width="640" height="360" alt="Rose Garden 1">
+                </picture>
+            </li>
+            <!--
+                1000×1000, 1280×1280, 1510×1510, 1710×1710, 1890×1890, 2048×2048
+
             <li class="slideshow__slides__slide" style="height:100%;width:100%;">
                 <p class="titletext">Rose garden 2</p>
+                <div class='slideshow__slides__slide--spinner'></div>
                 <picture>
-                    <source srcset="images/2020s/2022/not_used/DSC03834-large-i.webp 1x, images/2020s/2022/not_used/DSC03834-hidpi-i.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022/not_used/DSC03834-small-i.webp 1x, images/2020s/2022/not_used/DSC03834-medium-i.webp 2x" media="(min-width: 600px)">
+                    <source srcset="images/2020s/2022/not_used/DSC03834-large-i.webp 1x, images/2020s/2022/not_used/DSC03834-hidpi-i.webp 2x" media="(min-width: 1000px)" width="1920" height="1080">
+                    <source srcset="images/2020s/2022/not_used/DSC03834-small-i.webp 1x, images/2020s/2022/not_used/DSC03834-medium-i.webp 2x" media="(min-width: 600px)" width="640" height="360">
                     <img loading="lazy" class="slide-image" src="images/2020s/2022/not_used/DSC03834-small-i.webp" alt="Rose garen 2">
                 </picture>
             </li>
+            -->
         </ul>
         
         <p class="slideshow__vcr-container">
