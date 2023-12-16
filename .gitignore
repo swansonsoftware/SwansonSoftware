@@ -2,6 +2,7 @@ dist/
 downloads/
 node_modules/
 bundled.js
+*.asp
 *.jpg
 *.psp
 *.jbf

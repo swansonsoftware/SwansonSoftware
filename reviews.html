@@ -1,779 +1,688 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Swanson Software's paper on software reviews.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Swanson Software's paper on software reviews.">
 	<meta charset="utf-8">
 	<title>Swanson Software - Reviews</title>
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
-    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
-    <link rel='preload' as='style' onload="this.onload=null;this.rel='stylesheet'" href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" sizes="32x32" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/images/favicon-180x180.png">
+	<link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#000000">
+	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+		href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-    <a href="#maincontent" class="accessibility__skiptocontent accessibility__skiptocontent--dark">Skip to main content</a>
-    <a id="top"></a>
+	<a href="#maincontent" class="accessibility__skiptocontent accessibility__skiptocontent--dark">Skip to main
+		content</a>
+	<a id="top"></a>
 
-    <header class="site-header site-header--dark" data-matching-link="#reviews">
-        <div class="wrapper">
-            <div class="site-header__logo">
-                <a href="index.html">
-                    <img src='/assets/images/logo.svg' width="220" height="53" alt='Swanson Software logo' title='Swanson Software home'>
-                </a>
-            </div>
-            <div class="site-header__menu-icon site-header__menu-icon--dark"></div>
+	<header class="site-header site-header--dark" data-matching-link="#reviews">
+		<div class="wrapper">
+			<div class="site-header__logo">
+				<a href="index.html">
+					<img src="assets/images/logo.svg" width="220" height="53" alt="Swanson Software logo"
+						title="Swanson Software home">
+				</a>
+			</div>
+			<div class="site-header__menu-icon site-header__menu-icon--dark"></div>
 
-            <div class="site-header__menu-content">
-                <nav class="primary-nav primary-nav--pull-right primary-nav--dark">
-                </nav>
-            </div>
-        </div>
-    </header>
+			<div class="site-header__menu-content">
+				<nav class="primary-nav primary-nav--pull-right primary-nav--dark"></nav>
+			</div>
+		</div>
+	</header>
 
-    <div class="page-section" id="maincontent">
-        <div class="wrapper wrapper__article">
-            
-            <h1 class="headline__h1 headline__h1--center">Software Reviews</h1>
-            <p class="headline__author">Gregory Swanson, 2007</p>
-            
-            <h2 class="headline__h2 headline__h2--center">Contents</h2>
+	<div class="page-section" id="maincontent">
+		<div class="wrapper wrapper__article">
+			<h1 class="headline__h1 headline__h1--center">Software Reviews</h1>
+			<p class="headline__author">Gregory Swanson, 2007</p>
 
-            <ol class="contents">
-                <li><a href="#lst1">Introduction</a>
-                    <ol class="contents">
-                        <li><a href="#lst1.1">Components</a></li>
-                        <li><a href="#lst1.2">Cost</a></li>
-                    </ol>
-                </li>
-                <li><a href="#lst2">Overview of Review Types</a>
-                    <ol class="contents">
-                        <li><a href="#lst2.1">Fagan's Software Review</a></li>
-                        <li><a href="#lst2.2">Active Design Review</a></li>
-                        <li><a href="#lst2.3">Two-Person Review</a></li>
-                        <li><a href="#lst2.4">N-Fold Review</a></li>
-                        <li><a href="#lst2.5">Phased Review</a></li>
-                        <li><a href="#lst2.6">IEEE Standard 1028 For Software Reviews</a></li>
-                        <li><a href="#lst2.7">Informal Reviews</a>
-                            <ol class="contents">
-                                <li><a href="#lst2.7.1">Walkthrough</a></li>
-                                <li><a href="#lst2.7.2">Pair Programming</a></li>
-                                <li><a href="#lst2.7.3">Peer Check</a></li>
-                                <li><a href="#lst2.7.4">Pass-Around</a></li>
-                            </ol>
-                        </li>
-                    </ol>
-                </li>
-                <li><a href="#lst3">Review Process</a>
-                    <ol class="contents">
-                        <li><a href="#lst3.1">Review Task</a></li>
-                        <li><a href="#lst3.2">Reading Technique</a></li>
-                        <li><a href="#lst3.3">Planning On-going Reviews</a></li>
-                    </ol>
-                </li>
-                <li><a href="#lst4">Sample Forms</a>
-                    <ol class="contents">
-                        <li><a href="#lst4.1">Technical Review Summary Report</a></li>
-                        <li><a href="#lst4.2">Design / Specification Grade Sheet</a></li>
-                    </ol>
-                </li>
-                <li><a href="#idRef">References</a></li>
-            </ol>
-                
-            <!--*******************************************************************************-->
-            <br><br>
-                
-            <section class="section">
-                
-                <a id="lst1"></a>
-                <h2 class="section--h2">Introduction</h2>
-                
-                
-                <p>Code review is one of the key components of software process. The need for reviews arises from fundamental inadequacies in the way software is made:</p>
+			<h2 class="headline__h2 headline__h2--center">Contents</h2>
 
-                <ul>
-                    <li>Software requirements are not always concise, and require 
-                    interpretation;  however, interpretation of requirements may be incorrect.  Furthermore,
-                    interpretation of a particular requirement will vary between teams (e.g. Quality Assurance
-                    and Development), and between members of a team.</li>
-                
-                    <li>Many errors start with a misconception that becomes part of the design 
-                    and is repeated in each phase of development through testing.  Without a review process, the
-                    end user will catch the flaw in the end product, when fixing it is most difficult and
-                    expensive.</li>
-                
-                    <li>The quality of implementation of the requirements depends on the
-                    experience and ability of the programmer.  However, there is a fundamental inability in
-                    team members to find some errors.</li>
-                </ul>
-                
-                <p>
-                Michael Fagan recognized these problems and in 1972 introduced the software review at IBM.  Since 
-                then, several review process structures have appeared in the literature.  Wong provides an
-                overview of them as well as a bibliographical reference (1996).  Each review process has strengths
-                and weaknesses (discussed below) that will determine its appropriateness in a particular
-                organization.
-                </p>
-                
-                <p>
-                Software reviews have the primary objective of finding errors before a lot of time and effort is
-                wasted building them into the software.  In addition to finding errors, software reviews have the 
-                following objectives (based on Humphrey, 1989 p. 173, and McConnell, 1993):
-                </p>
-                <ul>
-                    <li>Disseminate product awareness - ensure everyone understands and knows what the product is and what they are supposed to do.</li>
-                
-                    <li>Begin a process - conducting a software review requires that you have some kind of process in place, because you can't do a software review unless you have some predefined criteria to guide the participants.</li>
-                
-                    <li>Provide data points - reviews provide data points for both the product and the review process. Data points are used to measure your review process so you can make adjustments to improve it.</li>
-                
-                    <li>Disseminate technical knowledge - Less experienced team members learn about standards and become familiar with the various technical documents and/or coding techniques. Experienced team members hone their skills.</li>
-                </ul>
-                
-                <a id="lst1.1"></a>
-                <h3 class="section--h3">Components</h3>
-                <p>
-                Depending on the formality of the process, some of the following review components may not be
-                needed.  Based on Humphrey, 1989 (Humphrey refers to software reviews as inspections):
-                </p>
-                <ul>
-                    <li>Checklists and forms - Inspections require different checklists and
-                    forms for each kind of work artifact: design, requirements, code, test cases, test data,
-                    etc. Checklists and forms cover each phase of the inspection: planning, participant
-                    preparation, the inspection, inspection summary, and reporting of results. You can tailor
-                    generic checklists or forms for these uses.</li>
-                
-                    <li>Format - Inspections must follow a predefined format where participants
-                    have specific roles. Participants use checklists to ensure they follow the format.</li>
-                    
-                    <li>Roles - Inspection participants include a moderator, one to four
-                    reviewers, and one author (Humphrey refers to the author as the "producer").</li>
-                    
-                    <li>Managers - Managers don't attend, because their presence interferes
-                    with the activity. However, results such as inspection process quality reports and timelines 
-                    for error fixes are reported.</li>
-                    
-                    <li>Preparation - Reviewers prepare for the inspection by reading the
-                    documents handed them by the moderator. These documents are the artifacts produced by the
-                    author. They follow a checklist and note questions and any problems they find.</li>
-                    
-                    <li>Error fixes - Inspection meeting participants don't talk about how
-                    fixes should be made when errors are found; errors are noted and any further discussion 
-                    about fixes is done outside of the inspection meeting.</li>
-                    
-                    <li>Results - Inspection data is kept, and ideally there is an application 
-                    designed specifically for process management which stores inspection data in a database.</li>
-                    
-                    <li>Followup - After the inspection, the author receives a list of things 
-                    to fix. Once the fixes are made, another inspection is held to ensure the fixes were made 
-                    and to ensure nothing else was broken.</li>
-                </ul>
-                
-                <a id="lst1.2"></a>
-                <h3 class="section--h3">Cost</h3>
-                
-                <p>
-                Several factors affect the cost of inspections.
-                </p>
-                <ul>
-                    <li>As defects are found during inspections of design, fewer defects are found during inspections of code and inspection time decreases for 	  those.</li>
-                    <li>As design inspections reduce defects in code, rework decreases.</li>
-                    <li>As participant's inspection skill improves, the number of defects found per hour increases.</li>
-                    <li>As quality improves in pre-test phases, test time is reduced.</li>
-                </ul>
-                
-                <p>
-                McConnell (1993) said about 15 percent of a project's cost will go to inspections when
-                both design and code inspections are done (p. 577). When you consider that 60 to 90 percent
-                of a product's defects can be found with inspections (ibid. p. 576), that's a bargain.
-                </p>
-                
-                <!--*******************************************************************************-->
-                
-                <a id="lst2"></a>
-                <h2 class="section--h2">Overview of Review Types</h2>
-                
-                <p>
-                Some authors have found it sufficient to classify reviews based mostly on formality.  For example,
-                McConnell (1993) has found the following categories:
-                </p>
-                <ul>
-                    <li>Reading documents and code - The least formal, reviewers read through
-                    a code listing independently (i.e. a meeting is not held). A checklist and summary form is 
-                    not used, the reviewer points out problems and discusses them or notes them on the listing.
-                    Typically a code listing is no greater than 4000 lines.</li>
-                
-                    <li>Walkthroughs - More formal than code and document reading, walkthroughs
-                    follow a format that is less formal than inspections. The greatest distinguishing feature
-                    between walkthroughs and inspections is the participants: in walkthroughs, reviewers are the 
-                    author's peers; in inspections, reviewers are peers and non-peers.  Like inspections, 
-                    walkthroughs specify roles for participants and those roles are the same as roles in 
-                    inspections. Walkthroughs allow less preparation time for reviewers, but do specify 
-                    checklists, forms, meeting rules, and followup.</li>
-                
-                    <li>Inspections - The most formal of the three review types, inspections
-                    include non-peers in the process. Non-peers are other persons who have an interest in the 
-                    product. Inspections allow longer preparation time, and more time between the review and 
-                    followup.</li>
-                </ul>
-                
-                <p>
-                There are several distinct review types that the above classification scheme glosses over.  They
-                are covered well in Wong (2006):
-                </p>
-                
-                
-                <a id="lst2.1"></a>
-                <h3 class="section--h3">Fagan's Software Review</h3>
-                
-                <p>
-                Michael Fagan had two purposes in mind: 1) improve software quality, and 2) increase software 
-                developer productivity.  The review process he describes includes six main steps (Wong p. 17):
-                </p>
-                <ul>
-                    <li>planning</li>
-                    <li>overview</li>
-                    <li>individual preparation</li>
-                    <li>group review meeting</li>
-                    <li>rework</li>
-                    <li>follow-up</li>
-                </ul>
-                
-                <p>
-                Some steps may not be appropriate for a particular software artifact.  E. g. the overview step 
-                is less useful for a code review.  
-                </p>
-                
-                <p>
-                Wong found that research results do not support some review practices:
-                </p>
-                <ul>
-                    <li>The "synergy effect" of a group meeting, in which the collective contribution is greater than the combination of individual results.  Research shows that this synergy effect is low.</li>
-                    <li>Group meetings are costly in terms of time, which reduces development efficiency.</li>
-                    <li>Where groups have been larger (group meetings), participation decreases across time.</li>
-                </ul>
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.2"></a>
-                <h3 class="section--h3">Active Design Review</h3>
-                
-                <p>
-                Active Design Review was described by Parnas and Weiss (1985). The rationale for ADR are (from
-                Wong, p. 20):
-                </p>
-                <ol>
-                    <li>"When reviewers are overloaded with information they are unable to find defects effectively."</li>
-                    <li>Reviewers are often not familiar with the objective of the design and they are often unable to understand detailed levels of the artefact."</li>
-                    <li>"Large group review meetings often fall short of their objectives."</li>
-                </ol>
-                
-                <p>
-                ADR process has three steps (Wong, p. 20):
-                </p>
-                <ol>
-                    <li>"The author presents an overview of the design artefact"</li>
-                    <li>Defect detection - "the author provides an open-ended questionnaire to help reviewers find defects in the design artefact"</li>
-                    <li>Defect collection - a "segmented review meeting strategy allows reviewers to concentrate" on small dimensions, minimizing information overload.</li>
-                </ol>
-                
-                <p>
-                ADR has two roles: author, and reviewer.
-                </p>
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.3"></a>
-                <h3 class="section--h3">Two-Person Review</h3>
-                
-                <p>
-                Two-Person Review (TPR) was described by Bisant and Lyle (1989).  Similar to ADR in that there 
-                are two roles: author and reviewer.  TPR "adopts Fagan's formal review method but removes the
-                role of the moderator (Wong, p. 21)."
-                </p>
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.4"></a>
-                <h3 class="section--h3">N-Fold Review</h3>
-                
-                <p>
-                N-Fold Review was described by Martin and Tsai (1990).  Martin and Tsai's premise is that
-                multiple review teams "working in parallel sessions" will find "a large number of defects"
-                in an artefact, whereas a single team will likely find a small number (Wong, p. 21).
-                </p>
-                
-                <p>
-                Tasks are divided so that groups do not duplicate each other's efforts.  Fagan's (six-step)
-                review process is followed, with participants (three or four) filling the roles of author, 
-                moderator, and reviewer (ibid).
-                </p>
-                
-                <p>
-                Wong cites research that shows low defect redundancy (where each team finds the same defect),
-                and defect discovery of 35% for a single team vs. 78% for all teams in the study (ibid).
-                </p>
-                
-                <p>
-                The success of N-Fold Review depends on 1) adequate availability of expertise, and 2) ability
-                to meet the additional costs required by multiple review teams.
-                </p>
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.5"></a>
-                <h3 class="section--h3">Phased Review</h3>
-                
-                <p>
-                Phased Review (PR) was described by Knight and Myers (1993).  PR adopts ideas from ADR, 
-                Fagan's Software Review, and N-Fold Review.  It follows Fagan's six-step process, in a 
-                series of "mini-reviews" called "phases."  A phase is a full examination of one property of 
-                the artefact, such as reusability or maintainability (Wong, p. 22)
-                </p>
-                
-                <p>
-                All work (including rework) must be completed for a review phase before progressing to the next
-                phase.  PRs can be performed with either a single reviewer or multiple reviewers.  In the 
-                multiple reviewer approach, reviewers examine the artefact using copies of a checklist, then
-                meet to discuss defects (ibid).
-                </p>
-                
-                <p>
-                Wong finds that PRs are not widely used in practice, perhaps because they have the drawback of
-                higher cost over other review processes.
-                </p>
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.6"></a>
-                <h3 class="section--h3">IEEE Standard 1028 For Software Reviews</h3>
-                
-                <p>
-                The standard describes a systematic, seven step review process (Wong, p. 24):
-                </p>
-                
-                <ol>
-                    <li>Introduction - describes the objective and provides an overview of the procedures.</li>
-                    <li>Responsibilities - defines roles and responsibilities.</li>
-                    <li>Inputs - describes the input requirements.</li>
-                    <li>Entry criteria - describes the criteria to be met before starting a review, including authorization and initiating events.</li>
-                    <li>Procedures - details the procedures, which include planning the review, overview of procedures, preparation, examinatjion/evaluation/recording of results, rework and followup.</li>
-                    <li>Exit criteria - describes the criteria to be met before the review can be considered complete.</li>
-                    <li>Output - describes the minimum set of deliverables to be produced.</li>
-                </ol>
-                
-                <p>
-                The IEEE standard describes a process similar to Fagan's.  However, Wong finds that it has
-                three shortcomings (ibid. p. 24):
-                </p>
-                
-                <ol>
-                    <li>It does not provide "explicit suggestions" for adopting a sustainable review approach</li>
-                    <li>Relationships between input, process, and output are missing, because the guidelines only conceptualize the input-output relations</li>
-                    <li>Reviewer's characteristics are ignored (e.g. experience).</li>
-                </ol>
-                
-                
-                <!--*******************************************************************************-->
-                <a id="lst2.7"></a>
-                <h3 class="section--h3">Informal Reviews</h3>
-                <br>
-                
-                <a id="lst2.7.1"></a>
-                <h4 class="section--h4">Walkthrough</h4>
-                
-                <p>
-                A walkthrough is where the author describes the artefact to a group of peers and seeks comments.
-                A walkthrough differes from a formal software review in that
-                </p>
-                
-                <ol>
-                    <li>the process is largely unstructured</li>
-                    <li>it does not follow a defined procedure</li>
-                    <li>it does not require management reporting and does not generate measurement metrics</li>
-                </ol>
-                
-                <p>
-                Walkthrough approach is appropriate "where the primary review objective is to educate others
-                about the product" (ibid).  A "structured" walkthrough process is described in detail in
-                Yourdon (1989):
-                </p>
-                
-                <ul>
-                    <li>Formality
-                            <p>
-                            Formality varies between review types as described above. There are a few other 
-                            relationships between formality and the review process that are worth mentioning.
-                            Formality plays a role in determining who participates in the review, and the
-                            preparation time. Results from less-formal reviews may not be added to a process
-                            database.
-                            </p>
-                            
-                            <table class="tableParent">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <th>Formal</th>
-                                    <th>Informal</th>
-                                </tr>
-                
-                                <tr>
-                                    <td>Participants</td>
-                                    <td>Peers & non-peers</td>
-                                    <td>Peers</td>
-                                </tr>
-                                <tr>
-                                    <td>Prep time</td>
-                                    <td>Long</td>
-                                    <td>Little</td>
-                                </tr>
-                            </table>
-                    </li>
-                
-                
-                    <li>Roles
-                        <p>
-                        Depending on the type of review, the number of roles will vary. Inspections require
-                        three roles performed by three different people; walkthroughs and code readings can 
-                        have two (author and reviewer).
-                        </p>
-                
-                            <ul style="padding-top:0px;">
-                                <li><b>Author</b> - the person who wrote the code or the design.
-                                The author might give an overview of the material, explain sections that are
-                                unclear, and help clear up misperceived errors.</li>
-                
-                                <li><b>Moderator</b> - this person is responsible for coordinating
-                                the meeting: distributing checklists and material for review, reserving a room, and
-                                moderating the meeting. The moderator is also responsible for inspection results
-                                (entering into the process database or distributing a summary report), and ensuring
-                                the followup actions are performed.</li>
-                
-                                <li><b>Reviewer</b> - reviewers read over design or code documents
-                                looking for defects, prior to the review meeting. During the meeting reviewers go
-                                over the material again and discuss the defects found prior to the meeting, and look
-                                for additional defects.</li>
-                
-                                <li><b>Scribe</b> - takes notes on defects found during the meeting
-                                and who is assigned to take action. The scribe role can be combined with reviewer
-                                or author roles.</li>
-                            </ul>
-                    </li>
-                    
-                    <li>Preparation
-                            <p>
-                            Each reviewer prepares for the review by reading over the design or code, using the 
-                            specified reading technique as a guide.
-                            </p>
-                    </li>
-                
-                    <li>The Review
-                            <p>
-                            The moderator begins the meeting and guides the discussion. One rule that must be
-                            followed is that the product is being reviewed, not the author (Humphrey 1989,
-                            McConnell 1993, Yourdon 1989). Follow the guideline that once a defect is discovered
-                            you move on. No time is spent discussing a fix, the defect is noted and assigned. 
-                            </p>
-                            <p>
-                            Someone is chosen to read through and describe the design or code. Each branch of code 
-                            is explained. The scribe notes errors that are discovered using a form for this
-                            purpose. Meetings should last one to two hours.
-                            </p>
-                    </li>
-                
-                    <li>Followup
-                            <p>
-                            The moderator is responsible for writing a report of the meeting that lists each defect.
-                            A template is used to ensure consistent reporting. Action items and assignees are
-                            indicated. 
-                            </p>
-                            <p>
-                            Rework assigned on the inspection report is checked by the moderator, who is
-                            responsible for keeping track of the timeline for repairs. The moderator asseses the
-                            review with regards to reinspection criteria and determines whether or not reinspection
-                            is needed. 
-                            </p>
-                    </li>
-                    
-                    <li>Reinspection Criteria
-                            <p>
-                            Certain results indicate problems in the process. These are used to determine when
-                            reinspection is needed.
-                            </p>
-                    </li>
-                
-                    </ul>
-                
-                
-                <a id="lst2.7.2"></a>
-                <h4 class="section--h4">Pair Programming</h4>
-                
-                <p>
-                Pair programming is where "two programmers work simultaneously on the same program at a single
-                workstation" (ibid p. 25).  The result is continuous, incremental review of the working 
-                product.
-                </p>
-                
-                
-                <a id="lst2.7.3"></a>
-                <h4 class="section--h4">Peer Check</h4>
-                
-                <p>
-                Often presented as the least expensive approach to software review, Peer Check is where "only
-                one person besides the author examines the software artefact" (ibid).  Similar to individual
-                software review, but has "no consistent set of practices.."  Usually informal, Peer Check can
-                be formalized.  Its drawback is that it relies on the knowledge and skill of the reviewer.
-                </p>
-                
-                
-                <a id="lst2.7.4"></a>
-                <h4 class="section--h4">Pass-Around</h4>
-                
-                <p>
-                Pass-around is where the author distributes copies of the artefact to reviewers for concurrent
-                review (Wong, p. 26).  Reviewers can see comments others have already written, which reveals
-                differences in interpretation and helps minimize redundancy.  There is no group meeting.
-                </p>
-                
-                <!--*******************************************************************************-->
-                
-                <a id="lst3"></a>
-                <h2 class="section--h2">Review Process</h2>
-                
-                <p>
-                This section describes the tasks and techniques for conducting a software review, as well as 
-                what to look for.
-                </p>
-                
-                <a id="lst3.1"></a>
-                <h3 class="section--h3">Review Task</h3>
-                <p>
-                This section describes the tasks and techniques for conducting a software review, as well as 
-                what to look for.
-                </p>
-                
-                <p>
-                Tasks are categorized into four artefacts, the work products that are reviewed (adapted from
-                Wong, 2006):
-                </p>
-                
-                <ol>
-                    <li>Requirements artefact</li>
-                    <li>Design artefact</li>
-                    <li>Code artefact</li>
-                    <li>Testing artefact</li>
-                </ol>
-                
-                <h4 class="headline__h4">What To Look For</h4>
-                
-                <p>
-                The following sections describe what to look for in the artefact (adapted from Yourdon (1989) 
-                and McConnell (1993)). 
-                </p>
-                
-                <ul>
-                    <li>Requirements artefact - Look for ambiguities and omissions.</li>
-                
-                    <li>Design artefact - Note that a design review is based on the assumption that the functional requirements are correct
-                        <ul>
-                                <li>System-level design: Issues to examine include performance, security, network communications, cost, reliability, database design, backup and recovery, etc.</li>
-                                <li>Procedural design: the design that immediately preceeds coding, procedural designs include flowcharts, pseudocode, UML diagrams, and any other diagrams used to help write code.</li>
-                        </ul>
-                    </li>
-                
-                    <li>Code artefact - Listings of code (McConnell suggests up to 1000 lines of code for a two-hour meeting). Listings should include code that has been compiled and checked with any other tools available, such as one that identifies unused variables and functions.</li>
-                
-                    <li>Testing artefact - E.g. test cases and test data.  Test cases and test data are checked to make sure they adequately cover the functionality described in the functional specification.</li>
-                </ul>
-                
-                
-                <a id="lst3.2"></a>
-                <h3 class="section--h3">Reading Technique</h3>
-                
-                <p>
-                Wong (ibid) describes reading technique as a mechanism an individual reviewer uses to detect 
-                defects.  Reading technique is "a series of procedures a reviewer can use to obtain an 
-                understanding of the artefact...providing a systematic guideline for finding defects." (3 and 
-                4 increases reading coverage and defect detection performance.)
-                </p>
-                
-                <ol>
-                    <li>Ad-hoc - there are no explicit instructions.</li>
-                
-                    <li>Checklist-based reading (CBR) - usually no longer than one page of 
-                    items in the checklist.  The checklist guides reviewers by pointing out particular 
-                    concerns that have been trouble spots in the past. If you are implementing reviews 
-                    for the first time there is no history of trouble spots, so you can use a generic 
-                    checklist to start.  When you finish your first review you may notice that certain 
-                    recurring problems arose, e.g. un-used variables declared in different places.  
-                    These are added to the checklist, and other items that were less relevant are removed.  
-                    There are several shortcomings to CBR.</li>
-                
-                    <li>Stepwise abstraction - especially helpful for code documents, because
-                    the reading instructions are more structured and precise.</li>
-                
-                    <li>Scenario-based reading - "provides systematic guidance for reviewers
-                    on what and how to find defects."  A scenario "may contain detailed descriptive
-                    questions...or how to review an artefact."  Effectiveness depends on the design and 
-                    content of the scenario questions, and typically requires comprehensive training. 
-                    Research indicates greater defect detection (about 35%) with this technique.</li>
-                </ol>
-                
-                <a id="lst3.3"></a>
-                <h3 class="section--h3">Planning On-going Reviews</h3>
-                
-                <p>
-                With on-going inspections, you will know what is next on the agenda for review. 
-                </p>
-                
-                <ul>
-                    <li>It has been from personal experience that many companies are so
-                    small that the same people will always participate in reviews. In larger companies you
-                    will have more resources to choose from. In either case, you will announce the upcomming 
-                    review meeting and suggest a date and time.</li>
-                
-                    <li>Schedule the review meeting for a time when all participants can
-                    attend, and do not schedule participants for more than one review meeting in a day.</li>
-                
-                    <li>Provide materials for the review to reviewers: code listings, 
-                    design documents, etc., and the checklists reviewers will use. Plan time for reviewers
-                    to prepare prior to the meeting; it will take 30 minutes to 90 minutes working alone 
-                    to become familiar with the material. Humphrey (1989) cites studies of high-level 
-                    languages in which application code was reviewed at 700 lines per hour, and system 
-                    code at 125 lines per hour.</li>
-                </ul>
-                
-                <!--*******************************************************************************-->
-                
-                <a id="lst4"></a>
-                <h2 class="section--h2">Sample Forms</h2>
-                
-                <p>
-                Freedman and Weinberg (1990) describe a variety of evaluation criteria in their thorough (if
-                dated) book.  The forms are all paper, but today they would more likely be a simple spreadsheet,
-                or even Web-based forms hooked up to a database.
-                </p>
-                
-                <a id="lst4.1"></a>
-                <h3 class="section--h3">Technical Review Summary Report</h3>
-                <p>
-                Adapted from Freedman and Weinberg (p. 183).  This report is in a Q&A format.  The report describes 
-                what was reviewed, who did the reviewing, and what was their conclusion.  Fields would include:
-                </p>
-                
-                <ul>
-                    <li>Review Number (like the version number of an application)</li>
-                    <li>Date</li>
-                    <li>Start time and End time</li>
-                    <li>Work unit identification: module or feature</li>
-                    <li>Produced by: producer(s) name(s)</li>
-                    <li>Brief description</li>
-                    <li>Materials used in the review (ID and description)</li>
-                    <li>Participants (their names and signatures or IDs)</li>
-                    <li>Appraisal of the work unit:
-                        <ul>
-                            <li>Accepted:
-                                <ul style="padding-top:0px;padding-bottom:0px;">
-                                    <li>as-is</li>
-                                    <li>with minor revisions</li>
-                                </ul>
-                            </li>
-                            <li>Not accepted (new review required):
-                                <ul style="padding-top:0px;padding-bottom:0px;">
-                                    <li>major revisions</li>
-                                    <li>rebuild</li>
-                                    <li>review not completed</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                
-                    <li>Supplementary materials produced: description or IDs</li>
-                    <li>Issues list, related-issues list, etc.</li>
-                </ul>
-                
-                <a id="lst4.2"></a>
-                <h3 class="section--h3">Design / Specification Grade Sheet</h3>
-                
-                <p>
-                Adapted from Freedman and Weinberg (p. 324).  Fields could include:
-                </p>
-                <ul>
-                    <li>Name of Attribute / Characteristic of attribute</li>
-                    <li>Units measured</li>
-                    <li>Planned (Y/N)</li>
-                    <li>Worst acceptable case</li>
-                    <li>% weight (W)</li>
-                    <li>Design performance</li>
-                    <li>Grade (0-1.00) (G)</li>
-                    <li>G x W</li>
-                    <li>Overall grade</li>
-                </ul>
-                
-                <!--*******************************************************************************-->
-                
-                
-                
-                <a id="idRef"></a>
-                <h3 class="headline__h3 section__refs">References</h3>
-                
-                
-                <p class="references">
-                <b>Bisant, D. B., and Lyle, J. R.,</b> 1989, A Two Person Inspection Method to Improve
-                Programming Productivity:  IEEE Transactions on Software Engineering, 15 (10), 1294-1304.
-                </p>
-                
-                <p class="references">
-                <b>Freedman, D. p., and Weinberg, G. M.</b>, 1990, Handbook of Walkthroughs, Inspections, and
-                Technical Reviews: Evaluating Programs, Projects, and Products, 3rd Edition: Dorset House
-                ISBN: 0-932633-19-6
-                </p>
-                
-                <p class="references">
-                <b>Humphrey, Watts S.</b>, 1989, Managing the Software Process: Addison-Wesley, 494 pages.
-                ISBN: 0-201-18095-2
-                </p>
-                
-                <p class="references">
-                <b>Martin, J., and Tsai, W. T.,</b> 1992, N-fold Inspection: A Requirements Analysis Technique:
-                Communications of ACM, 33(2), 225-232.
-                </p>
-                
-                <p class="references">
-                <b>Knight, J. C., and Myers, A. E.,</b> 1993, An Improved Inspection Technique: Communications
-                of ACM, 36(11), 50-69.
-                </p>
-                
-                <p class="references">
-                <a href="http://www.stevemcconnell.com/" class="generic" target="_top"><b>McConnell,
-                Steve</b></a>, 1993, Code Complete: A Practical Handbook of Software Construction: Microsoft
-                Press, 880 pages. ISBN: 1-55615-484-4
-                </p>
-                
-                <p class="references">
-                <a href="http://www.stevemcconnell.com/" class="generic" target="_top"><b>McConnell, Steve</b></a>,
-                1996, Rapid Development: Taming Wild Software Schedules: Microsoft Press, 660 pages.
-                ISBN: 1-55615-900-5
-                </p>
-                
-                <p class="references">
-                <b>Parnas, D. L., and Weiss, D. M.,</b> 1985, Active Design Reviews: Principles and Practices:
-                Proceeding of ICSE '85, Aug. 28-30, pp. 132-136.  IEEE Computer Society.
-                </p>
-                
-                <p class="references">
-                <b>Wong, Y. K.,</b> 2006, Modern Software Review: Techniques And Technologies: IRM Press,
-                324 pages.  ISBN: 159904014X
-                </p>
-                
-                <p class="references">
-                <b>Yourdon, Edward</b>, 1989, Structured Walkthroughs, fourth edition: Yourdon Press/Prentice Hall,
-                193 pages.
-                ISBN: 0-13-855289-4
-                </p>
-            </section>
-        </div>
-    </div>
+			<ol class="contents">
+				<li>
+					<a href="#lst1">Introduction</a>
+					<ol class="contents">
+						<li><a href="#lst1.1">Components</a></li>
+						<li><a href="#lst1.2">Cost</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#lst2">Overview of Review Types</a>
+					<ol class="contents">
+						<li><a href="#lst2.1">Fagan's Software Review</a></li>
+						<li><a href="#lst2.2">Active Design Review</a></li>
+						<li><a href="#lst2.3">Two-Person Review</a></li>
+						<li><a href="#lst2.4">N-Fold Review</a></li>
+						<li><a href="#lst2.5">Phased Review</a></li>
+						<li><a href="#lst2.6">IEEE Standard 1028 For Software Reviews</a></li>
+						<li>
+							<a href="#lst2.7">Informal Reviews</a>
+							<ol class="contents">
+								<li><a href="#lst2.7.1">Walkthrough</a></li>
+								<li><a href="#lst2.7.2">Pair Programming</a></li>
+								<li><a href="#lst2.7.3">Peer Check</a></li>
+								<li><a href="#lst2.7.4">Pass-Around</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<a href="#lst3">Review Process</a>
+					<ol class="contents">
+						<li><a href="#lst3.1">Review Task</a></li>
+						<li><a href="#lst3.2">Reading Technique</a></li>
+						<li><a href="#lst3.3">Planning On-going Reviews</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#lst4">Sample Forms</a>
+					<ol class="contents">
+						<li><a href="#lst4.1">Technical Review Summary Report</a></li>
+						<li><a href="#lst4.2">Design / Specification Grade Sheet</a></li>
+					</ol>
+				</li>
+				<li><a href="#idRef">References</a></li>
+			</ol>
 
-    <footer  class="site-footer">
-    </footer>
+			<!--*******************************************************************************-->
+			<br><br>
 
+			<section class="section">
+				<a id="lst1"></a>
+				<h2 class="section--h2">Introduction</h2>
+
+				<p>Code review is one of the key components of software process. The need for reviews arises from
+					fundamental inadequacies in the way software is made:</p>
+
+				<ul>
+					<li>Software requirements are not always concise, and require interpretation; however,
+						interpretation of requirements may be incorrect. Furthermore, interpretation of a particular
+						requirement will vary between teams (e.g. Quality Assurance and Development), and between
+						members of a team.</li>
+
+					<li>Many errors start with a misconception that becomes part of the design and is repeated in each
+						phase of development through testing. Without a review process, the end user will catch the flaw
+						in the end product, when fixing it is most difficult and expensive.</li>
+
+					<li>The quality of implementation of the requirements depends on the experience and ability of the
+						programmer. However, there is a fundamental inability in team members to find some errors.</li>
+				</ul>
+
+				<p>Michael Fagan recognized these problems and in 1972 introduced the software review at IBM. Since
+					then, several review process structures have appeared in the literature. Wong provides an overview
+					of them as well as a bibliographical reference (1996). Each review process has strengths and
+					weaknesses (discussed below) that will determine its appropriateness in a particular organization.
+				</p>
+
+				<p>Software reviews have the primary objective of finding errors before a lot of time and effort is
+					wasted building them into the software. In addition to finding errors, software reviews have the
+					following objectives (based on Humphrey, 1989 p. 173, and McConnell, 1993):</p>
+				<ul>
+					<li>Disseminate product awareness - ensure everyone understands and knows what the product is and
+						what they are supposed to do.</li>
+
+					<li>Begin a process - conducting a software review requires that you have some kind of process in
+						place, because you can't do a software review unless you have some predefined criteria to guide
+						the participants.</li>
+
+					<li>Provide data points - reviews provide data points for both the product and the review process.
+						Data points are used to measure your review process so you can make adjustments to improve it.
+					</li>
+
+					<li>Disseminate technical knowledge - Less experienced team members learn about standards and become
+						familiar with the various technical documents and/or coding techniques. Experienced team members
+						hone their skills.</li>
+				</ul>
+
+				<a id="lst1.1"></a>
+				<h3 class="section--h3">Components</h3>
+				<p>Depending on the formality of the process, some of the following review components may not be needed.
+					Based on Humphrey, 1989 (Humphrey refers to software reviews as inspections):</p>
+				<ul>
+					<li>Checklists and forms - Inspections require different checklists and forms for each kind of work
+						artifact: design, requirements, code, test cases, test data, etc. Checklists and forms cover
+						each phase of the inspection: planning, participant preparation, the inspection, inspection
+						summary, and reporting of results. You can tailor generic checklists or forms for these uses.
+					</li>
+
+					<li>Format - Inspections must follow a predefined format where participants have specific roles.
+						Participants use checklists to ensure they follow the format.</li>
+
+					<li>Roles - Inspection participants include a moderator, one to four reviewers, and one author
+						(Humphrey refers to the author as the "producer").</li>
+
+					<li>Managers - Managers don't attend, because their presence interferes with the activity. However,
+						results such as inspection process quality reports and timelines for error fixes are reported.
+					</li>
+
+					<li>Preparation - Reviewers prepare for the inspection by reading the documents handed them by the
+						moderator. These documents are the artifacts produced by the author. They follow a checklist and
+						note questions and any problems they find.</li>
+
+					<li>Error fixes - Inspection meeting participants don't talk about how fixes should be made when
+						errors are found; errors are noted and any further discussion about fixes is done outside of the
+						inspection meeting.</li>
+
+					<li>Results - Inspection data is kept, and ideally there is an application designed specifically for
+						process management which stores inspection data in a database.</li>
+
+					<li>Followup - After the inspection, the author receives a list of things to fix. Once the fixes are
+						made, another inspection is held to ensure the fixes were made and to ensure nothing else was
+						broken.</li>
+				</ul>
+
+				<a id="lst1.2"></a>
+				<h3 class="section--h3">Cost</h3>
+
+				<p>Several factors affect the cost of inspections.</p>
+				<ul>
+					<li>As defects are found during inspections of design, fewer defects are found during inspections of
+						code and inspection time decreases for those.</li>
+					<li>As design inspections reduce defects in code, rework decreases.</li>
+					<li>As participant's inspection skill improves, the number of defects found per hour increases.</li>
+					<li>As quality improves in pre-test phases, test time is reduced.</li>
+				</ul>
+
+				<p>McConnell (1993) said about 15 percent of a project's cost will go to inspections when both design
+					and code inspections are done (p. 577). When you consider that 60 to 90 percent of a product's
+					defects can be found with inspections (ibid. p. 576), that's a bargain.</p>
+
+				<!--*******************************************************************************-->
+
+				<a id="lst2"></a>
+				<h2 class="section--h2">Overview of Review Types</h2>
+
+				<p>Some authors have found it sufficient to classify reviews based mostly on formality. For example,
+					McConnell (1993) has found the following categories:</p>
+				<ul>
+					<li>Reading documents and code - The least formal, reviewers read through a code listing
+						independently (i.e. a meeting is not held). A checklist and summary form is not used, the
+						reviewer points out problems and discusses them or notes them on the listing. Typically a code
+						listing is no greater than 4000 lines.</li>
+
+					<li>Walkthroughs - More formal than code and document reading, walkthroughs follow a format that is
+						less formal than inspections. The greatest distinguishing feature between walkthroughs and
+						inspections is the participants: in walkthroughs, reviewers are the author's peers; in
+						inspections, reviewers are peers and non-peers. Like inspections, walkthroughs specify roles for
+						participants and those roles are the same as roles in inspections. Walkthroughs allow less
+						preparation time for reviewers, but do specify checklists, forms, meeting rules, and followup.
+					</li>
+
+					<li>Inspections - The most formal of the three review types, inspections include non-peers in the
+						process. Non-peers are other persons who have an interest in the product. Inspections allow
+						longer preparation time, and more time between the review and followup.</li>
+				</ul>
+
+				<p>There are several distinct review types that the above classification scheme glosses over. They are
+					covered well in Wong (2006):</p>
+
+				<a id="lst2.1"></a>
+				<h3 class="section--h3">Fagan's Software Review</h3>
+
+				<p>Michael Fagan had two purposes in mind: 1) improve software quality, and 2) increase software
+					developer productivity. The review process he describes includes six main steps (Wong p. 17):</p>
+				<ul>
+					<li>planning</li>
+					<li>overview</li>
+					<li>individual preparation</li>
+					<li>group review meeting</li>
+					<li>rework</li>
+					<li>follow-up</li>
+				</ul>
+
+				<p>Some steps may not be appropriate for a particular software artifact. E. g. the overview step is less
+					useful for a code review.</p>
+
+				<p>Wong found that research results do not support some review practices:</p>
+				<ul>
+					<li>The "synergy effect" of a group meeting, in which the collective contribution is greater than
+						the combination of individual results. Research shows that this synergy effect is low.</li>
+					<li>Group meetings are costly in terms of time, which reduces development efficiency.</li>
+					<li>Where groups have been larger (group meetings), participation decreases across time.</li>
+				</ul>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.2"></a>
+				<h3 class="section--h3">Active Design Review</h3>
+
+				<p>Active Design Review was described by Parnas and Weiss (1985). The rationale for ADR are (from Wong,
+					p. 20):</p>
+				<ol>
+					<li>"When reviewers are overloaded with information they are unable to find defects effectively."
+					</li>
+					<li>Reviewers are often not familiar with the objective of the design and they are often unable to
+						understand detailed levels of the artefact."</li>
+					<li>"Large group review meetings often fall short of their objectives."</li>
+				</ol>
+
+				<p>ADR process has three steps (Wong, p. 20):</p>
+				<ol>
+					<li>"The author presents an overview of the design artefact"</li>
+					<li>Defect detection - "the author provides an open-ended questionnaire to help reviewers find
+						defects in the design artefact"</li>
+					<li>Defect collection - a "segmented review meeting strategy allows reviewers to concentrate" on
+						small dimensions, minimizing information overload.</li>
+				</ol>
+
+				<p>ADR has two roles: author, and reviewer.</p>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.3"></a>
+				<h3 class="section--h3">Two-Person Review</h3>
+
+				<p>Two-Person Review (TPR) was described by Bisant and Lyle (1989). Similar to ADR in that there are two
+					roles: author and reviewer. TPR "adopts Fagan's formal review method but removes the role of the
+					moderator (Wong, p. 21)."</p>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.4"></a>
+				<h3 class="section--h3">N-Fold Review</h3>
+
+				<p>N-Fold Review was described by Martin and Tsai (1990). Martin and Tsai's premise is that multiple
+					review teams "working in parallel sessions" will find "a large number of defects" in an artefact,
+					whereas a single team will likely find a small number (Wong, p. 21).</p>
+
+				<p>Tasks are divided so that groups do not duplicate each other's efforts. Fagan's (six-step) review
+					process is followed, with participants (three or four) filling the roles of author, moderator, and
+					reviewer (ibid).</p>
+
+				<p>Wong cites research that shows low defect redundancy (where each team finds the same defect), and
+					defect discovery of 35% for a single team vs. 78% for all teams in the study (ibid).</p>
+
+				<p>The success of N-Fold Review depends on 1) adequate availability of expertise, and 2) ability to meet
+					the additional costs required by multiple review teams.</p>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.5"></a>
+				<h3 class="section--h3">Phased Review</h3>
+
+				<p>Phased Review (PR) was described by Knight and Myers (1993). PR adopts ideas from ADR, Fagan's
+					Software Review, and N-Fold Review. It follows Fagan's six-step process, in a series of
+					"mini-reviews" called "phases." A phase is a full examination of one property of the artefact, such
+					as reusability or maintainability (Wong, p. 22)</p>
+
+				<p>All work (including rework) must be completed for a review phase before progressing to the next
+					phase. PRs can be performed with either a single reviewer or multiple reviewers. In the multiple
+					reviewer approach, reviewers examine the artefact using copies of a checklist, then meet to discuss
+					defects (ibid).</p>
+
+				<p>Wong finds that PRs are not widely used in practice, perhaps because they have the drawback of higher
+					cost over other review processes.</p>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.6"></a>
+				<h3 class="section--h3">IEEE Standard 1028 For Software Reviews</h3>
+
+				<p>The standard describes a systematic, seven step review process (Wong, p. 24):</p>
+
+				<ol>
+					<li>Introduction - describes the objective and provides an overview of the procedures.</li>
+					<li>Responsibilities - defines roles and responsibilities.</li>
+					<li>Inputs - describes the input requirements.</li>
+					<li>Entry criteria - describes the criteria to be met before starting a review, including
+						authorization and initiating events.</li>
+					<li>Procedures - details the procedures, which include planning the review, overview of procedures,
+						preparation, examinatjion/evaluation/recording of results, rework and followup.</li>
+					<li>Exit criteria - describes the criteria to be met before the review can be considered complete.
+					</li>
+					<li>Output - describes the minimum set of deliverables to be produced.</li>
+				</ol>
+
+				<p>The IEEE standard describes a process similar to Fagan's. However, Wong finds that it has three
+					shortcomings (ibid. p. 24):</p>
+
+				<ol>
+					<li>It does not provide "explicit suggestions" for adopting a sustainable review approach</li>
+					<li>Relationships between input, process, and output are missing, because the guidelines only
+						conceptualize the input-output relations</li>
+					<li>Reviewer's characteristics are ignored (e.g. experience).</li>
+				</ol>
+
+				<!--*******************************************************************************-->
+				<a id="lst2.7"></a>
+				<h3 class="section--h3">Informal Reviews</h3>
+				<br>
+
+				<a id="lst2.7.1"></a>
+				<h4 class="section--h4">Walkthrough</h4>
+
+				<p>A walkthrough is where the author describes the artefact to a group of peers and seeks comments. A
+					walkthrough differes from a formal software review in that</p>
+
+				<ol>
+					<li>the process is largely unstructured</li>
+					<li>it does not follow a defined procedure</li>
+					<li>it does not require management reporting and does not generate measurement metrics</li>
+				</ol>
+
+				<p>Walkthrough approach is appropriate "where the primary review objective is to educate others about
+					the product" (ibid). A "structured" walkthrough process is described in detail in Yourdon (1989):
+				</p>
+
+				<ul>
+					<li>
+						Formality
+						<p>Formality varies between review types as described above. There are a few other relationships
+							between formality and the review process that are worth mentioning. Formality plays a role
+							in determining who participates in the review, and the preparation time. Results from
+							less-formal reviews may not be added to a process database.</p>
+
+						<table class="tableParent">
+							<tr>
+								<td>&nbsp;</td>
+								<th>Formal</th>
+								<th>Informal</th>
+							</tr>
+
+							<tr>
+								<td>Participants</td>
+								<td>Peers & non-peers</td>
+								<td>Peers</td>
+							</tr>
+							<tr>
+								<td>Prep time</td>
+								<td>Long</td>
+								<td>Little</td>
+							</tr>
+						</table>
+					</li>
+
+					<li>
+						Roles
+						<p>Depending on the type of review, the number of roles will vary. Inspections require three
+							roles performed by three different people; walkthroughs and code readings can have two
+							(author and reviewer).</p>
+
+						<ul style="padding-top: 0px">
+							<li><b>Author</b> - the person who wrote the code or the design. The author might give an
+								overview of the material, explain sections that are unclear, and help clear up
+								misperceived errors.</li>
+
+							<li><b>Moderator</b> - this person is responsible for coordinating the meeting: distributing
+								checklists and material for review, reserving a room, and moderating the meeting. The
+								moderator is also responsible for inspection results (entering into the process database
+								or distributing a summary report), and ensuring the followup actions are performed.</li>
+
+							<li><b>Reviewer</b> - reviewers read over design or code documents looking for defects,
+								prior to the review meeting. During the meeting reviewers go over the material again and
+								discuss the defects found prior to the meeting, and look for additional defects.</li>
+
+							<li><b>Scribe</b> - takes notes on defects found during the meeting and who is assigned to
+								take action. The scribe role can be combined with reviewer or author roles.</li>
+						</ul>
+					</li>
+
+					<li>
+						Preparation
+						<p>Each reviewer prepares for the review by reading over the design or code, using the specified
+							reading technique as a guide.</p>
+					</li>
+
+					<li>
+						The Review
+						<p>The moderator begins the meeting and guides the discussion. One rule that must be followed is
+							that the product is being reviewed, not the author (Humphrey 1989, McConnell 1993, Yourdon
+							1989). Follow the guideline that once a defect is discovered you move on. No time is spent
+							discussing a fix, the defect is noted and assigned.</p>
+						<p>Someone is chosen to read through and describe the design or code. Each branch of code is
+							explained. The scribe notes errors that are discovered using a form for this purpose.
+							Meetings should last one to two hours.</p>
+					</li>
+
+					<li>
+						Followup
+						<p>The moderator is responsible for writing a report of the meeting that lists each defect. A
+							template is used to ensure consistent reporting. Action items and assignees are indicated.
+						</p>
+						<p>Rework assigned on the inspection report is checked by the moderator, who is responsible for
+							keeping track of the timeline for repairs. The moderator asseses the review with regards to
+							reinspection criteria and determines whether or not reinspection is needed.</p>
+					</li>
+
+					<li>
+						Reinspection Criteria
+						<p>Certain results indicate problems in the process. These are used to determine when
+							reinspection is needed.</p>
+					</li>
+				</ul>
+
+				<a id="lst2.7.2"></a>
+				<h4 class="section--h4">Pair Programming</h4>
+
+				<p>Pair programming is where "two programmers work simultaneously on the same program at a single
+					workstation" (ibid p. 25). The result is continuous, incremental review of the working product.</p>
+
+				<a id="lst2.7.3"></a>
+				<h4 class="section--h4">Peer Check</h4>
+
+				<p>Often presented as the least expensive approach to software review, Peer Check is where "only one
+					person besides the author examines the software artefact" (ibid). Similar to individual software
+					review, but has "no consistent set of practices.." Usually informal, Peer Check can be formalized.
+					Its drawback is that it relies on the knowledge and skill of the reviewer.</p>
+
+				<a id="lst2.7.4"></a>
+				<h4 class="section--h4">Pass-Around</h4>
+
+				<p>Pass-around is where the author distributes copies of the artefact to reviewers for concurrent review
+					(Wong, p. 26). Reviewers can see comments others have already written, which reveals differences in
+					interpretation and helps minimize redundancy. There is no group meeting.</p>
+
+				<!--*******************************************************************************-->
+
+				<a id="lst3"></a>
+				<h2 class="section--h2">Review Process</h2>
+
+				<p>This section describes the tasks and techniques for conducting a software review, as well as what to
+					look for.</p>
+
+				<a id="lst3.1"></a>
+				<h3 class="section--h3">Review Task</h3>
+				<p>This section describes the tasks and techniques for conducting a software review, as well as what to
+					look for.</p>
+
+				<p>Tasks are categorized into four artefacts, the work products that are reviewed (adapted from Wong,
+					2006):</p>
+
+				<ol>
+					<li>Requirements artefact</li>
+					<li>Design artefact</li>
+					<li>Code artefact</li>
+					<li>Testing artefact</li>
+				</ol>
+
+				<h4 class="headline__h4">What To Look For</h4>
+
+				<p>The following sections describe what to look for in the artefact (adapted from Yourdon (1989) and
+					McConnell (1993)).</p>
+
+				<ul>
+					<li>Requirements artefact - Look for ambiguities and omissions.</li>
+
+					<li>
+						Design artefact - Note that a design review is based on the assumption that the functional
+						requirements are correct
+						<ul>
+							<li>System-level design: Issues to examine include performance, security, network
+								communications, cost, reliability, database design, backup and recovery, etc.</li>
+							<li>Procedural design: the design that immediately preceeds coding, procedural designs
+								include flowcharts, pseudocode, UML diagrams, and any other diagrams used to help write
+								code.</li>
+						</ul>
+					</li>
+
+					<li>Code artefact - Listings of code (McConnell suggests up to 1000 lines of code for a two-hour
+						meeting). Listings should include code that has been compiled and checked with any other tools
+						available, such as one that identifies unused variables and functions.</li>
+
+					<li>Testing artefact - E.g. test cases and test data. Test cases and test data are checked to make
+						sure they adequately cover the functionality described in the functional specification.</li>
+				</ul>
+
+				<a id="lst3.2"></a>
+				<h3 class="section--h3">Reading Technique</h3>
+
+				<p>Wong (ibid) describes reading technique as a mechanism an individual reviewer uses to detect defects.
+					Reading technique is "a series of procedures a reviewer can use to obtain an understanding of the
+					artefact...providing a systematic guideline for finding defects." (3 and 4 increases reading
+					coverage and defect detection performance.)</p>
+
+				<ol>
+					<li>Ad-hoc - there are no explicit instructions.</li>
+
+					<li>Checklist-based reading (CBR) - usually no longer than one page of items in the checklist. The
+						checklist guides reviewers by pointing out particular concerns that have been trouble spots in
+						the past. If you are implementing reviews for the first time there is no history of trouble
+						spots, so you can use a generic checklist to start. When you finish your first review you may
+						notice that certain recurring problems arose, e.g. un-used variables declared in different
+						places. These are added to the checklist, and other items that were less relevant are removed.
+						There are several shortcomings to CBR.</li>
+
+					<li>Stepwise abstraction - especially helpful for code documents, because the reading instructions
+						are more structured and precise.</li>
+
+					<li>Scenario-based reading - "provides systematic guidance for reviewers on what and how to find
+						defects." A scenario "may contain detailed descriptive questions...or how to review an
+						artefact." Effectiveness depends on the design and content of the scenario questions, and
+						typically requires comprehensive training. Research indicates greater defect detection (about
+						35%) with this technique.</li>
+				</ol>
+
+				<a id="lst3.3"></a>
+				<h3 class="section--h3">Planning On-going Reviews</h3>
+
+				<p>With on-going inspections, you will know what is next on the agenda for review.</p>
+
+				<ul>
+					<li>It has been from personal experience that many companies are so small that the same people will
+						always participate in reviews. In larger companies you will have more resources to choose from.
+						In either case, you will announce the upcomming review meeting and suggest a date and time.</li>
+
+					<li>Schedule the review meeting for a time when all participants can attend, and do not schedule
+						participants for more than one review meeting in a day.</li>
+
+					<li>Provide materials for the review to reviewers: code listings, design documents, etc., and the
+						checklists reviewers will use. Plan time for reviewers to prepare prior to the meeting; it will
+						take 30 minutes to 90 minutes working alone to become familiar with the material. Humphrey
+						(1989) cites studies of high-level languages in which application code was reviewed at 700 lines
+						per hour, and system code at 125 lines per hour.</li>
+				</ul>
+
+				<!--*******************************************************************************-->
+
+				<a id="lst4"></a>
+				<h2 class="section--h2">Sample Forms</h2>
+
+				<p>Freedman and Weinberg (1990) describe a variety of evaluation criteria in their thorough (if dated)
+					book. The forms are all paper, but today they would more likely be a simple spreadsheet, or even
+					Web-based forms hooked up to a database.</p>
+
+				<a id="lst4.1"></a>
+				<h3 class="section--h3">Technical Review Summary Report</h3>
+				<p>Adapted from Freedman and Weinberg (p. 183). This report is in a Q&A format. The report describes
+					what was reviewed, who did the reviewing, and what was their conclusion. Fields would include:</p>
+
+				<ul>
+					<li>Review Number (like the version number of an application)</li>
+					<li>Date</li>
+					<li>Start time and End time</li>
+					<li>Work unit identification: module or feature</li>
+					<li>Produced by: producer(s) name(s)</li>
+					<li>Brief description</li>
+					<li>Materials used in the review (ID and description)</li>
+					<li>Participants (their names and signatures or IDs)</li>
+					<li>
+						Appraisal of the work unit:
+						<ul>
+							<li>
+								Accepted:
+								<ul style="padding-top: 0px; padding-bottom: 0px">
+									<li>as-is</li>
+									<li>with minor revisions</li>
+								</ul>
+							</li>
+							<li>
+								Not accepted (new review required):
+								<ul style="padding-top: 0px; padding-bottom: 0px">
+									<li>major revisions</li>
+									<li>rebuild</li>
+									<li>review not completed</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li>Supplementary materials produced: description or IDs</li>
+					<li>Issues list, related-issues list, etc.</li>
+				</ul>
+
+				<a id="lst4.2"></a>
+				<h3 class="section--h3">Design / Specification Grade Sheet</h3>
+
+				<p>Adapted from Freedman and Weinberg (p. 324). Fields could include:</p>
+				<ul>
+					<li>Name of Attribute / Characteristic of attribute</li>
+					<li>Units measured</li>
+					<li>Planned (Y/N)</li>
+					<li>Worst acceptable case</li>
+					<li>% weight (W)</li>
+					<li>Design performance</li>
+					<li>Grade (0-1.00) (G)</li>
+					<li>G x W</li>
+					<li>Overall grade</li>
+				</ul>
+
+				<!--*******************************************************************************-->
+
+				<a id="idRef"></a>
+				<h3 class="headline__h3 section__refs">References</h3>
+
+				<p class="references"><b>Bisant, D. B., and Lyle, J. R.,</b> 1989, A Two Person Inspection Method to
+					Improve Programming Productivity: IEEE Transactions on Software Engineering, 15 (10), 1294-1304.</p>
+
+				<p class="references"><b>Freedman, D. p., and Weinberg, G. M.</b>, 1990, Handbook of Walkthroughs,
+					Inspections, and Technical Reviews: Evaluating Programs, Projects, and Products, 3rd Edition: Dorset
+					House ISBN: 0-932633-19-6</p>
+
+				<p class="references"><b>Humphrey, Watts S.</b>, 1989, Managing the Software Process: Addison-Wesley,
+					494 pages. ISBN: 0-201-18095-2</p>
+
+				<p class="references"><b>Martin, J., and Tsai, W. T.,</b> 1992, N-fold Inspection: A Requirements
+					Analysis Technique: Communications of ACM, 33(2), 225-232.</p>
+
+				<p class="references"><b>Knight, J. C., and Myers, A. E.,</b> 1993, An Improved Inspection Technique:
+					Communications of ACM, 36(11), 50-69.</p>
+
+				<p class="references">
+					<a href="http://www.stevemcconnell.com/" class="generic" target="_top"><b>McConnell, Steve</b></a>,
+					1993, Code Complete: A Practical Handbook of Software Construction: Microsoft Press, 880 pages.
+					ISBN: 1-55615-484-4
+				</p>
+
+				<p class="references">
+					<a href="http://www.stevemcconnell.com/" class="generic" target="_top"><b>McConnell, Steve</b></a>,
+					1996, Rapid Development: Taming Wild Software Schedules: Microsoft Press, 660 pages. ISBN:
+					1-55615-900-5
+				</p>
+
+				<p class="references"><b>Parnas, D. L., and Weiss, D. M.,</b> 1985, Active Design Reviews: Principles
+					and Practices: Proceeding of ICSE '85, Aug. 28-30, pp. 132-136. IEEE Computer Society.</p>
+
+				<p class="references"><b>Wong, Y. K.,</b> 2006, Modern Software Review: Techniques And Technologies: IRM
+					Press, 324 pages. ISBN: 159904014X</p>
+
+				<p class="references"><b>Yourdon, Edward</b>, 1989, Structured Walkthroughs, fourth edition: Yourdon
+					Press/Prentice Hall, 193 pages. ISBN: 0-13-855289-4</p>
+			</section>
+		</div>
+	</div>
+
+	<footer class="site-footer"></footer>
 </body>
+
 </html>

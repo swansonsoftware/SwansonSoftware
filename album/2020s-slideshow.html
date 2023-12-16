@@ -1,232 +1,334 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A slideshow of our photos from the 2020s.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A slideshow of our photos from the 2020s.">
 	<meta charset="utf-8">
 	<title>Greg And Ru&#39;s Album - 2020s Slideshow</title>
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
-    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" sizes="32x32" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/images/favicon-180x180.png">
+	<link rel="mask-icon" href="../assets/images/safari-pinned-tab.svg" color="#000000">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class="album">
+	<header class="site-header site-header--album-slideshow" data-matching-link="#a2020s">
+		<div class="wrapper">
+			<div class="site-header__logo">
+				<a href="../index.html">
+					<img src="../assets/images/logo-dark.svg" width="220" height="53" alt="Swanson Software logo"
+						title="Swanson Software home">
+				</a>
+			</div>
+			<div class="site-header__menu-icon"></div>
 
-<header class="site-header site-header--album-slideshow" data-matching-link="#a2020s">
-    <div class="wrapper">
-        <div class="site-header__logo">
-            <a href="../index.html">
-                <img src='/assets/images/logo-dark.svg' width="220" height="53" alt='Swanson Software logo' title='Swanson Software home'>
-            </a>
-        </div>
-        <div class="site-header__menu-icon"></div>
+			<div class="site-header__menu-content">
+				<nav class="album-nav album-nav--pull-right"></nav>
+			</div>
+		</div>
+	</header>
 
-        <div class="site-header__menu-content">
-            <nav class="album-nav album-nav--pull-right">
-            </nav>
-        </div>
-    </div>
-</header>
+	<div style="width: 100%; height: 100vh">
+		<div class="slideshow">
+			<div class="slideshow__slide-title">
+				<a href="#" class="slideshow__slide-title__button">
+					<span class="accessibility--hidden">Select this button to alternately close or open the box with the
+						photo caption.</span>
+					<i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
+					<i id="angle-right" class="slideshow__slide-title__button__icon-right"></i> </a><span
+					id="slideCaption" class="slideshow__slide-caption"></span>
+			</div>
+			<ul class="slideshow__slides">
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">February, 2020. We pruned the persimon trees in January, 2020, to reduce their
+						height</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-02-22_DSC03577-large.webp 1x, images/2020s/2020-02-22_DSC03577-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-02-22_DSC03577-small.webp 1x, images/2020s/2020-02-22_DSC03577-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img class="slide-image" src="images/2020s/2020-02-22_DSC03577-small.webp" width="640"
+							height="361" alt="Persimon trees in back yard.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Trees are showing growth by May, 2020.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-05-16-DSC03628-large.webp 1x, images/2020s/2020-05-16-DSC03628-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-05-16-DSC03628-small.webp 1x, images/2020s/2020-05-16-DSC03628-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-05-16-DSC03628-small.webp"
+							width="640" height="361" alt="The trees after three months.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">By June 2020, the new growth is surprising.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-06-07-DSC03637-large.webp 1x, images/2020s/2020-06-07-DSC03637-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-06-07-DSC03637-small.webp 1x, images/2020s/2020-06-07-DSC03637-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-06-07-DSC03637-small.webp"
+							width="640" height="361" alt="Four months after pruning.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Spot has separation anxiety. July 2020.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-07-08-DSC03643-large.webp 1x, images/2020s/2020-07-08-DSC03643-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-07-08-DSC03643-small.webp 1x, images/2020s/2020-07-08-DSC03643-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-07-08-DSC03643-small.webp"
+							width="640" height="361" alt="Spot watching Ru in driveway, from second floor walkway.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">December, 2021.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-12-20-01-spot-large.webp 1x, images/2020s/2021-12-20-01-spot-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-12-20-01-spot-small.webp 1x, images/2020s/2021-12-20-01-spot-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-12-20-01-spot-small.webp"
+							width="480" height="640"
+							alt="From second floor walkway, Spot watching Ru in neighbor's yard.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">We named this black cat Whitepaw, I suspect he is a cousin of Spot. February,
+						2021.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-02-whitepaw1-large.webp 1x, images/2020s/2021-02-whitepaw1-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-02-whitepaw1-small.webp 1x, images/2020s/2021-02-whitepaw1-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-02-whitepaw1-small.webp"
+							width="480" height="640" alt="The stray black cat at our door.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">He's at the door, probably looking for Spot.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-02-whitepaw2-large.webp 1x, images/2020s/2021-02-whitepaw2-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-02-whitepaw2-small.webp 1x, images/2020s/2021-02-whitepaw2-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-02-whitepaw2-small.webp"
+							width="480" height="640" alt="Stray black cat at door, enjoying a neck scratch.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">San Jose Municipal Rose garden, May, 2021.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-05-21-DSC03695-large.webp 1x, images/2020s/2021-05-21-DSC03695-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-05-21-DSC03695-small.webp 1x, images/2020s/2021-05-21-DSC03695-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03695-small.webp"
+							width="640" height="361" alt="Ru in front of large bushes of fresh yellow roses.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">A plethora of roses in so many colors. San Jose Municipal Rose garden, May
+						2021.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-05-21-DSC03701b-large.webp 1x, images/2020s/2021-05-21-DSC03701b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-05-21-DSC03701b-small.webp 1x, images/2020s/2021-05-21-DSC03701b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03701b-small.webp"
+							width="640" height="361" alt="Ru standing behind bushes of pink roses.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Nice day for a stroll in the rose garden. San Jose Municipal Rose garden, May
+						2021.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-05-21-DSC03717b-large.webp 1x, images/2020s/2021-05-21-DSC03717b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-05-21-DSC03717b-small.webp 1x, images/2020s/2021-05-21-DSC03717b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03717b-small.webp"
+							width="640" height="361" alt="Bushes of huge yellow roses.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Norma's yard also has a kumquat tree, and two tangerine trees. February 2022.
+					</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-02-26-02b-large.webp 1x, images/2020s/2022-02-26-02b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-02-26-02b-small.webp 1x, images/2020s/2022-02-26-02b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-02-26-02b-small.webp" width="640"
+							height="360" alt="Ru holding plastic bin filled with ripe kumquats.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">May, 2022. San Jose Municipal Rose garden.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-05-01-DSC03815b-large.webp 1x, images/2020s/2022-05-01-DSC03815b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-05-01-DSC03815b-small.webp 1x, images/2020s/2022-05-01-DSC03815b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03815b-small.webp"
+							width="640" height="360" alt="Close up of a fresh pink rose.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">White roses in their prime, San Jose Municipal Rose garden, May 2022.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-05-01-DSC03856b-large.webp 1x, images/2020s/2022-05-01-DSC03856b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-05-01-DSC03856b-small.webp 1x, images/2020s/2022-05-01-DSC03856b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03856b-small.webp"
+							width="640" height="360" alt="A few bushes of crisp white roses.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">A beautiful color for a rose. San Jose Municipal Rose garden, May 2022.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-05-01-DSC03868b-large.webp 1x, images/2020s/2022-05-01-DSC03868b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-05-01-DSC03868b-small.webp 1x, images/2020s/2022-05-01-DSC03868b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03868b-small.webp"
+							width="640" height="360" alt="A hot pink rose.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Red plumeria trees are rare. This one is at Kauai Coffee Plantation. July 2022.
+					</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-07-09-01-kauaicoffeeb-large.webp 1x, images/2020s/2022-07-09-01-kauaicoffeeb-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-07-09-01-kauaicoffeeb-small.webp 1x, images/2020s/2022-07-09-01-kauaicoffeeb-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-01-kauaicoffeeb-small.webp"
+							width="640" height="360" alt="The big, red plumeria tree.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">The garden walk at Kauai Coffee Plantation has more than coffee trees. July
+						2022.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-07-09-13-kauaicoffeeb-large.webp 1x, images/2020s/2022-07-09-13-kauaicoffeeb-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-07-09-13-kauaicoffeeb-small.webp 1x, images/2020s/2022-07-09-13-kauaicoffeeb-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-13-kauaicoffeeb-small.webp"
+							width="640" height="360" alt="Delicate and beautiful, white hibiscus flowers.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">These rainbow shower trees are on Lopaka Paipa Blvd, Kauai. July 2022.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-07-11-DSC03994-large.webp 1x, images/2020s/2022-07-11-DSC03994-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-07-11-DSC03994-small.webp 1x, images/2020s/2022-07-11-DSC03994-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-07-11-DSC03994-small.webp"
+							width="640" height="360" alt="Rainbow Shower trees lining the street.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">A nice view, with the corner of building G and unit G5 at top. July 2022.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-07-09-42-pahiob-large.webp 1x, images/2020s/2022-07-09-42-pahiob-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-07-09-42-pahiob-small.webp 1x, images/2020s/2022-07-09-42-pahiob-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-42-pahiob-small.webp"
+							width="640" height="360" alt="Next to building G, looking at the stream and ocean.">
+					</picture>
+				</li>
+			</ul>
 
-<div style="width: 100%;height:100vh;">
-    <div class="slideshow">
-        <div class="slideshow__slide-title">
-            <a href="#" class="slideshow__slide-title__button">
-                <span class="accessibility--hidden">Select this button to alternately close or open the box with the photo caption.</span>
-                <i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
-                <i id="angle-right" class="slideshow__slide-title__button__icon-right"></i>
-            </a><span id="slideCaption" class="slideshow__slide-caption"></span>
-        </div>
-        <ul class="slideshow__slides">
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">February, 2020. We pruned the persimon trees in January, 2020, to reduce their height</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-02-22_DSC03577-large.webp 1x, images/2020s/2020-02-22_DSC03577-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-02-22_DSC03577-small.webp 1x, images/2020s/2020-02-22_DSC03577-medium.webp 2x" media="(min-width: 600px)">
-                    <img class="slide-image" src="images/2020s/2020-02-22_DSC03577-small.webp" width="640" height="361" alt="Persimon trees in back yard.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Trees are showing growth by May, 2020.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-05-16-DSC03628-large.webp 1x, images/2020s/2020-05-16-DSC03628-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-05-16-DSC03628-small.webp 1x, images/2020s/2020-05-16-DSC03628-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-05-16-DSC03628-small.webp" width="640" height="361" alt="The trees after three months.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">By June 2020, the new growth is surprising.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-06-07-DSC03637-large.webp 1x, images/2020s/2020-06-07-DSC03637-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-06-07-DSC03637-small.webp 1x, images/2020s/2020-06-07-DSC03637-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-06-07-DSC03637-small.webp" width="640" height="361" alt="Four months after pruning.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Spot has separation anxiety. July 2020.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-07-08-DSC03643-large.webp 1x, images/2020s/2020-07-08-DSC03643-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-07-08-DSC03643-small.webp 1x, images/2020s/2020-07-08-DSC03643-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-07-08-DSC03643-small.webp" width="640" height="361" alt="Spot watching Ru in driveway, from second floor walkway.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">December, 2021.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-12-20-01-spot-large.webp 1x, images/2020s/2021-12-20-01-spot-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-12-20-01-spot-small.webp 1x, images/2020s/2021-12-20-01-spot-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-12-20-01-spot-small.webp" width="480" height="640" alt="From second floor walkway, Spot watching Ru in neighbor's yard.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">We named this black cat Whitepaw, I suspect he is a cousin of Spot. February, 2021.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-02-whitepaw1-large.webp 1x, images/2020s/2021-02-whitepaw1-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-02-whitepaw1-small.webp 1x, images/2020s/2021-02-whitepaw1-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-02-whitepaw1-small.webp" width="480" height="640" alt="The stray black cat at our door.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">He's at the door, probably looking for Spot.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-02-whitepaw2-large.webp 1x, images/2020s/2021-02-whitepaw2-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-02-whitepaw2-small.webp 1x, images/2020s/2021-02-whitepaw2-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-02-whitepaw2-small.webp" width="480" height="640" alt="Stray black cat at door, enjoying a neck scratch.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">San Jose Municipal Rose garden, May, 2021.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-05-21-DSC03695-large.webp 1x, images/2020s/2021-05-21-DSC03695-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-05-21-DSC03695-small.webp 1x, images/2020s/2021-05-21-DSC03695-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03695-small.webp" width="640" height="361" alt="Ru in front of large bushes of fresh yellow roses.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">A plethora of roses in so many colors. San Jose Municipal Rose garden, May 2021.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-05-21-DSC03701b-large.webp 1x, images/2020s/2021-05-21-DSC03701b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-05-21-DSC03701b-small.webp 1x, images/2020s/2021-05-21-DSC03701b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03701b-small.webp" width="640" height="361" alt="Ru standing behind bushes of pink roses.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Nice day for a stroll in the rose garden. San Jose Municipal Rose garden, May 2021.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-05-21-DSC03717b-large.webp 1x, images/2020s/2021-05-21-DSC03717b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-05-21-DSC03717b-small.webp 1x, images/2020s/2021-05-21-DSC03717b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-05-21-DSC03717b-small.webp" width="640" height="361" alt="Bushes of huge yellow roses.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Norma's yard also has a kumquat tree, and two tangerine trees. February 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-02-26-02b-large.webp 1x, images/2020s/2022-02-26-02b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-02-26-02b-small.webp 1x, images/2020s/2022-02-26-02b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-02-26-02b-small.webp" width="640" height="360" alt="Ru holding plastic bin filled with ripe kumquats.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">May, 2022. San Jose Municipal Rose garden.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-05-01-DSC03815b-large.webp 1x, images/2020s/2022-05-01-DSC03815b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-05-01-DSC03815b-small.webp 1x, images/2020s/2022-05-01-DSC03815b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03815b-small.webp" width="640" height="360" alt="Close up of a fresh pink rose.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">White roses in their prime, San Jose Municipal Rose garden, May 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-05-01-DSC03856b-large.webp 1x, images/2020s/2022-05-01-DSC03856b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-05-01-DSC03856b-small.webp 1x, images/2020s/2022-05-01-DSC03856b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03856b-small.webp" width="640" height="360" alt="A few bushes of crisp white roses.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">A beautiful color for a rose. San Jose Municipal Rose garden, May 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-05-01-DSC03868b-large.webp 1x, images/2020s/2022-05-01-DSC03868b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-05-01-DSC03868b-small.webp 1x, images/2020s/2022-05-01-DSC03868b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-05-01-DSC03868b-small.webp" width="640" height="360" alt="A hot pink rose.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Red plumeria trees are rare. This one is at Kauai Coffee Plantation. July 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-07-09-01-kauaicoffeeb-large.webp 1x, images/2020s/2022-07-09-01-kauaicoffeeb-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-07-09-01-kauaicoffeeb-small.webp 1x, images/2020s/2022-07-09-01-kauaicoffeeb-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-01-kauaicoffeeb-small.webp" width="640" height="360" alt="The big, red plumeria tree.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">The garden walk at Kauai Coffee Plantation has more than coffee trees. July 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-07-09-13-kauaicoffeeb-large.webp 1x, images/2020s/2022-07-09-13-kauaicoffeeb-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-07-09-13-kauaicoffeeb-small.webp 1x, images/2020s/2022-07-09-13-kauaicoffeeb-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-13-kauaicoffeeb-small.webp" width="640" height="360" alt="Delicate and beautiful, white hibiscus flowers.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">These rainbow shower trees are on Lopaka Paipa Blvd, Kauai. July 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-07-11-DSC03994-large.webp 1x, images/2020s/2022-07-11-DSC03994-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-07-11-DSC03994-small.webp 1x, images/2020s/2022-07-11-DSC03994-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-07-11-DSC03994-small.webp" width="640" height="360" alt="Rainbow Shower trees lining the street.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">A nice view, with the corner of building G and unit G5 at top. July 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-07-09-42-pahiob-large.webp 1x, images/2020s/2022-07-09-42-pahiob-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-07-09-42-pahiob-small.webp 1x, images/2020s/2022-07-09-42-pahiob-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-07-09-42-pahiob-small.webp" width="640" height="360" alt="Next to building G, looking at the stream and ocean.">
-                </picture>
-            </li>
-        </ul>
-        
-        <p class="slideshow__vcr-container">
-            <a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
-                <span class="accessibility--hidden">Select this button to alternately pause and start the slideshow.</span>
-                <i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
-                <i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
-            </a>
-            <a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
-                <i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
-                <span class="accessibility--hidden">Button to show the previous slide.</span>
-            </a>
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
-                <i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
-                <span class="accessibility--hidden">Button to show the next slide.</span>
-            </a>
-        </p>
-    </div>
-</div>
+			<p class="slideshow__vcr-container">
+				<a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
+					<span class="accessibility--hidden">Select this button to alternately pause and start the
+						slideshow.</span>
+					<i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
+					<i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
+				</a>
+				<a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
+					<i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
+					<span class="accessibility--hidden">Button to show the previous slide.</span>
+				</a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
+					<i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
+					<span class="accessibility--hidden">Button to show the next slide.</span>
+				</a>
+			</p>
+		</div>
+	</div>
 
-<script>slideInterval = 4;</script>
-
+	<script>
+		slideInterval = 4
+	</script>
 </body>
+
 </html>

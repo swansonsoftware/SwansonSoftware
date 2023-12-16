@@ -1,133 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A slideshow of the stream next to Kauai Beach Villas, showing erosion of the banks over many years.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="A slideshow of the stream next to Kauai Beach Villas, showing erosion of the banks over many years.">
 	<meta charset="utf-8">
 	<title>Greg And Ru&#39;s Album - Kauai Stream Favorites</title>
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
-    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" sizes="32x32" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/images/favicon-180x180.png">
+	<link rel="mask-icon" href="../assets/images/safari-pinned-tab.svg" color="#000000">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class="album">
+	<header class="site-header site-header--album-slideshow" data-matching-link="#favorites">
+		<div class="wrapper">
+			<div class="site-header__logo">
+				<a href="../index.html">
+					<img src="../assets/images/logo-dark.svg" width="220" height="53" alt="Swanson Software logo"
+						title="Swanson Software home">
+				</a>
+			</div>
+			<div class="site-header__menu-icon"></div>
 
-<header class="site-header site-header--album-slideshow" data-matching-link="#favorites">
-    <div class="wrapper">
-        <div class="site-header__logo">
-            <a href="../index.html">
-                <img src='/assets/images/logo-dark.svg' width="220" height="53" alt='Swanson Software logo' title='Swanson Software home'>
-            </a>
-        </div>
-        <div class="site-header__menu-icon"></div>
+			<div class="site-header__menu-content">
+				<nav class="album-nav album-nav--pull-right"></nav>
+			</div>
+		</div>
+	</header>
 
-        <div class="site-header__menu-content">
-            <nav class="album-nav album-nav--pull-right">
-            </nav>
-        </div>
-    </div>
-</header>
+	<div style="width: 100%; height: 100vh">
+		<div class="slideshow">
+			<div class="slideshow__slide-title">
+				<a href="#" class="slideshow__slide-title__button">
+					<span class="accessibility--hidden">Select this button to alternately close or open the box with the
+						photo caption.</span>
+					<i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
+					<i id="angle-right" class="slideshow__slide-title__button__icon-right"></i> </a><span
+					id="slideCaption" class="slideshow__slide-caption"></span>
+			</div>
+			<ul class="slideshow__slides">
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">The stream in 2005.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2000s/2005_0037_x-large.webp 1x, images/2000s/2005_0037_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2000s/2005_0037_x-small.webp 1x, images/2000s/2005_0037_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img class="slide-image" src="images/2000s/2005_0037_x-small.webp" width="640" height="480"
+							alt="The stream next to Kauai Beach Villas, from building G stairwell.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">The stream bank shows considerable erosion by 2008.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2000s/2008_0306_x-large.webp 1x, images/2000s/2008_0306_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2000s/2008_0306_x-small.webp 1x, images/2000s/2008_0306_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2000s/2008_0306_x-small.webp" width="640"
+							height="480" alt="Stream bank erosion as of 2008.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Erosion has slowed for 2009.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2000s/2009_0435_x-large.webp 1x, images/2000s/2009_0435_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2000s/2009_0435_x-small.webp 1x, images/2000s/2009_0435_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2000s/2009_0435_x-small.webp" width="640"
+							height="480" alt="Not much change in 2009.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Only a little erosion for 2010.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2010s/2010_0505_x-large.webp 1x, images/2010s/2010_0505_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2010_0505_x-small.webp 1x, images/2010s/2010_0505_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2010_0505_x-small.webp" width="640"
+							height="480" alt="Again in 2010, not much change.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Just a bit more in 2011.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2010s/2011_0764_x-large.webp 1x, images/2010s/2011_0764_x-hidpi.webp 1.11x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2011_0764_x-small.webp 1x, images/2010s/2011_0764_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2011_0764_x-small.webp" width="640"
+							height="480" alt="Erosion as of 2011.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">In 2014, sand appears where the eroded stream bank once was, perhaps deposited
+						by storms.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2010s/2014-031_x-large.webp 1x, images/2010s/2014-031_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2014-031_x-small.webp 1x, images/2010s/2014-031_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2014-031_x-small.webp" width="640"
+							height="480" alt="The stream bank is smoothed over as of 2014.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">2018, storms have brought more sand and driftwood.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2010s/2018-06-18-DSC02459-b_x-large.webp 1x, images/2010s/2018-06-18-DSC02459-b_x-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2010s/2018-06-18-DSC02459-b_x-small.webp 1x, images/2010s/2018-06-18-DSC02459-b_x-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2018-06-18-DSC02459-b_x-small.webp"
+							width="640" height="480" alt="Driftwood litters the stream and beach.">
+					</picture>
+				</li>
+			</ul>
 
-<div style="width: 100%;height:100vh;">
-    <div class="slideshow">
-        <div class="slideshow__slide-title">
-            <a href="#" class="slideshow__slide-title__button">
-                <span class="accessibility--hidden">Select this button to alternately close or open the box with the photo caption.</span>
-                <i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
-                <i id="angle-right" class="slideshow__slide-title__button__icon-right"></i>
-            </a><span id="slideCaption" class="slideshow__slide-caption"></span>
-        </div>
-        <ul class="slideshow__slides">
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">The stream in 2005.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2000s/2005_0037_x-large.webp 1x, images/2000s/2005_0037_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2000s/2005_0037_x-small.webp 1x, images/2000s/2005_0037_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img class="slide-image" src="images/2000s/2005_0037_x-small.webp" width="640" height="480" alt="The stream next to Kauai Beach Villas, from building G stairwell.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">The stream bank shows considerable erosion by 2008.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2000s/2008_0306_x-large.webp 1x, images/2000s/2008_0306_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2000s/2008_0306_x-small.webp 1x, images/2000s/2008_0306_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2000s/2008_0306_x-small.webp" width="640" height="480" alt="Stream bank erosion as of 2008.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Erosion has slowed for 2009.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2000s/2009_0435_x-large.webp 1x, images/2000s/2009_0435_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2000s/2009_0435_x-small.webp 1x, images/2000s/2009_0435_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2000s/2009_0435_x-small.webp" width="640" height="480" alt="Not much change in 2009.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Only a little erosion for 2010.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2010_0505_x-large.webp 1x, images/2010s/2010_0505_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2010_0505_x-small.webp 1x, images/2010s/2010_0505_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2010_0505_x-small.webp" width="640" height="480" alt="Again in 2010, not much change.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Just a bit more in 2011.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2011_0764_x-large.webp 1x, images/2010s/2011_0764_x-hidpi.webp 1.11x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2011_0764_x-small.webp 1x, images/2010s/2011_0764_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2011_0764_x-small.webp" width="640" height="480" alt="Erosion as of 2011.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">In 2014, sand appears where the eroded stream bank once was, perhaps deposited by storms.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2014-031_x-large.webp 1x, images/2010s/2014-031_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2014-031_x-small.webp 1x, images/2010s/2014-031_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2014-031_x-small.webp" width="640" height="480" alt="The stream bank is smoothed over as of 2014.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">2018, storms have brought more sand and driftwood.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2018-06-18-DSC02459-b_x-large.webp 1x, images/2010s/2018-06-18-DSC02459-b_x-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2018-06-18-DSC02459-b_x-small.webp 1x, images/2010s/2018-06-18-DSC02459-b_x-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2018-06-18-DSC02459-b_x-small.webp" width="640" height="480" alt="Driftwood litters the stream and beach.">
-                </picture>
-            </li>
-        </ul>
-        
-        <p class="slideshow__vcr-container">
-            <a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
-                <span class="accessibility--hidden">Select this button to alternately pause and start the slideshow.</span>
-                <i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
-                <i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
-            </a>
-            <a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
-                <i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
-                <span class="accessibility--hidden">Button to show the previous slide.</span>
-            </a>
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
-                <i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
-                <span class="accessibility--hidden">Button to show the next slide.</span>
-            </a>
-        </p>
-    </div>
-</div>
+			<p class="slideshow__vcr-container">
+				<a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
+					<span class="accessibility--hidden">Select this button to alternately pause and start the
+						slideshow.</span>
+					<i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
+					<i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
+				</a>
+				<a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
+					<i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
+					<span class="accessibility--hidden">Button to show the previous slide.</span>
+				</a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
+					<i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
+					<span class="accessibility--hidden">Button to show the next slide.</span>
+				</a>
+			</p>
+		</div>
+	</div>
 
-<script>slideInterval = 4;</script>
-
+	<script>
+		slideInterval = 4
+	</script>
 </body>
+
 </html>

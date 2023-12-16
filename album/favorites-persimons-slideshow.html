@@ -1,169 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A slideshow of our favorite photos of neighbor Norma's persimon trees and fruit.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="A slideshow of our favorite photos of neighbor Norma's persimon trees and fruit.">
 	<meta charset="utf-8">
 	<title>Greg And Ru&#39;s Album - Persimon Favorites</title>
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/images/favicon-180x180.png">
-    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#000000">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" sizes="32x32" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+	<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/images/favicon-180x180.png">
+	<link rel="mask-icon" href="../assets/images/safari-pinned-tab.svg" color="#000000">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body class="album">
+	<header class="site-header site-header--album-slideshow" data-matching-link="#favorites">
+		<div class="wrapper">
+			<div class="site-header__logo">
+				<a href="../index.html">
+					<img src="../assets/images/logo-dark.svg" width="220" height="53" alt="Swanson Software logo"
+						title="Swanson Software home">
+				</a>
+			</div>
+			<div class="site-header__menu-icon"></div>
 
-<header class="site-header site-header--album-slideshow" data-matching-link="#favorites">
-    <div class="wrapper">
-        <div class="site-header__logo">
-            <a href="../index.html">
-                <img src='/assets/images/logo-dark.svg' width="220" height="53" alt='Swanson Software logo' title='Swanson Software home'>
-            </a>
-        </div>
-        <div class="site-header__menu-icon"></div>
+			<div class="site-header__menu-content">
+				<nav class="album-nav album-nav--pull-right"></nav>
+			</div>
+		</div>
+	</header>
 
-        <div class="site-header__menu-content">
-            <nav class="album-nav album-nav--pull-right">
-            </nav>
-        </div>
-    </div>
-</header>
+	<div style="width: 100%; height: 100vh">
+		<div class="slideshow">
+			<div class="slideshow__slide-title">
+				<a href="#" class="slideshow__slide-title__button">
+					<span class="accessibility--hidden">Select this button to alternately close or open the box with the
+						photo caption.</span>
+					<i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
+					<i id="angle-right" class="slideshow__slide-title__button__icon-right"></i> </a><span
+					id="slideCaption" class="slideshow__slide-caption"></span>
+			</div>
+			<ul class="slideshow__slides">
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Usually I would leave bags of persimons in the kitchen at work, but this basket
+						makes a nice display. November 2010.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2010s/2010_0531-large.webp 1x, images/2020s/2010_0531-hidpi.webp 1.11x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2010_0531-small.webp 1x, images/2020s/2010_0531-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img class="slide-image" src="images/2010s/2010_0531-small.webp" width="640" height="480"
+							alt="A basket of shiny ripe persimons.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">These chocolate persimons in Norma's yard are almost ripe. 2010.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2010s/2010_0528-large.webp 1x, images/2020s/2010_0528-hidpi.webp 1.11x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2010_0528-small.webp 1x, images/2020s/2010_0528-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2010_0528-small.webp" width="640"
+							height="480" alt="A cluster of large chocolate persimons on the tree.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">The chocolate persimon will have seeds only when pollinated. The seeds give off
+						alcohol, which turns the flesh of the fruit chocolate brown and makes it sweet.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2021-11-15-01-b-large.webp 1x, images/2020s/2021-11-15-01-b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2021-11-15-01-b-small.webp 1x, images/2020s/2021-11-15-01-b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2021-11-15-01-b-small.webp"
+							width="640" height="361" alt="Chocolate persimon on plate with knife.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">2012, Persimons washed and bagged, ready to give to friends and neighbors.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source srcset="images/2010s/2012_1103-large.webp 1x, images/2020s/2012_1103-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source srcset="images/2010s/2012_1103-small.webp 1x, images/2020s/2012_1103-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2012_1103-small.webp" width="640"
+							height="480" alt="Persimons in crates and bags in our living room.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">2016, Persimon trees in Norma's yard. As the leaves turn color they begin to
+						fall.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2010s/2016-DSC01113-large.webp 1x, images/2010s/2016-DSC01113-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2010s/2016-DSC01113-small.webp 1x, images/2010s/2016-DSC01113-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2016-DSC01113-small.webp" width="640"
+							height="427" alt="Beautiful leaves of persimon trees.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Persimon leaves are especially beautiful when they turn color in the fall.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2010s/2016-DSC01118-large.webp 1x, images/2010s/2016-DSC01118-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2010s/2016-DSC01118-small.webp 1x, images/2010s/2016-DSC01118-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2016-DSC01118-small.webp" width="640"
+							height="427" alt="Closeup of red persimon leaves on tree.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">2017, Persimons washed and bagged, ready to give to friends and neighbors.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2010s/2017-11-19-DSC01936-large.webp 1x, images/2020s/2017-11-19-DSC01936-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2010s/2017-11-19-DSC01936-small.webp 1x, images/2020s/2017-11-19-DSC01936-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2010s/2017-11-19-DSC01936-small.webp"
+							width="640" height="427" alt="The 2017 harvest of persimons, in our living room">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">January 2020, a heavy pruning as the trees were overgrown</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-02-22_DSC03577-large.webp 1x, images/2020s/2020-02-22_DSC03577-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-02-22_DSC03577-small.webp 1x, images/2020s/2020-02-22_DSC03577-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-02-22_DSC03577-small.webp"
+							width="640" height="361" alt="Persimon trees in back yard.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">May 2020, not long for new growth to appear.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-05-16-DSC03628-large.webp 1x, images/2020s/2020-05-16-DSC03628-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-05-16-DSC03628-small.webp 1x, images/2020s/2020-05-16-DSC03628-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-05-16-DSC03628-small.webp"
+							width="640" height="361" alt="Trees showing New growth after three months.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">By June 2020, the new growth is surprising.</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2020-06-07-DSC03637-large.webp 1x, images/2020s/2020-06-07-DSC03637-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2020-06-07-DSC03637-small.webp 1x, images/2020s/2020-06-07-DSC03637-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2020-06-07-DSC03637-small.webp"
+							width="640" height="361" alt="Four months after pruning.">
+					</picture>
+				</li>
+				<li class="slideshow__slides__slide" style="height: 100%; width: 100%">
+					<p class="titletext">Norma's yard also has a kumquat tree, and two tangerine trees. February 2022.
+					</p>
+					<div class="slideshow__slides__slide--spinner"></div>
+					<picture>
+						<source
+							srcset="images/2020s/2022-02-26-02b-large.webp 1x, images/2020s/2022-02-26-02b-hidpi.webp 2x"
+							media="(min-width: 1000px)">
+						<source
+							srcset="images/2020s/2022-02-26-02b-small.webp 1x, images/2020s/2022-02-26-02b-medium.webp 2x"
+							media="(min-width: 600px)">
+						<img loading="lazy" class="slide-image" src="images/2020s/2022-02-26-02b-small.webp" width="640"
+							height="360" alt="Ru holding plastic bin filled with ripe kumquats.">
+					</picture>
+				</li>
+			</ul>
 
-<div style="width: 100%;height:100vh;">
-    <div class="slideshow">
-        <div class="slideshow__slide-title">
-            <a href="#" class="slideshow__slide-title__button">
-                <span class="accessibility--hidden">Select this button to alternately close or open the box with the photo caption.</span>
-                <i id="angle-left" class="slideshow__slide-title__button__icon-left"></i>
-                <i id="angle-right" class="slideshow__slide-title__button__icon-right"></i>
-            </a><span id="slideCaption" class="slideshow__slide-caption"></span>
-        </div>
-        <ul class="slideshow__slides">
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Usually I would leave bags of persimons in the kitchen at work, but this basket makes a nice display. November 2010.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2010_0531-large.webp 1x, images/2020s/2010_0531-hidpi.webp 1.11x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2010_0531-small.webp 1x, images/2020s/2010_0531-medium.webp 2x" media="(min-width: 600px)">
-                    <img class="slide-image" src="images/2010s/2010_0531-small.webp" width="640" height="480" alt="A basket of shiny ripe persimons.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">These chocolate persimons in Norma's yard are almost ripe. 2010.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2010_0528-large.webp 1x, images/2020s/2010_0528-hidpi.webp 1.11x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2010_0528-small.webp 1x, images/2020s/2010_0528-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2010_0528-small.webp" width="640" height="480" alt="A cluster of large chocolate persimons on the tree.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">The chocolate persimon will have seeds only when pollinated. The seeds give off alcohol, which turns the flesh of the fruit chocolate brown and makes it sweet.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2021-11-15-01-b-large.webp 1x, images/2020s/2021-11-15-01-b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2021-11-15-01-b-small.webp 1x, images/2020s/2021-11-15-01-b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2021-11-15-01-b-small.webp" width="640" height="361" alt="Chocolate persimon on plate with knife.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">2012, Persimons washed and bagged, ready to give to friends and neighbors.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2012_1103-large.webp 1x, images/2020s/2012_1103-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2012_1103-small.webp 1x, images/2020s/2012_1103-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2012_1103-small.webp" width="640" height="480" alt="Persimons in crates and bags in our living room.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">2016, Persimon trees in Norma's yard. As the leaves turn color they begin to fall.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2016-DSC01113-large.webp 1x, images/2010s/2016-DSC01113-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2016-DSC01113-small.webp 1x, images/2010s/2016-DSC01113-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2016-DSC01113-small.webp" width="640" height="427" alt="Beautiful leaves of persimon trees.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Persimon leaves are especially beautiful when they turn color in the fall.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2016-DSC01118-large.webp 1x, images/2010s/2016-DSC01118-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2016-DSC01118-small.webp 1x, images/2010s/2016-DSC01118-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2016-DSC01118-small.webp" width="640" height="427" alt="Closeup of red persimon leaves on tree.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">2017, Persimons washed and bagged, ready to give to friends and neighbors.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2010s/2017-11-19-DSC01936-large.webp 1x, images/2020s/2017-11-19-DSC01936-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2010s/2017-11-19-DSC01936-small.webp 1x, images/2020s/2017-11-19-DSC01936-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2010s/2017-11-19-DSC01936-small.webp" width="640" height="427" alt="The 2017 harvest of persimons, in our living room">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">January 2020, a heavy pruning as the trees were overgrown</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-02-22_DSC03577-large.webp 1x, images/2020s/2020-02-22_DSC03577-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-02-22_DSC03577-small.webp 1x, images/2020s/2020-02-22_DSC03577-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-02-22_DSC03577-small.webp" width="640" height="361" alt="Persimon trees in back yard.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">May 2020, not long for new growth to appear.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-05-16-DSC03628-large.webp 1x, images/2020s/2020-05-16-DSC03628-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-05-16-DSC03628-small.webp 1x, images/2020s/2020-05-16-DSC03628-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-05-16-DSC03628-small.webp" width="640" height="361" alt="Trees showing New growth after three months.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">By June 2020, the new growth is surprising.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2020-06-07-DSC03637-large.webp 1x, images/2020s/2020-06-07-DSC03637-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2020-06-07-DSC03637-small.webp 1x, images/2020s/2020-06-07-DSC03637-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2020-06-07-DSC03637-small.webp" width="640" height="361" alt="Four months after pruning.">
-                </picture>
-            </li>
-            <li class="slideshow__slides__slide" style="height:100%;width:100%;">
-                <p class="titletext">Norma's yard also has a kumquat tree, and two tangerine trees. February 2022.</p>
-                <div class='slideshow__slides__slide--spinner'></div>
-                <picture>
-                    <source srcset="images/2020s/2022-02-26-02b-large.webp 1x, images/2020s/2022-02-26-02b-hidpi.webp 2x" media="(min-width: 1000px)">
-                    <source srcset="images/2020s/2022-02-26-02b-small.webp 1x, images/2020s/2022-02-26-02b-medium.webp 2x" media="(min-width: 600px)">
-                    <img loading="lazy" class="slide-image" src="images/2020s/2022-02-26-02b-small.webp" width="640" height="360" alt="Ru holding plastic bin filled with ripe kumquats.">
-                </picture>
-            </li>
-        </ul>
-        
-        <p class="slideshow__vcr-container">
-            <a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
-                <span class="accessibility--hidden">Select this button to alternately pause and start the slideshow.</span>
-                <i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
-                <i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
-            </a>
-            <a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
-                <i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
-                <span class="accessibility--hidden">Button to show the previous slide.</span>
-            </a>
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
-                <i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
-                <span class="accessibility--hidden">Button to show the next slide.</span>
-            </a>
-        </p>
-    </div>
-</div>
+			<p class="slideshow__vcr-container">
+				<a href="#" id="pauseplay" class="slideshow__vcr-container__vcr-button--link">
+					<span class="accessibility--hidden">Select this button to alternately pause and start the
+						slideshow.</span>
+					<i id="pause" class="slideshow__vcr-container__vcr-button-pause"></i>
+					<i id="play" class="slideshow__vcr-container__vcr-button-play"></i>
+				</a>
+				<a href="#" id="prev" class="slideshow__vcr-container__vcr-button--link">
+					<i id="prevslide" class="slideshow__vcr-container__vcr-button-angle-left"></i>
+					<span class="accessibility--hidden">Button to show the previous slide.</span>
+				</a>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				<a href="#" id="next" class="slideshow__vcr-container__vcr-button--link">
+					<i id="nextslide" class="slideshow__vcr-container__vcr-button-angle-right"></i>
+					<span class="accessibility--hidden">Button to show the next slide.</span>
+				</a>
+			</p>
+		</div>
+	</div>
 
-<script>slideInterval = 4;</script>
-
+	<script>
+		slideInterval = 4
+	</script>
 </body>
+
 </html>
