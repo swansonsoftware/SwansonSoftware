@@ -6,16 +6,17 @@ class Footer {
 
     injectFooterHTML() {
         if (this.footerElement != null) {
+            const currentDate = new Date();
             // this.footerElement.insertAdjacentHTML("beforeend", `
             // <div class="wrapper">
-            //     <p><span class="site-footer__text">Copyright &copy; 2023. All rights reserved. | 
+            //     <p><span class="site-footer__text">Copyright &copy; ${currentDate.getFullYear()}. All rights reserved. | 
             //     <a href="email-form.html">Contact</a> |
             //     <a href="about.html">About SwansonSoftware.com</a></span></p>
             // </div>
             // `)
             this.footerElement.insertAdjacentHTML("beforeend", `
             <div class="wrapper">
-                <p><span class="site-footer__text">Copyright &copy; 2023. All rights reserved. | 
+                <p><span class="site-footer__text">Copyright &copy; ${currentDate.getFullYear()}. All rights reserved. | 
                 <a href="about.html">About SwansonSoftware.com</a></span></p>
             </div>
             `)

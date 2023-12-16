@@ -20,10 +20,11 @@ class AlbumFooter {
 
     injectFooterHTML() {
         if (this.footerElement != null) {
+            const currentDate = new Date();
             // this.footerElement.insertAdjacentHTML("beforeend", `
             // <div class="wrapper">
             //     <p><span class="album-footer__text">
-            //         Copyright &copy; 2023. All rights reserved. | 
+            //         Copyright &copy; ${currentDate.getFullYear()}. All rights reserved. | 
             //         <a href="../email-form.html">Contact</a> |
             //         <a href="../about.html">About SwansonSoftware.com</a>
             //     </span></p>
@@ -32,7 +33,7 @@ class AlbumFooter {
             this.footerElement.insertAdjacentHTML("beforeend", `
             <div class="wrapper">
                 <p><span class="album-footer__text">
-                    Copyright &copy; 2023. All rights reserved. | 
+                    Copyright &copy; ${currentDate.getFullYear()}. All rights reserved. | 
                     <a href="../about.html">About SwansonSoftware.com</a>
                 </span></p>
             </div>
