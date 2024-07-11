@@ -1,177 +1,193 @@
 .album-photos {
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 50px;
 
-    &--pull-left {
-        padding-top: 0px;
-        padding-bottom: 10px;
-        justify-content: flex-start;
+  &--pull-left {
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  @mixin atSmall {
+    grid-template-columns: 1fr;
+    padding-bottom: 5px;
+  }
+  @mixin atMedSmall {
+    grid-template-columns: 1fr 1fr;
+  }
+  @mixin atMedium {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @mixin atLarge {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__polaroid {
+    padding: 5px 1px 10px 1px;
+    color: $bodyLiteBGFontColor;
+
+    @mixin atMedium {
+      padding: 10px 10px 20px 10px;
+    }
+    @mixin atSmall {
+      display: flex;
+      justify-content: center;
     }
 
-    &__polaroid {
-        padding: 5px 1px 10px 1px;
+    &--rotate-right {
+      /*width: 284px;*/
+      width: 330px;
+      padding: 10px 10px 20px 10px; /*top right bottom left*/
+      border: 1px solid #bfbfbf;
+      background-color: white;
+      float: left;
+      /*-ms-transform: rotate(7deg);*/ /* IE 9 */
+      /*-webkit-transform: rotate(7deg);*/ /* Safari */
+      /*transform: rotate(7deg);*/
+      @mixin atMedium {
+        padding: 10px 10px 20px 10px;
+      }
+      &:hover {
+        border-radius: 5%;
+        transition: border-radius 0.1s ease-in-out;
+      }
+    }
+
+    &--rotate-left {
+      /*width: 284px;*/
+      width: 330px;
+      padding: 10px 10px 20px 10px; /*top right bottom left*/
+      border: 1px solid #bfbfbf;
+      background-color: white;
+      /*float: left;*/
+      /*-ms-transform: rotate(-8deg);*/ /* IE 9 */
+      /*-webkit-transform: rotate(-8deg);*/ /* Safari */
+      /*transform: rotate(-8deg);*/
+      @mixin atMedium {
+        padding: 10px 10px 20px 10px;
+      }
+      &:hover {
+        border-radius: 5%;
+        transition: border-radius 0.1s ease-in-out;
+      }
+    }
+
+    &--rotate-none {
+      /*width: 284px;*/
+      width: 330px;
+      padding: 10px 10px 20px 10px; /*top right bottom left*/
+      border: 1px solid #bfbfbf;
+      background-color: white;
+      float: left;
+      @mixin atMedium {
+        padding: 10px 10px 20px 10px;
+      }
+      &:hover {
+        border-radius: 5%;
+        transition: border-radius 0.1s ease-in-out;
+      }
+    }
+
+    &__book {
+      box-shadow: 10px 10px 5px #aaaaaa;
+      /*margin-right: 5px;*/
+      @mixin atMedium {
+        margin-right: 10px;
+      }
+    }
+
+    &--show-overlay {
+      text-decoration: none;
+      z-index: 5;
+    }
+
+    a img {
+      border: 3px solid #fff;
+    }
+
+    a:hover img {
+      border: 3px solid #000;
+    }
+  }
+
+  &__photo-title {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 200px;
+    transform: translate(0%, -50%);
+    padding: 0px 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: "Tangerine", sans-serif;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    background: $albumPhotoCaptionBackgroundColor;
+    opacity: 1;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+
+    &--is-collapsed {
+      left: -185px;
+    }
+
+    &__button {
+      position: fixed;
+      top: 0%;
+      right: 0%;
+      height: 100%;
+      width: 15px;
+      background-color: $albumPhotoCaptionBackgroundColor;
+      text-decoration: none;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      z-index: 2;
+
+      &:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      &__icon-left {
+        font-size: 2rem;
+        font-weight: bold;
         color: $bodyLiteBGFontColor;
-
-        @mixin atMedium{
-            padding: 10px 10px 20px 10px;
-        }
-    
-        &--rotate-right {
-            /*width: 284px;*/
-            width: 330px;
-            padding: 10px 10px 20px 10px; /*top right bottom left*/
-            border: 1px solid #BFBFBF;
-            background-color: white;
-            float: left;
-            /*-ms-transform: rotate(7deg);*/ /* IE 9 */
-            /*-webkit-transform: rotate(7deg);*/ /* Safari */
-            /*transform: rotate(7deg);*/
-            @mixin atMedium{
-                padding: 10px 10px 20px 10px;
-            }
-            &:hover {
-                border-radius: 5%;
-                transition: border-radius 0.1s ease-in-out;
-            }
-        }
-
-        &--rotate-left {
-            /*width: 284px;*/
-            width: 330px;
-            padding: 10px 10px 20px 10px; /*top right bottom left*/
-            border: 1px solid #BFBFBF;
-            background-color: white;
-            float: left;
-            /*-ms-transform: rotate(-8deg);*/ /* IE 9 */
-            /*-webkit-transform: rotate(-8deg);*/ /* Safari */
-            /*transform: rotate(-8deg);*/
-            @mixin atMedium{
-                padding: 10px 10px 20px 10px;
-            }
-            &:hover {
-                border-radius: 5%;
-                transition: border-radius 0.1s ease-in-out;
-            }
-        }
-
-        &--rotate-none {
-            /*width: 284px;*/
-            width: 330px;
-            padding: 10px 10px 20px 10px; /*top right bottom left*/
-            border: 1px solid #BFBFBF;
-            background-color: white;
-            float:left;
-            @mixin atMedium{
-                padding: 10px 10px 20px 10px;
-            }
-            &:hover {
-                border-radius: 5%;
-                transition: border-radius 0.1s ease-in-out;
-            }
-        }
-
-        &__book {
-            box-shadow: 10px 10px 5px #aaaaaa;
-            /*margin-right: 5px;*/
-            @mixin atMedium{
-                margin-right: 10px;
-            }
-        }
-
-        &--show-overlay {
-            text-decoration: none;
-            z-index: 5;
-        }
-
-        a img {
-            border: 3px solid #fff;
-        }
-
-        a:hover img {
-            border: 3px solid #000;
-        }
-    }
-
-    &__photo-title{
-        position: absolute;
+        position: fixed;
         top: 50%;
-        left:0%;
-        width: 200px;
         transform: translate(0%, -50%);
-        padding: 0px 15px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        font-family: 'Tangerine', sans-serif;
-        text-align: center;
-        font-size: 2em;
-        font-weight:600;
-        background: $albumPhotoCaptionBackgroundColor;
-        opacity: 1;
-        transition: all 0.5s ease-in;
-        z-index: 1;
+        right: -7px;
+      }
+      &__icon-left::after {
+        font-family: "Material Icons";
+        font-style: normal;
+        content: "\e5cb";
+      }
 
-        &--is-collapsed {
-            left: -185px;
-        }
-
-        &__button {
-            position: fixed;
-            top: 0%;
-            right: 0%;
-            height: 100%;
-            width: 15px;
-            background-color: $albumPhotoCaptionBackgroundColor;
-            text-decoration: none;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            z-index: 2;
-            
-            &:hover{
-                cursor: pointer;
-                background: rgba(0,0,0,0.6);
-            }
-
-            &__icon-left {
-                font-size: 2rem;
-                font-weight: bold;
-                color: $bodyLiteBGFontColor;
-                position: fixed;
-                top: 50%;
-                transform: translate(0%, -50%);
-                right: -7px;
-            }
-            &__icon-left::after{
-                font-family: 'Material Icons';
-                font-style: normal;
-                content: '\e5cb';
-            }
-
-            &__icon-right {
-                font-size: 2rem;
-                font-weight: bold;
-                color: $bodyLiteBGFontColor;
-                position: fixed;
-                top: 50%;
-                transform: translate(0%, -50%);
-                right: -7px;
-            }
-            &__icon-right::after{
-                font-family: 'Material Icons';
-                font-style: normal;
-                content: '\e5cc';
-            }
-        }
+      &__icon-right {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $bodyLiteBGFontColor;
+        position: fixed;
+        top: 50%;
+        transform: translate(0%, -50%);
+        right: -7px;
+      }
+      &__icon-right::after {
+        font-family: "Material Icons";
+        font-style: normal;
+        content: "\e5cc";
+      }
     }
+  }
 
-    &__photo-caption {
-        color: $albumPhotoCaptionBackgroundColor; /* hide caption - make text the same color as background */
-        transition: color .5s ease-in-out;
- 
-        &--is-visible {
-            color: $bodyLiteBGFontColor;
-        }
+  &__photo-caption {
+    color: $albumPhotoCaptionBackgroundColor; /* hide caption - make text the same color as background */
+    transition: color 0.5s ease-in-out;
+
+    &--is-visible {
+      color: $bodyLiteBGFontColor;
     }
-
+  }
 }
