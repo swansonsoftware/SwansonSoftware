@@ -1,44 +1,48 @@
 .album-wrapper {
-    padding-left: 18px;
-    padding-right: 18px;
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow-x: hidden;
+  padding-left: 18px;
+  padding-right: 18px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow-x: hidden;
 
-    @mixin atMedium{
-        top:60px;
-        /*max-width: 1075px;*/
-        max-width: 1180px;
-    }
-    @mixin atLarge{
-        top:60px;
-        /*max-width: 1200px;*/
-        max-width: 1500px;
-    }
+  @mixin atMedSmall {
+    top: 60px;
+    max-width: 820px;
+  }
+  @mixin atMedium {
+    top: 60px;
+    /*max-width: 1075px;*/
+    max-width: 1180px;
+  }
+  @mixin atLarge {
+    top: 60px;
+    /*max-width: 1200px;*/
+    max-width: 1500px;
+  }
 
-    &__article{
-        @mixin atMedium{
-            max-width: 1075px;
-        }
-        @mixin atLarge{
-            max-width: 1200px;
-        }
+  &__article {
+    @mixin atMedium {
+      max-width: 1075px;
     }
+    @mixin atLarge {
+      max-width: 1200px;
+    }
+  }
 
-    &__video {
-        padding: 20px 5px 20px 5px; /*top right bottom left*/
-    }
+  &__video {
+    padding: 20px 5px 20px 5px; /*top right bottom left*/
+  }
 
-    a {
-        color: $bodyDarkBGFontColor;
-        font-size: 1.3rem;
-        @mixin atMedium{
-            font-size: 1.5rem;
-        }
+  a {
+    color: $bodyDarkBGFontColor;
+    font-size: 1.3rem;
+    @mixin atMedium {
+      font-size: 1.5rem;
     }
-    a:hover {
-        color: $hoverColorDarkBG;
-    }
+  }
+  a:hover {
+    color: $hoverColorDarkBG;
+  }
 }
