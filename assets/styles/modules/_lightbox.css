@@ -1,103 +1,121 @@
 .lightbox {
+  &__overlay {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.5);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s ease-in;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
 
-    &__overlay {
-        opacity: 0;
-        visibility: hidden;
-        transform: scale(.5);
-        transition: opacity .3s, transform .3s, visibility .3s ease-in;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 1);
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        overflow-y: auto;
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      z-index: 10;
+    }
 
-        &--visible {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1);
-            z-index: 10;
-        }
-
-        &--anchor {
-            text-decoration: none;
-            /*position: absolute;
+    &--anchor {
+      text-decoration: none;
+      /*position: absolute;
             top: 18px;
             right: 16px;*/
-            &:focus {
-                color: #fff;
-                font-weight: 700;
-            }
-        }
-
-        &--close-icon {
-            position: absolute;
-            top: 18px;
-            right: 16px;
-            cursor: pointer;
-            font-size:40px;
-            &:hover {
-                color: #fff;
-                font-weight: 700;
-            }
-            &:focus {
-                color: #fff;
-                font-weight: 700;
-            }
-        }
-        &--close-icon::after{
-            font-family: 'Material Icons';
-            font-style: normal;
-            color: rgba(255, 255, 255, 0.9);
-            content: '\e5c9';
-        }
-
-        &__image {
-            display:flex;
-            justify-content:center;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        &--spinner {
-            margin: auto;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            border: 0.25rem solid #fff;
-            border-top-color: #686868;
-            -webkit-animation: spin 1s infinite linear;
-                    animation: spin 1s infinite linear;
-        }
-        @-moz-keyframes spin {
-            from { -moz-transform: rotate(0deg); }
-            to { -moz-transform: rotate(359deg); }
-        }
-        @-webkit-keyframes spin {
-            from { -webkit-transform: rotate(0deg); }
-            to { -webkit-transform: rotate(359deg); }
-        }
-        @keyframes spin {
-            from {transform:rotate(0deg);}
-            to {transform:rotate(359deg);}
-        }
-        
-        picture {
-            display:flex;
-            height: 100%;
-            width: 100%;
-            justify-content: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-            object-position: 50% 50%;
-        }
+      &:focus {
+        color: #fff;
+        font-weight: 700;
+      }
     }
+
+    &--close-icon {
+      position: absolute;
+      top: 18px;
+      right: 16px;
+      cursor: pointer;
+      font-size: 40px;
+      &:hover {
+        color: #fff;
+        font-weight: 700;
+      }
+      &:focus {
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+    &--close-icon::after {
+      font-family: "Material Icons";
+      font-style: normal;
+      color: rgba(255, 255, 255, 0.9);
+      content: "\e5c9";
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &--spinner {
+      margin: auto;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      border: 0.25rem solid #fff;
+      border-top-color: #686868;
+      -webkit-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+    }
+    @-moz-keyframes spin {
+      from {
+        -moz-transform: rotate(0deg);
+      }
+      to {
+        -moz-transform: rotate(359deg);
+      }
+    }
+    @-webkit-keyframes spin {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+
+    &__selectedImg {
+      display: flex;
+      /*height: 100%;
+      width: 100%;*/
+      justify-content: center;
+    }
+
+    picture {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      /*object-fit: contain;*/
+      object-position: 50% 50%;
+    }
+  }
 }

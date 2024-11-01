@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script>
         console.log("screen width: " + window.innerWidth + "px")
+        console.log("screen height: " + window.innerHeight + "px")
         // console.log(screen.width); //screen.availHeight: 824; screen.availWidth: 1536; screen.pixelDepth: 24
     </script>
 </head>
@@ -51,77 +52,15 @@
         display-size of single image (non-slideshow): 262x150; best size ~400x225 @70%
         https://web.dev/responsive-images/
         
-        hidpi: 2560x1443 1600x1200 (for retina displays only)
-        large: 1920x1080 1440x1080
-        medium:1280x721  1280x960 (for retina displays only)
-        small: 640x360	 640x480
-        thumb: 260x147	 260x195
-        thumb (new): 330x186
-portrait:
-        hidpi: 1620x2160 (for retina displays only)
-        large: 810x1080
-        medium:960x1280  (for retina displays only)
-        small: 480x640
-        thumb: 260x347
-jpg compression: 60%
 
-May use these sizes in future:
+portrait 2x3:
+small=426x639;smallhires=852x1278;medium=1080x1620;large=1300x1950;larger=1394x2091;largehires=1708x2562;extralarge=2048x3072
 
-    3:2 ratio example: 1080x720
-    5:4 ratio example: 1280x1024; 1200x960; 640x512; 
-    16:9 ratio example: 1920x1080
-    9:16 ratio example: 1080x1920
+landscape 3x2:
+small=639x426;smallhires=1278x852;medium=1620x1080;large=1920x1301;larger=2091x1394;largehires=2562x1708
 
-    Original: 3x4 (1600 x 1200)
-               3200 x 2400
-               1600 x 1200
-               1440 x 1080
-               1280 x 960
-                960 x 720
-                640 x 480
-                330 x 248
-
-    Original: 2x3 (2333 x 1555; 3888 x 2592)
-               3840 x 2560 (2x large)
-               3360 x 2240
-               2880 x 1920
-               2400 x 1600
-    large:     1920 x 1280
-               1600 x 1066
-    medium:    1280 x 853
-                960 x 640
-    small:      640 x 427
-    thumb:      330 x 220
-
-    Original: 16x9 (3888 x 2187)
-    hidpi:      3840 x 2160 (2 x 1920)
-                2560 x 1440
-                2240 x 1260
-    large:      1920 x 1080
-                1600 x 900
-    medium:     1280 x 720
-                 960 x 540
-    small:       640 x 360
-    thumb:       330 x 186
-
-
-<img src="images/2020s/2020-02-22_DSC03577-thumb.webp"
-srcset="2020-02-22_DSC03577-thumb.webp 1x
-        2020-02-22_DSC03577-small.webp 2x
-
---------------------------
-<img src="small.webp" srcset="medium.webp 1000w, large.webp 2000w"
-1000w is equivalent to 1000px wide and 2000w to 2000px wide
-the browser will account for pixel density automatically
-
-If the browser window is wider than 1200px, the image is 
-probably going to be displayed about half the size of that. 
-If it’s smaller, it’ll probably be full-width.
-... sizes="(min-width: 1200px) 50vw, 100vw"
-
-<img src="images/2020s/2020-02-22_DSC03577-thumb.webp"
-sizes="(min-width: 1200px) 50vw, 100vw"
-
+landscape 16x9:
+small=640x360;smallhires=1280x720;medium=1600x900;large=1920x1080;larger=2240x1260;largehires=2560x1440;extralarge=3072x1728
 -->
 
         <div class="album-photos">
@@ -137,32 +76,51 @@ sizes="(min-width: 1200px) 50vw, 100vw"
             <div class="album-photos__polaroid">
                 <div class="album-photos__polaroid--rotate-left">
                     <a href="#" class="album-photos__polaroid--show-overlay">
-                        <img src="images/2020s/2020-02-22_DSC03577-thumb-i.webp" width="330" height="186"
-                            alt="Persimon trees in backyard.">
+                        <img src="images/2010s/2010_11-12-0528-test.webp" width="320" height="240"
+                            alt="A cluster of large chocolate persimons on the tree."
+                            data-srcset="320=320x240;360=360x270;393=393x295;432=432x324;608=608x456;672=672x504;768=768x576;896=896x672;960=960x720;1180=1180x885;1290=1290x968;1368=1368x1026;1442=1442x1082;1600=1600x1200;1852=1852x1389;1920=1920x1440;2120=2120x1590;2379=2379x1784;2560=2560x1920;2796=2796x2097;2960=2960x2220;3240=3240x2430;3840=3840x2880" />
+                        <!--
+						<img src="images/2010s/2010_11-12-0528-test.webp" width="332" height="249"
+							alt="A cluster of large chocolate persimons on the tree."
+
+							new standard set:
+							   data-srcset="320=320x240;360=360x270;393=393x295;432=432x324;608=608x456;672=672x504;768=768x576;896=896x672;960=960x720;1180=1180x885;1290=1290x968;1368=1368x1026;1442=1442x1082;1600=1600x1200;1852=1852x1389;1920=1920x1440;2120=2120x1590;2379=2379x1784;2560=2560x1920;2796=2796x2097;2960=2960x2220;3240=3240x2430;3840=3840x2880" />
+
+							20k perf budget set:
+							   data-srcset="360=360x270;667=668x501;932=932x699;1180=1180x885;1442=1444x1083;1600=1600x1200;1852=1852x1389;2120=2120x1590;2240=2240x1680;2379=2380x1785;2560=2560x1920;2760=2760x2070;2960=2960x2220;3060=3060x2295;3240=3240x2430" />
+							standard set, skip 1x copies:
+							   data-srcset="672=672x504;768=768x576;896=896x672;960=960x720;1180=1180x885;1290=1290x968;1368=1368x1026;1442=1442x1082;1600=1600x1200;1852=1852x1389;1920=1920x1440;2120=2120x1590;2379=2379x1784;2560=2560x1920;2796=2796x2097;2960=2960x2220;3240=3240x2430;3840=3840x2880" />
+							legacy file sizes
+								data-srcset="640=640x480;1280=1280x960;1600=1600x1200;1920=1920x1440;2240=2240x1680;2560=2560x1920;3840=3840x2880" />
+						<img src="images/2010s/2010_11-12-0528-thumb.webp" width="332" height="249"
+							alt="A cluster of large chocolate persimons on the tree."
+							data-srcset="thumb=332x249;small=640x480;smallplus=960x720;smallhires=1280x960;medium=1600x1200;large=1920x1440;larger=2240x1680;largehires=2560x1920" />
+						-->
                     </a>
-                    <p>Test image 1.</p>
+                    <p>Hanalei Scenic Overlook.</p>
                 </div>
             </div>
 
             <div class="album-photos__polaroid">
                 <div class="album-photos__polaroid--rotate-left">
                     <a href="#" class="album-photos__polaroid--show-overlay">
-                        <img src="images/2020s/2022-05-01-DSC03815b-small-i.webp" width="330" height="186"
+                        <img src="images/1900s/1999-kauai-a013-b-test.webp" width="320" height="180"
+                            alt="Hanalei valley farm fields from the Scenic Overlook."
+                            data-srcset="320=320x180;360=360x202;393=393x221;432=432x243;608=608x342;672=672x378;768=768x432;896=896x504;960=960x540;1180=1180x664;1290=1290x726;1368=1368x769;1442=1442x811;1600=1600x900;1852=1852x1042;1920=1920x1080;2120=2120x1192;2379=2379x1338;2560=2560x1440;2796=2796x1573;2960=2960x1665;3240=3240x1822;3840=3840x2160" />
+                    </a>
+                    <p>Hanalei Scenic Overlook.</p>
+                </div>
+            </div>
+
+            <div class="album-photos__polaroid">
+                <div class="album-photos__polaroid--rotate-left">
+                    <a href="#" class="album-photos__polaroid--show-overlay">
+                        <img src="images/2020s/2022-05-01-DSC03815b-thumb-i.webp" width="330" height="186"
                             alt="Test image 1">
                     </a>
                     <p>Test image 1.</p>
                 </div>
             </div>
-            <!--
-            <div class="album-photos__polaroid">
-                <div class="album-photos__polaroid--rotate-right">
-                    <a href="#" class="album-photos__polaroid--show-overlay">
-                        <img src="images/2020s/2022/not_used/DSC03834-small-i.webp" width="330" height="186" alt="Test image 2">
-                    </a>
-                    <p>Test image 2.</p>
-                </div>
-            </div>
-            -->
         </div>
     </div>
 
