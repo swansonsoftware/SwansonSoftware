@@ -1,8 +1,10 @@
 dist/
 downloads/
 node_modules/
+vendor/
 bundled.js
 *.asp
+*.env
 *.jpg
 *.psp
 *.jbf
