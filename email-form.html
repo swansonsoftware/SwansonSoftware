@@ -13,7 +13,6 @@
 	<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
 		href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script src="javascript/debug.js"></script>
 </head>
 
 <body>
@@ -45,7 +44,7 @@
 				address too. SwansonSoftware does not store or share any information you send, and you will not get
 				unsolicited email or marketing material from SwansonSoftware.</p>
 
-			<form action="contact.php" method="post" class="form">
+			<form action="contact.php" id="contactus" class="form">
 				<div>
 					<label for="name">Name: <span class="form--required">(required)</span></label>
 				</div>
@@ -92,14 +91,12 @@
 					</label>
 				</div>
 				<div>
-					<button type="submit">Send</button>
+					<button type="button" id="send">Send</button>
 				</div>
 
-				<div></div>
-				<div><br /><br /></div>
-
-
 			</form>
+			<br>
+			<h3 class="headline__h3">Other ways to get in touch</h3>
 
 			<a href="https://www.youtube.com/channel/UCP0ZqbwKwrFb98I4_UueOaQ" rel="noopener noreferrer"
 				target="_blank">
