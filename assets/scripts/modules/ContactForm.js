@@ -25,10 +25,6 @@ class ContactForm {
     }
     return false
   }
-
-  validateForm() {
-    return false
-  }
 }
 
 export default ContactForm
